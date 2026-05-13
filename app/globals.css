@@ -91,7 +91,7 @@ nav a.active { color: var(--green); }
 .hero-photo {
   position: absolute;
   inset: 0 0 0 36%;
-  background: url('/Homepagina/Afbeelding homepagina.png') center/cover no-repeat;
+  background: url('/Homepagina/Meer woningwaarde.png') center/cover no-repeat;
   z-index: -2;
 }
 
