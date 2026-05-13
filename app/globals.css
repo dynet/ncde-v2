@@ -1,26 +1,50 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7faf8;
+  --foreground: #1f2933;
+
+  --ncde-primary: #1a421f;
+  --ncde-primary-dark: #0f2d13;
+  --ncde-accent: #40916c;
+  --ncde-sage: #d8f3dc;
+  --ncde-muted: #5f6b7a;
+
+  --pastel-green: #eef8ef;
+  --pastel-yellow: #fff6df;
+  --pastel-blue: #eef7ff;
+  --pastel-cream: #fff2e7;
+  --pastel-purple: #f1efff;
+  --pastel-pink: #fff1ee;
+
+  --shadow-card: 0 12px 30px rgba(0, 0, 0, 0.08);
+  --shadow-soft: 0 8px 22px rgba(0, 0, 0, 0.05);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-ncde-primary: var(--ncde-primary);
+  --color-ncde-primary-dark: var(--ncde-primary-dark);
+  --color-ncde-accent: var(--ncde-accent);
+  --color-ncde-sage: var(--ncde-sage);
+  --color-ncde-muted: var(--ncde-muted);
+
+  --color-pastel-green: var(--pastel-green);
+  --color-pastel-yellow: var(--pastel-yellow);
+  --color-pastel-blue: var(--pastel-blue);
+  --color-pastel-cream: var(--pastel-cream);
+  --color-pastel-purple: var(--pastel-purple);
+  --color-pastel-pink: var(--pastel-pink);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
 }
