@@ -14,12 +14,12 @@ export default function Home() {
           <nav>
             <a className="active" href="#">Home</a>
             <a href="#over">Over ons</a>
-            <a href="#doen">Wat we doen</a>
-            <a href="#kennis">Kennis & inspiratie</a>
+            <a href="#subsidies-financiering">Subsidies & Financiering</a>
+            <a href="#partners">Partners</a>
             <a href="#nieuws">Nieuws</a>
             <a href="#contact">Contact</a>
           </nav>
-          <a className="btn btn-primary" href="#contact">✉ Neem contact op</a>
+          <a className="btn btn-primary" href="#contact">Start woningcheck</a>
         </div>
       </header>
 
@@ -37,33 +37,39 @@ export default function Home() {
           </div>
           <div className="hero-photo" aria-label="Nederlandse woning met zonnepanelen en warmtepomp"></div>
           <div className="hero-info-card">
-            <div className="mini"><div className="mini-icon">🧮</div><div><strong>Duidelijk inzicht</strong><span>Kosten, besparing en terugverdientijd</span></div></div>
-            <div className="mini"><div className="mini-icon">🐷</div><div><strong>Subsidies</strong><span>Bekijk waar u recht op heeft</span></div></div>
-            <div className="mini"><div className="mini-icon">🔧</div><div><strong>Betrouwbare uitvoerders</strong><span>Geselecteerd op kwaliteit</span></div></div>
+            {/* eslint-disable @next/next/no-img-element */}
+            <div className="mini"><div className="mini-thumb"><img src="/Homepagina/duidelijk inzicht.png" alt="" /></div><div><strong>Duidelijk inzicht</strong><span>Kosten, besparing en terugverdientijd</span></div></div>
+            <div className="mini"><div className="mini-thumb"><img src="/Homepagina/subsidie.png" alt="" /></div><div><strong>Subsidies</strong><span>Bekijk waar u recht op heeft</span></div></div>
+            <div className="mini"><div className="mini-thumb"><img src="/Homepagina/betrouwbare partners.png" alt="" /></div><div><strong>Betrouwbare uitvoerders</strong><span>Geselecteerd op kwaliteit</span></div></div>
+            {/* eslint-enable @next/next/no-img-element */}
           </div>
         </section>
 
         <section id="doen">
           <h2 className="section-title">Waarom nu verduurzamen?</h2>
           <div className="grid-6 benefits">
-            <div className="card pastel-green"><div className="icon">🐷</div><h3>Besparing op energiekosten</h3><p>Verlaag direct uw maandlasten door minder energieverbruik en efficiëntere installaties.</p><strong>Minder verbruik = direct voordeel.</strong></div>
-            <div className="card pastel-yellow"><div className="icon">🏠</div><h3>Meer woningwaarde (energielabel)</h3><p>Een beter energielabel verhoogt de waarde van uw woning.</p><strong>Investeren in duurzaamheid = investeren in uw woning.</strong></div>
-            <div className="card pastel-blue"><div className="icon">🛋️</div><h3>Meer comfort in huis</h3><p>Een goed geïsoleerde woning met slimme installaties zorgt voor een stabiel binnenklimaat.</p><strong>Warmer in de winter, koeler in de zomer.</strong></div>
-            <div className="card pastel-cream"><div className="icon">☀️</div><h3>Einde salderingsregeling (2027)</h3><p>Vanaf 2027 wordt terugleveren van stroom minder voordelig.</p><strong>Slim omgaan met eigen energie wordt essentieel.</strong></div>
-            <div className="card pastel-purple"><div className="icon">⚡</div><h3>Netcongestie & leveringszekerheid</h3><p>Het elektriciteitsnet raakt steeds voller, waardoor teruglevering en aansluiting beperkter worden.</p><strong>Zelfvoorzienend worden geeft zekerheid.</strong></div>
-            <div className="card pastel-green"><div className="icon">🌍</div><h3>Klimaat & toekomstbestendigheid</h3><p>Door te verduurzamen draagt u bij aan een beter klimaat.</p><strong>Voor uzelf én volgende generaties.</strong></div>
+            {/* eslint-disable @next/next/no-img-element */}
+            <div className="card pastel-green"><div className="icon"><img src="/Homepagina/besparing op energiekosten.png" alt="" /></div><h3>Besparing op energiekosten</h3><p>Verlaag direct uw maandlasten door minder energieverbruik en efficiëntere installaties.</p><strong>Minder verbruik = direct voordeel.</strong></div>
+            <div className="card pastel-yellow"><div className="icon"><img src="/Homepagina/Meer woningwaarde.png" alt="" /></div><h3>Meer woningwaarde (energielabel)</h3><p>Een beter energielabel verhoogt de waarde van uw woning.</p><strong>Investeren in duurzaamheid = investeren in uw woning.</strong></div>
+            <div className="card pastel-blue"><div className="icon"><img src="/Homepagina/meer comfort in huis.png" alt="" /></div><h3>Meer comfort in huis</h3><p>Een goed geïsoleerde woning met slimme installaties zorgt voor een stabiel binnenklimaat.</p><strong>Warmer in de winter, koeler in de zomer.</strong></div>
+            <div className="card pastel-cream"><div className="icon"><img src="/Homepagina/saldering stopt.png" alt="" /></div><h3>Einde salderingsregeling (2027)</h3><p>Vanaf 2027 wordt terugleveren van stroom minder voordelig.</p><strong>Slim omgaan met eigen energie wordt essentieel.</strong></div>
+            <div className="card pastel-purple"><div className="icon"><img src="/Homepagina/netgongestie.png" alt="" /></div><h3>Netcongestie & leveringszekerheid</h3><p>Het elektriciteitsnet raakt steeds voller, waardoor teruglevering en aansluiting beperkter worden.</p><strong>Zelfvoorzienend worden geeft zekerheid.</strong></div>
+            <div className="card pastel-green"><div className="icon"><img src="/Homepagina/klimaat.png" alt="" /></div><h3>Klimaat & toekomstbestendigheid</h3><p>Door te verduurzamen draagt u bij aan een beter klimaat.</p><strong>Voor uzelf én volgende generaties.</strong></div>
+            {/* eslint-enable @next/next/no-img-element */}
           </div>
         </section>
 
         <section id="oplossingen" className="solutions">
           <h2 className="section-title">Ontdek wat bij uw woning past</h2>
           <div className="grid-6">
-            <div className="card pastel-blue"><div className="icon">🏡</div><h3>Isolatie</h3><p>Bespaar energie en verhoog comfort.</p><div className="readmore">Lees meer →</div></div>
-            <div className="card pastel-yellow"><div className="icon">☀️</div><h3>Zonnepanelen</h3><p>Wek uw eigen stroom op en bespaar.</p><div className="readmore">Lees meer →</div></div>
-            <div className="card pastel-pink"><div className="icon">🌡️</div><h3>Warmtepomp</h3><p>Duurzaam verwarmen, minder gas gebruiken.</p><div className="readmore">Lees meer →</div></div>
-            <div className="card pastel-purple"><div className="icon">🔋</div><h3>Thuisbatterij</h3><p>Sla stroom op en gebruik slim.</p><div className="readmore">Lees meer →</div></div>
-            <div className="card pastel-green"><div className="icon">🌬️</div><h3>Ventilatie</h3><p>Gezond binnenklimaat, minder energieverlies.</p><div className="readmore">Lees meer →</div></div>
-            <div className="card pastel-green"><div className="icon">🔌</div><h3>Laadpaal</h3><p>Duurzaam laden, klaar voor de toekomst.</p><div className="readmore">Lees meer →</div></div>
+            {/* eslint-disable @next/next/no-img-element */}
+            <div className="card pastel-blue"><div className="icon"><img src="/Homepagina/isolatie.png" alt="" /></div><h3>Isolatie</h3><p>Bespaar energie en verhoog comfort.</p><div className="readmore">Lees meer →</div></div>
+            <div className="card pastel-yellow"><div className="icon"><img src="/Homepagina/zonnepanelen.png" alt="" /></div><h3>Zonnepanelen</h3><p>Wek uw eigen stroom op en bespaar.</p><div className="readmore">Lees meer →</div></div>
+            <div className="card pastel-pink"><div className="icon"><img src="/Homepagina/warmtepomp.png" alt="" /></div><h3>Warmtepomp</h3><p>Duurzaam verwarmen, minder gas gebruiken.</p><div className="readmore">Lees meer →</div></div>
+            <div className="card pastel-purple"><div className="icon"><img src="/Homepagina/thuisbatterij.png" alt="" /></div><h3>Thuisbatterij</h3><p>Sla stroom op en gebruik slim.</p><div className="readmore">Lees meer →</div></div>
+            <div className="card pastel-green"><div className="icon"><img src="/Homepagina/ventilatie.png" alt="" /></div><h3>Ventilatie</h3><p>Gezond binnenklimaat, minder energieverlies.</p><div className="readmore">Lees meer →</div></div>
+            <div className="card pastel-green"><div className="icon"><img src="/Homepagina/laadpaal.png" alt="" /></div><h3>Laadpaal</h3><p>Duurzaam laden, klaar voor de toekomst.</p><div className="readmore">Lees meer →</div></div>
+            {/* eslint-enable @next/next/no-img-element */}
           </div>
         </section>
 
@@ -94,7 +100,13 @@ export default function Home() {
               <p>✓ Vrijblijvend en persoonlijk advies<br />✓ Inzicht in kosten, besparing en subsidies<br />✓ Geselecteerde betrouwbare uitvoerders<br />✓ Van plan tot en met realisatie</p>
             </div>
             <div className="info-card"><h3>Noodpakket</h3><p>Bereid u voor op een stroomuitval en blijf zelfvoorzienend.</p><strong style={{ color: "var(--green)" }}>Meer informatie →</strong></div>
-            <div className="info-card"><h3>Actueel: salderingsregeling</h3><p>Vanaf 2027 wordt de salderingsregeling afgeschaft. Lees wat dit betekent.</p><strong style={{ color: "var(--green)" }}>Meer informatie →</strong></div>
+            <div className="info-card">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <div className="info-card-thumb"><img src="/Homepagina/saldering verandert.png" alt="" /></div>
+              <h3>Actueel: salderingsregeling</h3>
+              <p>Vanaf 1 januari 2027 wordt de salderingsregeling afgeschaft. Lees wat dit voor u betekent en welke alternatieven er zijn.</p>
+              <strong style={{ color: "var(--green)" }}>Meer informatie →</strong>
+            </div>
           </div>
         </section>
 
