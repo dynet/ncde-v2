@@ -34,7 +34,7 @@ export default function Home() {
         <div className="cx flex h-24 items-center justify-between">
           <a href="#" aria-label="NCDE — Nationaal Collectief Duurzame Energie home" className="block h-16 w-[200px] overflow-hidden shrink-0">
             <img
-              src="/logo/Group 39893.svg"
+              src="/this one.svg"
               alt="NCDE — Nationaal Collectief Duurzame Energie"
               className="h-[5.6rem] w-auto max-w-none object-cover object-top"
             />
@@ -128,7 +128,7 @@ export default function Home() {
                 <p className="text-xs leading-relaxed text-gray-700">
                   Krijg direct inzicht in kosten, besparing en terugverdientijd — persoonlijk en op basis van uw woning.
                 </p>
-                <a href="#" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700">
+                <a href="#woningcheck" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700">
                   Meer weten <ArrowRight size={15} />
                 </a>
               </div>
@@ -407,7 +407,7 @@ export default function Home() {
         <div className="cx py-16">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
             <div className="lg:col-span-4">
-              <img src="/Group 39896.svg" alt="NCDE — Nationaal Collectief Duurzame Energie" className="h-20 w-auto object-contain" />
+              <img src="/logo/Group 39895.svg" alt="NCDE — Nationaal Collectief Duurzame Energie" className="h-20 w-auto object-contain" />
               <p className="mt-4 max-w-xs text-sm leading-relaxed text-brand-100">Samen maken we Nederland duurzaam.</p>
               <div className="mt-5 flex items-center gap-3">
                 <a href="#" aria-label="LinkedIn" className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 text-brand-200 hover:bg-white hover:text-brand-700 transition-all">
