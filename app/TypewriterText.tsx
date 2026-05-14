@@ -13,10 +13,10 @@ type Props = {
 
 export default function TypewriterText({
   text,
-  typeSpeed = 90,
-  eraseSpeed = 45,
-  pauseAfterType = 1800,
-  pauseAfterErase = 400,
+  typeSpeed = 45,
+  eraseSpeed = 25,
+  pauseAfterType = 2500,
+  pauseAfterErase = 300,
   className,
 }: Props) {
   const [shown, setShown] = useState("");
@@ -49,7 +49,7 @@ export default function TypewriterText({
   return (
     <span className={className}>
       {shown}
-      <span className="inline-block w-[0.6ch] -mb-1 ml-1 animate-pulse">|</span>
+      <span className="typewriter-cursor inline-block ml-1">|</span>
     </span>
   );
 }

@@ -358,18 +358,18 @@ export default function Home() {
       {/* ===== WONINGCHECK ===== */}
       <section id="woningcheck" className="cx py-12 md:py-16">
         <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-card)] grid grid-cols-1 lg:grid-cols-2 transition-all duration-300 hover:scale-[1.02] hover:shadow-[var(--shadow-elevated)]">
-          <div className="p-8 text-white md:p-10" style={{ backgroundColor: "#71B867" }}>
-            <p className="text-xs font-bold uppercase tracking-[.2em] text-white/90">Gratis & vrijblijvend</p>
-            <h2 className="mt-2 font-display text-3xl font-extrabold uppercase md:text-4xl min-h-[2.5em] md:min-h-[1.2em]" aria-label="Start uw woningcheck">
-              <TypewriterText text="Start uw woningcheck" />
+          <div className="p-8 text-gray-900 md:p-10" style={{ backgroundColor: "#71B867" }}>
+            <p className="text-xs font-bold uppercase tracking-[.2em] text-gray-900">Gratis & vrijblijvend</p>
+            <h2 className="mt-2 font-display text-3xl font-extrabold uppercase md:text-4xl min-h-[2.5em] md:min-h-[1.2em] text-gray-900" aria-label="Start uw woningcheck">
+              <TypewriterText text="Start uw woningcheck" typeSpeed={45} eraseSpeed={25} pauseAfterType={2500} pauseAfterErase={300} />
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-white/95">
+            <p className="mt-4 text-base leading-relaxed text-gray-900">
               In vijf minuten inzicht in welke maatregelen bij uw woning passen, hoeveel u bespaart en welke subsidies beschikbaar zijn.
             </p>
             <ul className="mt-5 space-y-2">
               {["Persoonlijk rapport op maat", "Overzicht van beschikbare subsidies", "Terugverdientijd per maatregel"].map((t) => (
-                <li key={t} className="flex items-center gap-2 text-sm text-white">
-                  <CheckCircle size={18} className="text-white" />
+                <li key={t} className="flex items-center gap-2 text-sm text-gray-900">
+                  <CheckCircle size={18} className="text-gray-900" />
                   {t}
                 </li>
               ))}
