@@ -128,7 +128,7 @@ export default function Home() {
                 <p className="text-xs leading-relaxed text-gray-700">
                   Krijg direct inzicht in kosten, besparing en terugverdientijd — persoonlijk en op basis van uw woning.
                 </p>
-                <a href="#" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700">
+                <a href="#woningcheck" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700">
                   Meer weten <ArrowRight size={15} />
                 </a>
               </div>
