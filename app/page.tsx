@@ -32,11 +32,11 @@ export default function Home() {
       {/* ===== HEADER ===== */}
       <header className="sticky top-0 z-50 bg-white/95 shadow-[var(--shadow-soft)] backdrop-blur-md">
         <div className="cx flex h-24 items-center justify-between">
-          <a href="#">
+          <a href="#" aria-label="NCDE — Nationaal Collectief Duurzame Energie home" className="block h-16 w-[200px] overflow-hidden shrink-0">
             <img
-              src="/Homepagina/Logo final.png"
-              alt="NCDE"
-              className="h-20 w-auto object-contain"
+              src="/logo/Group 39893.svg"
+              alt="NCDE — Nationaal Collectief Duurzame Energie"
+              className="h-[5.6rem] w-auto max-w-none object-cover object-top"
             />
           </a>
           <nav className="hidden items-center gap-6 lg:flex">
@@ -66,7 +66,7 @@ export default function Home() {
       {/* ===== HERO ===== */}
       <section className="relative isolate min-h-[580px] flex items-center overflow-hidden">
         <img
-          src="/Homepagina/Afbeelding homepagina.png"
+          src="/hero-home.jpg"
           alt=""
           aria-hidden
           className="absolute inset-0 z-0 h-full w-full object-cover object-center"
@@ -386,7 +386,7 @@ export default function Home() {
         <div className="cx py-16">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
             <div className="lg:col-span-3">
-              <img src="/Homepagina/Logo final.png" alt="NCDE" className="h-20 w-auto object-contain" />
+              <img src="/logo/Group 39895.svg" alt="NCDE — Nationaal Collectief Duurzame Energie" className="h-20 w-auto object-contain" />
               <p className="mt-4 max-w-xs text-sm leading-relaxed text-brand-100">Samen maken we Nederland duurzaam.</p>
               <div className="mt-5 flex items-center gap-3">
                 <a href="#" aria-label="LinkedIn" className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 text-brand-200 hover:bg-white hover:text-brand-700 transition-all">
