@@ -1,211 +1,483 @@
-/* 1-op-1 overgenomen uit Claude Artifex mockup
-   Bron: Nirmal Madarie, mail "code homepagina NCDE" — 2026-05-05 09:06
-   CSS staat in app/globals.css */
+/* Homepage NCDE - 1-op-1 vanaf Codehomepagine Claude dd 7-5-2026.docx */
+
+import {
+  ArrowRight,
+  Home as HomeIcon,
+  BarChart2,
+  Banknote,
+  ShieldCheck,
+  CheckCircle,
+  Check,
+  Menu,
+} from "lucide-react";
+
+const LinkedinIcon = ({ size = 16 }: { size?: number }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+);
+
+const YoutubeIcon = ({ size = 16 }: { size?: number }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="currentColor"><path d="M23 9.71a8.5 8.5 0 00-.91-4.13 2.92 2.92 0 00-1.72-1A78.36 78.36 0 0012 4.27a78.45 78.45 0 00-8.34.3 2.87 2.87 0 00-1.46.74c-.9.83-1 2.25-1.1 3.45a48.29 48.29 0 000 5.58 9.55 9.55 0 00.3 2 3.14 3.14 0 00.71 1.36 2.86 2.86 0 001.49.78 45.18 45.18 0 006.5.33c3.5.05 6.57 0 10.2-.28a2.88 2.88 0 001.53-.78 2.49 2.49 0 00.61-1 10.58 10.58 0 00.52-3.4c.04-.56.04-3.94.04-4.64zM9.74 14.85V8.66l5.92 3.11c-1.66.92-3.85 1.96-5.92 3.08z"/></svg>
+);
+
+const InstagramIcon = ({ size = 16 }: { size?: number }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+);
+
+/* eslint-disable @next/next/no-img-element */
 
 export default function Home() {
   return (
     <>
-      <header>
-        <div className="nav">
-          <div className="logo">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/Homepagina/Logo final.png" alt="NCDE logo" />
-          </div>
-          <nav>
-            <a className="active" href="#">Home</a>
-            <a href="#over">Over ons</a>
-            <a href="#subsidies-financiering">Subsidies & Financiering</a>
-            <a href="#partners">Partners</a>
-            <a href="#nieuws">Nieuws</a>
-            <a href="#contact">Contact</a>
+      {/* ===== HEADER ===== */}
+      <header className="sticky top-0 z-50 bg-white/95 shadow-[var(--shadow-soft)] backdrop-blur-md">
+        <div className="cx flex h-24 items-center justify-between">
+          <a href="#">
+            <img
+              src="/Homepagina/Logo final.png"
+              alt="NCDE"
+              className="h-20 w-auto object-contain"
+            />
+          </a>
+          <nav className="hidden items-center gap-6 lg:flex">
+            <a href="#" className="relative text-sm font-semibold text-brand-600">
+              Home
+              <span className="absolute -bottom-[29px] left-0 right-0 h-[3px] rounded-full bg-brand-600"></span>
+            </a>
+            <a href="#" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Over ons</a>
+            <a href="#" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Subsidies & Financiering</a>
+            <a href="#" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Partners</a>
+            <a href="#" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Nieuws</a>
+            <a href="#" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Contact</a>
           </nav>
-          <a className="btn btn-primary" href="#contact">Start woningcheck</a>
+          <a
+            href="#woningcheck"
+            className="hidden lg:inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] transition-all"
+          >
+            <HomeIcon size={17} />
+            Start woningcheck
+          </a>
+          <button className="lg:hidden rounded-md p-2 text-brand-700" aria-label="Menu">
+            <Menu size={26} />
+          </button>
         </div>
       </header>
 
-      <main>
-        <section className="hero hero-reference">
-          <div className="hero-text">
-            <h5>Samen naar een duurzame toekomst</h5>
-            <h1>Samen werken aan duurzame energie voor iedereen</h1>
-            <p>Wij versterken collectieven en gemeenten bij het versnellen van de lokale energietransitie.</p>
-            <p>Met onafhankelijk advies, praktische oplossingen en betrouwbare partners.</p>
-            <div className="hero-actions">
-              <a className="btn btn-primary" href="#doen">👥 Wat we doen</a>
-              <a className="btn btn-outline" href="#oplossingen">→ Bekijk alle oplossingen</a>
+      {/* ===== HERO ===== */}
+      <section className="relative isolate min-h-[580px] flex items-center overflow-hidden">
+        <img
+          src="/Homepagina/Afbeelding homepagina.png"
+          alt=""
+          aria-hidden
+          className="absolute inset-0 z-0 h-full w-full object-cover object-center"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 z-10"
+          style={{
+            background:
+              "linear-gradient(100deg, rgba(241,250,245,1) 0%, rgba(241,250,245,.97) 30%, rgba(241,250,245,.82) 50%, rgba(241,250,245,.3) 68%, transparent 82%)",
+          }}
+        ></div>
+        <div className="cx relative z-20 py-20 w-full">
+          <div className="max-w-[540px]">
+            <p className="text-xs font-extrabold uppercase tracking-[.2em] text-brand-600 mb-5">
+              Nationaal Collectief Duurzame Energie
+            </p>
+            <h1 className="font-display text-4xl font-black leading-[1.05] text-brand-800 md:text-5xl lg:text-[3.4rem]">
+              Samen werken aan
+              <br />
+              duurzame energie
+            </h1>
+            <p className="mt-5 text-base leading-relaxed text-gray-800 md:text-lg max-w-md">
+              Wij helpen u stap voor stap naar een energiezuinige woning — met onafhankelijk advies, praktische oplossingen en betrouwbare uitvoerders.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#woningcheck"
+                className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-4 text-sm font-bold text-white hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] transition-all"
+              >
+                Start woningcheck <ArrowRight size={18} />
+              </a>
+              <a
+                href="#oplossingen"
+                className="inline-flex items-center gap-2 rounded-lg border-2 border-brand-600 bg-white/80 px-6 py-4 text-sm font-bold text-brand-600 hover:bg-brand-50 transition-all"
+              >
+                Bekijk oplossingen
+              </a>
             </div>
           </div>
-          <div className="hero-photo" aria-label="Nederlandse woning met zonnepanelen en warmtepomp"></div>
-          <div className="hero-info-card">
-            {/* eslint-disable @next/next/no-img-element */}
-            <div className="mini"><div className="mini-thumb"><img src="/Homepagina/duidelijk inzicht.png" alt="" /></div><div><strong>Duidelijk inzicht</strong><span>Kosten, besparing en terugverdientijd</span></div></div>
-            <div className="mini"><div className="mini-thumb"><img src="/Homepagina/subsidie.png" alt="" /></div><div><strong>Subsidies</strong><span>Bekijk waar u recht op heeft</span></div></div>
-            <div className="mini"><div className="mini-thumb"><img src="/Homepagina/betrouwbare partners.png" alt="" /></div><div><strong>Betrouwbare uitvoerders</strong><span>Geselecteerd op kwaliteit</span></div></div>
-            {/* eslint-enable @next/next/no-img-element */}
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="doen">
-          <h2 className="section-title">Waarom nu verduurzamen?</h2>
-          <div className="grid-6 benefits">
-            {/* eslint-disable @next/next/no-img-element */}
-            <div className="card pastel-green"><div className="icon"><img src="/Homepagina/besparing op energiekosten.png" alt="" /></div><h3>Besparing op energiekosten</h3><p>Verlaag direct uw maandlasten door minder energieverbruik en efficiëntere installaties.</p><strong>Minder verbruik = direct voordeel.</strong></div>
-            <div className="card pastel-yellow"><div className="icon"><img src="/Homepagina/Meer woningwaarde.png" alt="" /></div><h3>Meer woningwaarde (energielabel)</h3><p>Een beter energielabel verhoogt de waarde van uw woning.</p><strong>Investeren in duurzaamheid = investeren in uw woning.</strong></div>
-            <div className="card pastel-blue"><div className="icon"><img src="/Homepagina/meer comfort in huis.png" alt="" /></div><h3>Meer comfort in huis</h3><p>Een goed geïsoleerde woning met slimme installaties zorgt voor een stabiel binnenklimaat.</p><strong>Warmer in de winter, koeler in de zomer.</strong></div>
-            <div className="card pastel-cream"><div className="icon"><img src="/Homepagina/saldering stopt.png" alt="" /></div><h3>Einde salderingsregeling (2027)</h3><p>Vanaf 2027 wordt terugleveren van stroom minder voordelig.</p><strong>Slim omgaan met eigen energie wordt essentieel.</strong></div>
-            <div className="card pastel-purple"><div className="icon"><img src="/Homepagina/netgongestie.png" alt="" /></div><h3>Netcongestie & leveringszekerheid</h3><p>Het elektriciteitsnet raakt steeds voller, waardoor teruglevering en aansluiting beperkter worden.</p><strong>Zelfvoorzienend worden geeft zekerheid.</strong></div>
-            <div className="card pastel-green"><div className="icon"><img src="/Homepagina/klimaat.png" alt="" /></div><h3>Klimaat & toekomstbestendigheid</h3><p>Door te verduurzamen draagt u bij aan een beter klimaat.</p><strong>Voor uzelf én volgende generaties.</strong></div>
-            {/* eslint-enable @next/next/no-img-element */}
-          </div>
-        </section>
-
-        <section id="oplossingen" className="solutions">
-          <h2 className="section-title">Ontdek wat bij uw woning past</h2>
-          <div className="grid-6">
-            {/* eslint-disable @next/next/no-img-element */}
-            <div className="card pastel-blue"><div className="icon"><img src="/Homepagina/isolatie.png" alt="" /></div><h3>Isolatie</h3><p>Bespaar energie en verhoog comfort.</p><div className="readmore">Lees meer →</div></div>
-            <div className="card pastel-yellow"><div className="icon"><img src="/Homepagina/zonnepanelen.png" alt="" /></div><h3>Zonnepanelen</h3><p>Wek uw eigen stroom op en bespaar.</p><div className="readmore">Lees meer →</div></div>
-            <div className="card pastel-pink"><div className="icon"><img src="/Homepagina/warmtepomp.png" alt="" /></div><h3>Warmtepomp</h3><p>Duurzaam verwarmen, minder gas gebruiken.</p><div className="readmore">Lees meer →</div></div>
-            <div className="card pastel-purple"><div className="icon"><img src="/Homepagina/thuisbatterij.png" alt="" /></div><h3>Thuisbatterij</h3><p>Sla stroom op en gebruik slim.</p><div className="readmore">Lees meer →</div></div>
-            <div className="card pastel-green"><div className="icon"><img src="/Homepagina/ventilatie.png" alt="" /></div><h3>Ventilatie</h3><p>Gezond binnenklimaat, minder energieverlies.</p><div className="readmore">Lees meer →</div></div>
-            <div className="card pastel-green"><div className="icon"><img src="/Homepagina/laadpaal.png" alt="" /></div><h3>Laadpaal</h3><p>Duurzaam laden, klaar voor de toekomst.</p><div className="readmore">Lees meer →</div></div>
-            {/* eslint-enable @next/next/no-img-element */}
-          </div>
-        </section>
-
-        <section>
-          <div className="label-block">
-            <div>
-              <h5 style={{ color: "var(--green)", textTransform: "uppercase" }}>Verbeter uw energielabel</h5>
-              <h2>Meer waarde, minder kosten, beter voor het milieu</h2>
-              <p>Met de juiste maatregelen verhoogt u uw energielabel, bespaart u op kosten en draagt u bij aan een duurzame toekomst.</p>
-              <a className="btn btn-primary" href="#contact">Ontdek uw mogelijkheden →</a>
-            </div>
-            <div className="energy-scale">
-              <div className="a">A++++</div><div className="a">A+++</div><div className="b">A++</div><div className="b">A+</div><div className="c">B</div><div className="d">C</div><div className="e">D</div><div className="f">E</div><div className="f">F</div><div className="g">G</div>
-            </div>
-            <div className="checks">
-              <p>Lagere energiekosten</p>
-              <p>Meer wooncomfort</p>
-              <p>Hogere woningwaarde</p>
-              <p>Beter voor het milieu</p>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <div className="bottom-cta">
-            <div className="dark-card">
-              <h2>Onafhankelijk advies waar u op kunt vertrouwen</h2>
-              <p>✓ Vrijblijvend en persoonlijk advies<br />✓ Inzicht in kosten, besparing en subsidies<br />✓ Geselecteerde betrouwbare uitvoerders<br />✓ Van plan tot en met realisatie</p>
-            </div>
-            <div className="info-card"><h3>Noodpakket</h3><p>Bereid u voor op een stroomuitval en blijf zelfvoorzienend.</p><strong style={{ color: "var(--green)" }}>Meer informatie →</strong></div>
-            <div className="info-card">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <div className="info-card-thumb"><img src="/Homepagina/saldering verandert.png" alt="" /></div>
-              <h3>Actueel: salderingsregeling</h3>
-              <p>Vanaf 1 januari 2027 wordt de salderingsregeling afgeschaft. Lees wat dit voor u betekent en welke alternatieven er zijn.</p>
-              <strong style={{ color: "var(--green)" }}>Meer informatie →</strong>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <div className="stats">
-            <div className="stat"><strong>100%</strong><span>Onafhankelijk advies</span></div>
-            <div className="stat"><strong>10.000+</strong><span>Huiseigenaren geholpen</span></div>
-            <div className="stat"><strong>Landelijk</strong><span>Advies en ondersteuning door heel Nederland</span></div>
-            <div className="stat"><strong>4,8/5</strong><span>Klantwaardering</span></div>
-          </div>
-        </section>
-
-        <section id="subsidies-financiering" className="subsidies-financiering">
-          <div className="sf-wrap">
-            <div className="sf-hero">
-              <p className="sf-label">Subsidies & financiering</p>
-              <h1>Verduurzaam uw woning met financiële ondersteuning</h1>
-              <p>Voor veel huishoudens zijn subsidies en financieringsmogelijkheden belangrijk om verduurzaming haalbaar en betaalbaar te maken. NCDE helpt bewoners inzicht te krijgen in beschikbare regelingen, mogelijke besparingen en passende financiering.</p>
-              <div className="hero-actions">
-                <a className="btn btn-primary" href="#contact">Vraag een subsidiecheck aan</a>
-                <a className="btn btn-outline" href="#financiering">Bekijk financiering</a>
+      {/* ===== USP-SECTIE — 3 grote kaarten ===== */}
+      <section className="bg-white py-8 border-b border-gray-100">
+        <div className="cx">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+            {/* Duidelijk inzicht */}
+            <div className="group relative overflow-hidden rounded-2xl bg-brand-50 border border-brand-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-card)]">
+              <div className="h-32 overflow-hidden">
+                <img src="/Homepagina/duidelijk inzicht.png" alt="" className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+              </div>
+              <div className="p-4">
+                <div className="flex items-center gap-3 mb-1.5">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-600">
+                    <BarChart2 size={18} strokeWidth={2} className="text-white" />
+                  </div>
+                  <h3 className="font-display text-base font-extrabold text-brand-800">Duidelijk inzicht</h3>
+                </div>
+                <p className="text-xs leading-relaxed text-gray-700">
+                  Krijg direct inzicht in kosten, besparing en terugverdientijd — persoonlijk en op basis van uw woning.
+                </p>
+                <a href="#" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700">
+                  Meer weten <ArrowRight size={15} />
+                </a>
               </div>
             </div>
 
-            <div className="sf-grid">
-              <div className="sf-card pastel-green">
-                <div className="icon">🏡</div>
-                <h3>ISDE-subsidie</h3>
-                <p>Voor isolatie, warmtepompen en zonneboilers. Deze landelijke subsidie kan de investering aanzienlijk verlagen.</p>
-                <strong>Voor eigenaar-bewoners</strong>
+            {/* Subsidies */}
+            <div className="group relative overflow-hidden rounded-2xl bg-sand-50 border border-amber-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-card)]">
+              <div className="h-32 overflow-hidden">
+                <img src="/Homepagina/subsidie.png" alt="" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
               </div>
-              <div className="sf-card pastel-yellow">
-                <div className="icon">☀️</div>
-                <h3>Zonnepanelen</h3>
-                <p>Voor zonnepanelen geldt 0% btw. Dit verlaagt de aanschafkosten en maakt opwekking van eigen stroom aantrekkelijk.</p>
-                <strong>0% btw-regeling</strong>
-              </div>
-              <div className="sf-card pastel-blue">
-                <div className="icon">🏢</div>
-                <h3>Gemeentelijke regelingen</h3>
-                <p>Veel gemeenten bieden extra ondersteuning, zoals isolatiesubsidies, energieadvies of wijkgerichte acties.</p>
-                <strong>Afhankelijk van gemeente</strong>
-              </div>
-              <div className="sf-card pastel-purple">
-                <div className="icon">🏬</div>
-                <h3>VvE-subsidies</h3>
-                <p>Voor appartementen en VvE&apos;s bestaan aparte regelingen voor advies, onderzoek, isolatie en duurzame installaties.</p>
-                <strong>SVVE-regeling</strong>
+              <div className="p-4">
+                <div className="flex items-center gap-3 mb-1.5">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-amber-500">
+                    <Banknote size={18} strokeWidth={2} className="text-white" />
+                  </div>
+                  <h3 className="font-display text-base font-extrabold text-gray-900">Subsidies</h3>
+                </div>
+                <p className="text-xs leading-relaxed text-gray-700">
+                  Alle landelijke en gemeentelijke regelingen op één plek — wij vertalen ze naar uw situatie.
+                </p>
+                <a href="#" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-amber-700 hover:text-amber-800">
+                  Bekijk regelingen <ArrowRight size={15} />
+                </a>
               </div>
             </div>
 
-            <div id="financiering" className="sf-two-col">
-              <div className="sf-info-block">
-                <p className="sf-label">Financiering</p>
-                <h2>Verduurzamen zonder alles vooraf te betalen</h2>
-                <p>Niet iedereen heeft direct spaargeld beschikbaar om de woning te verduurzamen. Daarom zijn er financieringsmogelijkheden waarmee bewoners de investering kunnen spreiden.</p>
-                <ul className="sf-list">
-                  <li><strong>Energiebespaarlening:</strong> financiering via het Nationaal Warmtefonds voor energiebesparende maatregelen.</li>
-                  <li><strong>Hypotheek verhogen:</strong> extra financiering voor verduurzaming via de hypotheekadviseur of bank.</li>
-                  <li><strong>VvE-financiering:</strong> gezamenlijke financiering voor appartementencomplexen via de VvE.</li>
-                  <li><strong>Gemeentelijke leningen:</strong> sommige gemeenten bieden aanvullende duurzaamheidsleningen.</li>
+            {/* Betrouwbare partners */}
+            <div className="group relative overflow-hidden rounded-2xl bg-sky-50 border border-sky-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-card)]">
+              <div className="h-32 overflow-hidden">
+                <img src="/Homepagina/betrouwbare partners.png" alt="" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              </div>
+              <div className="p-4">
+                <div className="flex items-center gap-3 mb-1.5">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-sky-600">
+                    <ShieldCheck size={18} strokeWidth={2} className="text-white" />
+                  </div>
+                  <h3 className="font-display text-base font-extrabold text-gray-900">Betrouwbare partners</h3>
+                </div>
+                <p className="text-xs leading-relaxed text-gray-700">
+                  Wij werken uitsluitend met gecertificeerde uitvoerders — geselecteerd op kwaliteit, service en eerlijke prijs.
+                </p>
+                <a href="#" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-sky-700 hover:text-sky-800">
+                  Onze uitvoerders <ArrowRight size={15} />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== WAAROM VERDUURZAMEN ===== */}
+      <section className="cx py-16">
+        <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Waarom nu verduurzamen?</p>
+        <h2 className="mt-2 font-display text-3xl font-extrabold text-brand-800 md:text-4xl">Zes goede redenen</h2>
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+          {[
+            { img: "/Homepagina/besparing op energiekosten.png", title: "Besparing op energiekosten", body: "Verlaag direct uw maandlasten door minder verbruik.", strong: "Minder verbruik = direct voordeel" },
+            { img: "/Homepagina/Meer woningwaarde.png", title: "Meer woningwaarde", body: "Een beter energielabel verhoogt de waarde van uw woning.", strong: "Investeren in duurzaamheid loont" },
+            { img: "/Homepagina/meer comfort in huis.png", title: "Meer comfort in huis", body: "Stabiele temperaturen en betere luchtkwaliteit het jaar rond.", strong: "Warmer in winter, koeler in zomer" },
+            { img: "/Homepagina/saldering stopt.png", title: "Saldering verandert", body: "Vanaf 2027 wordt terugleveren minder voordelig. Handelen loont nu.", strong: "Eigen verbruik wordt essentieel", badge: "Actie vereist" },
+            { img: "/Homepagina/netgongestie.png", title: "Netcongestie", body: "Het net raakt vol. Zelfvoorzienend worden geeft zekerheid.", strong: "Minder afhankelijk van het net" },
+            { img: "/Homepagina/klimaat.png", title: "Klimaat & toekomst", body: "Draag bij aan een beter klimaat voor volgende generaties.", strong: "Voor uzelf én de toekomst" },
+          ].map((c) => (
+            <article key={c.title} className="flex flex-col overflow-hidden rounded-[var(--radius-xl2)] bg-white border border-gray-200 hover:border-brand-200 hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img src={c.img} alt="" className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" />
+              </div>
+              <div className="flex flex-col flex-1 p-4">
+                {c.badge && (
+                  <span className="inline-block self-start rounded-full bg-red-50 px-2 py-0.5 text-[10px] font-bold text-red-700 mb-1.5">{c.badge}</span>
+                )}
+                <h3 className="font-display text-sm font-bold text-gray-900">{c.title}</h3>
+                <p className="mt-1.5 text-xs leading-relaxed text-gray-600">{c.body}</p>
+                <p className="mt-auto pt-3 text-xs font-bold text-brand-700">{c.strong}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* ===== OPLOSSINGEN ===== */}
+      <section id="oplossingen" className="bg-brand-50 py-14">
+        <div className="cx">
+          <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Wat we doen</p>
+          <h2 className="mt-2 font-display text-3xl font-extrabold text-brand-800 md:text-4xl">Ontdek wat bij uw woning past</h2>
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+            {[
+              { img: "/Homepagina/isolatie.png", title: "Isolatie", sub: "Energie besparen & comfort" },
+              { img: "/Homepagina/zonnepanelen.png", title: "Zonnepanelen", sub: "Wek uw eigen stroom op" },
+              { img: "/Homepagina/warmtepomp.png", title: "Warmtepomp", sub: "Duurzaam verwarmen" },
+              { img: "/Homepagina/thuisbatterij.png", title: "Thuisbatterij", sub: "Sla energie op & gebruik slim" },
+              { img: "/Homepagina/ventilatie.png", title: "Ventilatie", sub: "Gezond binnenklimaat" },
+              { img: "/Homepagina/laadpaal.png", title: "Laadpaal", sub: "Klaar voor elektrisch rijden" },
+            ].map((s) => (
+              <a key={s.title} href="#" className="group flex flex-col overflow-hidden rounded-[var(--radius-xl2)] bg-white border border-transparent hover:border-brand-200 hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all duration-300">
+                <div className="aspect-video overflow-hidden">
+                  <img src={s.img} alt={s.title} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="p-3 text-center">
+                  <h3 className="font-display text-sm font-bold text-gray-900">{s.title}</h3>
+                  <p className="mt-0.5 text-xs text-gray-500">{s.sub}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== ENERGIELABEL ===== */}
+      <section className="cx py-16">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-5">
+            <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Energielabel</p>
+            <h2 className="mt-2 font-display text-3xl font-extrabold text-brand-800 md:text-4xl">Wat is uw energielabel waard?</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-700">
+              Van label G naar A kan duizenden euro&apos;s per jaar schelen — én verhoogt de waarde van uw woning.
+            </p>
+            <ul className="mt-6 space-y-3">
+              {["Lagere energierekening", "Hogere woningwaarde bij verkoop", "Meer comfort en minder tocht", "Betere positie voor verhuur"].map((t) => (
+                <li key={t} className="flex items-center gap-3 text-sm">
+                  <CheckCircle size={20} className="text-brand-600 shrink-0" />
+                  {t}
+                </li>
+              ))}
+            </ul>
+            <a href="#" className="mt-8 inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-4 text-sm font-bold text-white hover:bg-brand-700 transition-all">
+              Bekijk uw energielabel <ArrowRight size={18} />
+            </a>
+          </div>
+          <div className="lg:col-span-7">
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-[var(--shadow-card)]">
+              <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-4">Indicatieve energiekosten per jaar</p>
+              <div className="space-y-2">
+                {[
+                  { label: "A+++", bg: "#008453", width: "95%", cost: "<€500/jr", textWhite: true },
+                  { label: "A", bg: "#51ae45", width: "78%", cost: "€900/jr", textWhite: true },
+                  { label: "B", bg: "#b5cf31", width: "62%", cost: "€1.300/jr", textWhite: true },
+                  { label: "C", bg: "#f4c600", width: "50%", cost: "€1.800/jr", textWhite: false },
+                  { label: "D", bg: "#ec8217", width: "40%", cost: "€2.400/jr", textWhite: true },
+                  { label: "F", bg: "#e43b1b", width: "28%", cost: "€3.200/jr", textWhite: true },
+                  { label: "G", bg: "#c0202e", width: "16%", cost: ">€4.000/jr", textWhite: true },
+                ].map((r) => (
+                  <div key={r.label} className="flex items-center gap-3">
+                    <span
+                      className="rounded-md text-center text-sm font-extrabold py-1.5 shrink-0"
+                      style={{
+                        background: r.bg,
+                        color: r.textWhite ? "white" : "#333",
+                        width: "72px",
+                      }}
+                    >
+                      {r.label}
+                    </span>
+                    <div className="flex-1 bg-gray-100 rounded-full h-2.5">
+                      <div className="h-2.5 rounded-full" style={{ width: r.width, background: r.bg }}></div>
+                    </div>
+                    <span className="text-xs text-gray-500 w-16 text-right shrink-0">{r.cost}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-4 text-xs text-gray-400">* Indicatieve jaarkosten voor een gemiddelde tussenwoning.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== ADVIES BLOK ===== */}
+      <section className="cx pb-16">
+        <div className="relative overflow-hidden rounded-2xl bg-brand-700">
+          <svg aria-hidden viewBox="0 0 200 200" className="pointer-events-none absolute -left-8 top-0 h-48 w-48 opacity-15">
+            <g stroke="white" strokeWidth="1.5" fill="none" strokeLinecap="round">
+              <path d="M100 30 Q120 60 100 100 Q80 60 100 30 Z" />
+              <line x1="100" y1="30" x2="100" y2="100" />
+              <path d="M70 60 Q90 90 70 130 Q50 90 70 60 Z" />
+              <line x1="70" y1="60" x2="70" y2="130" />
+              <path d="M130 70 Q150 100 130 140 Q110 100 130 70 Z" />
+              <line x1="130" y1="70" x2="130" y2="140" />
+            </g>
+          </svg>
+          <div className="relative grid grid-cols-1 gap-6 p-6 md:p-8 lg:grid-cols-10">
+            <div className="lg:col-span-4">
+              <h2 className="font-display text-2xl font-extrabold text-white leading-tight md:text-3xl">
+                Onafhankelijk advies waar u op kunt vertrouwen
+              </h2>
+              <ul className="mt-6 space-y-3">
+                {[
+                  "Vrijblijvend en persoonlijk advies",
+                  "Inzicht in kosten, besparing en subsidies",
+                  "Geselecteerde, betrouwbare uitvoerders",
+                  "Van plan tot en met realisatie",
+                ].map((t) => (
+                  <li key={t} className="flex items-start gap-3 text-white/95 text-sm">
+                    <Check size={19} strokeWidth={3} className="mt-0.5 shrink-0 text-brand-200" />
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <a href="#" className="group flex flex-col rounded-xl bg-white p-5 hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all lg:col-span-3">
+              <div className="flex items-start justify-between gap-3">
+                <div className="flex-1">
+                  <h3 className="font-display text-lg font-bold text-gray-900">Noodpakket</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-gray-700">Bereid u voor op een stroomuitval en blijf zelfvoorzienend.</p>
+                </div>
+                <img src="/Homepagina/saldering stopt.png" alt="" className="h-28 w-32 shrink-0 rounded-lg object-cover" />
+              </div>
+              <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-bold text-brand-600">
+                Meer informatie <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </a>
+
+            <a href="#" className="group flex flex-col rounded-xl bg-white p-5 hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all lg:col-span-3">
+              <div className="flex items-start justify-between gap-3">
+                <div className="flex-1">
+                  <span className="inline-block rounded-full bg-red-50 px-2 py-0.5 text-[10px] font-bold text-red-700 mb-2">Vervalt 2027</span>
+                  <h3 className="font-display text-lg font-bold text-gray-900">Salderingsregeling</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-gray-700">Vanaf 2027 wordt terugleveren minder voordelig. Lees wat dit betekent.</p>
+                </div>
+                <img src="/Homepagina/saldering verandert.png" alt="" className="h-28 w-32 shrink-0 rounded-lg object-cover" />
+              </div>
+              <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-bold text-brand-600">
+                Meer informatie <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== WONINGCHECK ===== */}
+      <section id="woningcheck" className="cx py-16">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Gratis & vrijblijvend</p>
+            <h2 className="mt-2 font-display text-3xl font-extrabold text-brand-800 md:text-4xl">Start uw woningcheck</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-700">
+              In vijf minuten inzicht in welke maatregelen bij uw woning passen, hoeveel u bespaart en welke subsidies beschikbaar zijn.
+            </p>
+            <ul className="mt-5 space-y-2">
+              {["Persoonlijk rapport op maat", "Overzicht van beschikbare subsidies", "Terugverdientijd per maatregel"].map((t) => (
+                <li key={t} className="flex items-center gap-2 text-sm text-gray-700">
+                  <CheckCircle size={18} className="text-brand-600" />
+                  {t}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-[var(--shadow-card)]">
+            <h3 className="font-display text-xl font-bold text-gray-900">Vul uw adres in</h3>
+            <p className="mt-1 text-sm text-gray-600">We geven direct een eerste indicatie op basis van uw woning.</p>
+            <form className="mt-5 space-y-3">
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="text-xs font-semibold text-gray-700">Postcode</label>
+                  <input type="text" placeholder="1234 AB" required className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2.5 text-sm focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600" />
+                </div>
+                <div>
+                  <label className="text-xs font-semibold text-gray-700">Huisnummer</label>
+                  <input type="text" placeholder="12A" required className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2.5 text-sm focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600" />
+                </div>
+              </div>
+              <div>
+                <label className="text-xs font-semibold text-gray-700">E-mailadres</label>
+                <input type="email" placeholder="uw@email.nl" required className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2.5 text-sm focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600" />
+              </div>
+              <button type="submit" className="w-full rounded-lg bg-brand-600 py-3.5 text-sm font-bold text-white hover:bg-brand-700 transition-colors">
+                Start mijn gratis woningcheck →
+              </button>
+              <p className="text-center text-xs text-gray-500">Vrijblijvend · Geen verplichtingen · 100% onafhankelijk</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== FOOTER ===== */}
+      <footer className="bg-brand-800 border-t border-brand-700">
+        <div className="cx py-12">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
+            <div className="lg:col-span-3">
+              <img src="/Homepagina/Logo final.png" alt="NCDE" className="h-20 w-auto object-contain" />
+              <p className="mt-4 max-w-xs text-sm leading-relaxed text-brand-100">Samen maken we Nederland duurzaam.</p>
+              <div className="mt-5 flex items-center gap-3">
+                <a href="#" aria-label="LinkedIn" className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 text-brand-200 hover:bg-white hover:text-brand-700 transition-all">
+                  <LinkedinIcon />
+                </a>
+                <a href="#" aria-label="YouTube" className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 text-brand-200 hover:bg-white hover:text-brand-700 transition-all">
+                  <YoutubeIcon />
+                </a>
+                <a href="#" aria-label="Instagram" className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 text-brand-200 hover:bg-white hover:text-brand-700 transition-all">
+                  <InstagramIcon />
+                </a>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:col-span-6">
+              <div>
+                <h4 className="font-display text-sm font-bold text-white">Verduurzamen</h4>
+                <ul className="mt-3 space-y-2">
+                  {["Isolatie", "Zonnepanelen", "Warmtepomp", "Thuisbatterij", "Ventilatie"].map((t) => (
+                    <li key={t}><a href="#" className="text-sm text-brand-200 hover:text-white">{t}</a></li>
+                  ))}
                 </ul>
               </div>
-
-              <div className="sf-highlight">
-                <h3>Slim combineren</h3>
-                <p>De beste aanpak is vaak een combinatie van subsidie en financiering.</p>
-                <div className="sf-flow">
-                  <span>Subsidie</span>
-                  <span>+</span>
-                  <span>Lening</span>
-                  <span>=</span>
-                  <span>Betaalbare verduurzaming</span>
+              <div>
+                <h4 className="font-display text-sm font-bold text-white">Subsidies</h4>
+                <ul className="mt-3 space-y-2">
+                  {["ISDE-subsidie", "Gemeentelijke subsidies", "Energiebespaarlening", "Alle regelingen"].map((t) => (
+                    <li key={t}><a href="#" className="text-sm text-brand-200 hover:text-white">{t}</a></li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-display text-sm font-bold text-white">Pagina&apos;s</h4>
+                <ul className="mt-3 space-y-2">
+                  {["Home", "Over ons", "Partners", "Nieuws"].map((t) => (
+                    <li key={t}><a href="#" className="text-sm text-brand-200 hover:text-white">{t}</a></li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-display text-sm font-bold text-white">Contact</h4>
+                <ul className="mt-3 space-y-2">
+                  <li><a href="mailto:info@ncde.nl" className="text-sm text-brand-200 hover:text-white">info@ncde.nl</a></li>
+                  <li><a href="#" className="text-sm text-brand-200 hover:text-white">Contactformulier</a></li>
+                  <li><a href="#" className="text-sm text-brand-200 hover:text-white">FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+            <div className="lg:col-span-3">
+              <h4 className="font-display text-sm font-bold text-white">Blijf op de hoogte</h4>
+              <p className="mt-2 text-sm text-brand-200">Ontvang tips en actueel nieuws over verduurzamen.</p>
+              <form className="mt-4">
+                <div className="flex gap-2">
+                  <input type="email" required placeholder="E-mailadres" className="flex-1 rounded-md border border-brand-600 bg-brand-700 px-3 py-2 text-sm text-white placeholder-brand-300 focus:border-brand-400 focus:outline-none focus:ring-1 focus:ring-brand-400" />
+                  <button type="submit" className="rounded-md bg-brand-600 px-4 py-2 text-sm font-bold text-white hover:bg-brand-700">Aanmelden</button>
                 </div>
-                <p>Zo wordt de investering lager, terwijl de woning direct energiezuiniger en comfortabeler wordt.</p>
-              </div>
-            </div>
-
-            <div className="sf-process">
-              <h2>Hoe NCDE bewoners helpt</h2>
-              <div className="sf-steps">
-                <div><span>1</span><h3>Woning bekijken</h3><p>We brengen de woning en mogelijke maatregelen in kaart.</p></div>
-                <div><span>2</span><h3>Regelingen checken</h3><p>We bekijken welke subsidies en financiering mogelijk passen.</p></div>
-                <div><span>3</span><h3>Besparing berekenen</h3><p>We geven inzicht in kosten, voordeel en terugverdientijd.</p></div>
-                <div><span>4</span><h3>Keuze maken</h3><p>De bewoner kiest zelf wat passend en haalbaar is.</p></div>
-              </div>
-            </div>
-
-            <div className="sf-cta">
-              <h2>Wilt u weten welke subsidie of financiering bij uw woning past?</h2>
-              <p>Vraag een vrijblijvende check aan en ontvang een helder overzicht van uw mogelijkheden.</p>
-              <a className="btn btn-primary" href="#contact">Start gratis subsidie- en financieringscheck</a>
+              </form>
             </div>
           </div>
-        </section>
-      </main>
-
-      <footer id="contact">
-        Samen maken we Nederland duurzaam.
+        </div>
+        <div className="border-t border-brand-700">
+          <div className="cx flex flex-col gap-2 py-4 text-xs text-brand-300 md:flex-row md:items-center md:justify-between">
+            <p>© 2026 Nationaal Collectief Duurzame Energie. Alle rechten voorbehouden.</p>
+            <div className="flex gap-4">
+              <a href="#" className="hover:text-white">Privacy</a>
+              <a href="#" className="hover:text-white">Disclaimer</a>
+              <a href="#" className="hover:text-white">Cookies</a>
+            </div>
+          </div>
+        </div>
       </footer>
     </>
   );
