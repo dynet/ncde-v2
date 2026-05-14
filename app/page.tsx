@@ -407,7 +407,7 @@ export default function Home() {
         <div className="cx py-16">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
             <div className="lg:col-span-4">
-              <img src="/Group 39896.svg" alt="NCDE — Nationaal Collectief Duurzame Energie" className="h-20 w-auto object-contain" />
+              <img src="/logo/Group 39895.svg" alt="NCDE — Nationaal Collectief Duurzame Energie" className="h-20 w-auto object-contain" />
               <p className="mt-4 max-w-xs text-sm leading-relaxed text-brand-100">Samen maken we Nederland duurzaam.</p>
               <div className="mt-5 flex items-center gap-3">
                 <a href="#" aria-label="LinkedIn" className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 text-brand-200 hover:bg-white hover:text-brand-700 transition-all">
