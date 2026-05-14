@@ -238,8 +238,8 @@ export default function Home() {
       </section>
 
       {/* ===== ENERGIELABEL ===== */}
-      <section className="cx py-20 md:py-24">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center">
+      <section className="py-20 md:py-24">
+        <div className="cx grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-5">
             <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Energielabel</p>
             <h2 className="mt-2 font-display text-3xl font-extrabold text-brand-800 md:text-4xl">Wat is uw energielabel waard?</h2>
@@ -296,7 +296,7 @@ export default function Home() {
       </section>
 
       {/* ===== ADVIES BLOK ===== */}
-      <section className="cx pb-20 md:pb-24">
+      <section className="cx py-12 md:py-16">
         <div className="relative overflow-hidden rounded-2xl bg-brand-700">
           <svg aria-hidden viewBox="0 0 200 200" className="pointer-events-none absolute -left-8 top-0 h-48 w-48 opacity-15">
             <g stroke="white" strokeWidth="1.5" fill="none" strokeLinecap="round">
@@ -359,7 +359,7 @@ export default function Home() {
       </section>
 
       {/* ===== WONINGCHECK ===== */}
-      <section id="woningcheck" className="cx py-20 md:py-24">
+      <section id="woningcheck" className="cx py-12 md:py-16">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Gratis & vrijblijvend</p>
