@@ -208,13 +208,13 @@ export default function Home() {
       {/* ===== OPLOSSINGEN ===== */}
       <section id="oplossingen" className="bg-brand-50 py-14">
         <div className="cx">
-          <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Wat we doen</p>
+          <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Zes goede redenen om te verduurzamen</p>
           <h2 className="mt-2 font-display text-3xl font-extrabold text-brand-800 md:text-4xl">Ontdek wat bij uw woning past</h2>
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
             {[
               { img: "/Homepagina/isolatie.png", title: "Isolatie", sub: "Energie besparen & comfort" },
-              { img: "/Homepagina/zonnepanelen.png", title: "Zonnepanelen", sub: "Wek uw eigen stroom op" },
               { img: "/Homepagina/warmtepomp.png", title: "Warmtepomp", sub: "Duurzaam verwarmen" },
+              { img: "/Homepagina/zonnepanelen.png", title: "Zonnepanelen", sub: "Wek uw eigen stroom op" },
               { img: "/Homepagina/thuisbatterij.png", title: "Thuisbatterij", sub: "Sla energie op & gebruik slim" },
               { img: "/Homepagina/ventilatie.png", title: "Ventilatie", sub: "Gezond binnenklimaat" },
               { img: "/Homepagina/laadpaal.png", title: "Laadpaal", sub: "Klaar voor elektrisch rijden" },
