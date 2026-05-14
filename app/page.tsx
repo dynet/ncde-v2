@@ -79,13 +79,12 @@ export default function Home() {
           }}
         ></div>
         <div className="cx relative z-20 py-20 w-full">
-          <div className="max-w-[540px]">
+          <div className="max-w-[720px]">
             <p className="text-xs font-extrabold uppercase tracking-[.2em] text-brand-600 mb-5">
               Nationaal Collectief Duurzame Energie
             </p>
-            <h1 className="font-display text-4xl font-black leading-[1.05] text-brand-800 md:text-5xl lg:text-[3.4rem]">
-              Samen werken aan
-              <br />
+            <h1 className="font-display text-3xl font-black uppercase leading-[1.1] text-brand-800 md:text-4xl lg:text-[2.75rem] whitespace-nowrap">
+              Samen werken aan<br />
               duurzame energie
             </h1>
             <p className="mt-5 text-base leading-relaxed text-gray-800 md:text-lg max-w-md">
