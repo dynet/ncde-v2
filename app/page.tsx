@@ -10,6 +10,7 @@ import {
   Check,
   Menu,
 } from "lucide-react";
+import WoningCheckForm from "./WoningCheckForm";
 
 const LinkedinIcon = ({ size = 16 }: { size?: number }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
@@ -376,30 +377,7 @@ export default function Home() {
               ))}
             </ul>
           </div>
-          <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-[var(--shadow-card)]">
-            <h3 className="font-display text-xl font-bold text-gray-900">Vul uw adres in</h3>
-            <p className="mt-1 text-sm text-gray-600">We geven direct een eerste indicatie op basis van uw woning.</p>
-            <form className="mt-5 space-y-3">
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="text-xs font-semibold text-gray-700">Postcode</label>
-                  <input type="text" placeholder="1234 AB" required className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2.5 text-sm focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600" />
-                </div>
-                <div>
-                  <label className="text-xs font-semibold text-gray-700">Huisnummer</label>
-                  <input type="text" placeholder="12A" required className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2.5 text-sm focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600" />
-                </div>
-              </div>
-              <div>
-                <label className="text-xs font-semibold text-gray-700">E-mailadres</label>
-                <input type="email" placeholder="uw@email.nl" required className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2.5 text-sm focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600" />
-              </div>
-              <button type="submit" className="w-full rounded-lg bg-brand-600 py-3.5 text-sm font-bold text-white hover:bg-brand-700 transition-colors">
-                Start mijn gratis woningcheck →
-              </button>
-              <p className="text-center text-xs text-gray-500">Vrijblijvend · Geen verplichtingen · 100% onafhankelijk</p>
-            </form>
-          </div>
+          <WoningCheckForm />
         </div>
       </section>
 
