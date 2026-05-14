@@ -187,7 +187,7 @@ export default function Home() {
             { img: "/Homepagina/besparing op energiekosten.png", title: "Besparing op energiekosten", body: "Verlaag direct uw maandlasten door minder verbruik.", strong: "Minder verbruik = direct voordeel" },
             { img: "/Homepagina/Meer woningwaarde.png", title: "Meer woningwaarde", body: "Een beter energielabel verhoogt de waarde van uw woning.", strong: "Investeren in duurzaamheid loont" },
             { img: "/Homepagina/meer comfort in huis.png", title: "Meer comfort in huis", body: "Stabiele temperaturen en betere luchtkwaliteit het jaar rond.", strong: "Warmer in winter, koeler in zomer" },
-            { img: "/Homepagina/saldering stopt.png", title: "Saldering verandert", body: "Vanaf 2027 wordt terugleveren minder voordelig. Handelen loont nu.", strong: "Eigen verbruik wordt essentieel", badge: "Actie vereist" },
+            { img: "/Homepagina/saldering stopt.png", title: "Saldering verandert", body: "Vanaf 2027 wordt terugleveren minder voordelig. Handelen loont nu.", strong: "Eigen verbruik wordt essentieel" },
             { img: "/Homepagina/netgongestie.png", title: "Netcongestie", body: "Het net raakt vol. Zelfvoorzienend worden geeft zekerheid.", strong: "Minder afhankelijk van het net" },
             { img: "/Homepagina/klimaat.png", title: "Klimaat & toekomst", body: "Draag bij aan een beter klimaat voor volgende generaties.", strong: "Voor uzelf én de toekomst" },
           ].map((c) => (
@@ -196,9 +196,6 @@ export default function Home() {
                 <img src={c.img} alt="" className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" />
               </div>
               <div className="flex flex-col flex-1 p-4">
-                {c.badge && (
-                  <span className="inline-block self-start rounded-full bg-red-50 px-2 py-0.5 text-[10px] font-bold text-red-700 mb-1.5">{c.badge}</span>
-                )}
                 <h3 className="font-display text-sm font-bold text-gray-900">{c.title}</h3>
                 <p className="mt-1.5 text-xs leading-relaxed text-gray-600">{c.body}</p>
                 <p className="mt-auto pt-3 text-xs font-bold text-brand-700">{c.strong}</p>
