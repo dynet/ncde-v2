@@ -184,7 +184,7 @@ export default function Home() {
         <h2 className="mt-2 font-display text-3xl font-extrabold text-brand-800 md:text-4xl">Zes goede redenen</h2>
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
           {[
-            { img: "/Homepagina/besparing op energiekosten.png", title: "Besparing op energiekosten", body: "Verlaag direct uw maandlasten door minder verbruik.", strong: "Minder verbruik = direct voordeel" },
+            { img: "/Homepagina/besparing op energiekosten.png", title: "Besparing op energiekosten", body: "Verlaag direct uw maandlasten door minder verbruik.", strong: "Minder verbruik is direct voordeel" },
             { img: "/Homepagina/Meer woningwaarde.png", title: "Meer woningwaarde", body: "Een beter energielabel verhoogt de waarde van uw woning.", strong: "Investeren in duurzaamheid loont" },
             { img: "/Homepagina/meer comfort in huis.png", title: "Meer comfort in huis", body: "Stabiele temperaturen en betere luchtkwaliteit het jaar rond.", strong: "Warmer in winter, koeler in zomer" },
             { img: "/Homepagina/saldering stopt.png", title: "Saldering verandert", body: "Vanaf 2027 wordt terugleveren minder voordelig. Handelen loont nu.", strong: "Eigen verbruik wordt essentieel" },
