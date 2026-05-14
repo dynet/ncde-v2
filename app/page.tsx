@@ -357,25 +357,25 @@ export default function Home() {
 
       {/* ===== WONINGCHECK ===== */}
       <section id="woningcheck" className="cx py-12 md:py-16">
-        <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-card)] grid grid-cols-1 lg:grid-cols-2 transition-all duration-300 hover:scale-[1.02] hover:shadow-[var(--shadow-elevated)]">
-          <div className="p-8 text-gray-900 md:p-10" style={{ backgroundColor: "#71B867" }}>
-            <p className="text-xs font-bold uppercase tracking-[.2em] text-gray-900">Gratis & vrijblijvend</p>
-            <h2 className="mt-2 font-display text-3xl font-extrabold uppercase md:text-4xl min-h-[2.5em] md:min-h-[2.4em] text-gray-900" aria-label="Start uw woningcheck">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
+          <div className="rounded-2xl bg-brand-700 p-8 text-white shadow-[var(--shadow-card)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[var(--shadow-elevated)] md:p-10">
+            <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-200">Gratis & vrijblijvend</p>
+            <h2 className="mt-2 font-display text-3xl font-extrabold uppercase md:text-4xl min-h-[2.5em] md:min-h-[2.4em] text-white" aria-label="Start uw woningcheck">
               <PopText text="Start uw woningcheck" />
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-900">
+            <p className="mt-4 text-base leading-relaxed text-brand-100">
               In vijf minuten inzicht in welke maatregelen bij uw woning passen, hoeveel u bespaart en welke subsidies beschikbaar zijn.
             </p>
             <ul className="mt-5 space-y-2">
               {["Persoonlijk rapport op maat", "Overzicht van beschikbare subsidies", "Terugverdientijd per maatregel"].map((t) => (
-                <li key={t} className="flex items-center gap-2 text-sm text-gray-900">
-                  <CheckCircle size={18} className="text-gray-900" />
+                <li key={t} className="flex items-center gap-2 text-sm text-white">
+                  <CheckCircle size={18} className="text-brand-200" />
                   {t}
                 </li>
               ))}
             </ul>
           </div>
-          <div className="bg-white p-6 md:p-8">
+          <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-[var(--shadow-card)] md:p-8">
             <h3 className="font-display text-xl font-bold text-gray-900">Vul uw adres in</h3>
             <p className="mt-1 text-sm text-gray-600">We geven direct een eerste indicatie op basis van uw woning.</p>
             <form className="mt-5 space-y-3">
