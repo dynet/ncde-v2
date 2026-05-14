@@ -83,7 +83,7 @@ export default function Home() {
             <p className="text-xs font-extrabold uppercase tracking-[.2em] text-brand-600 mb-5">
               Nationaal Collectief Duurzame Energie
             </p>
-            <h1 className="font-display text-4xl font-black leading-[1.05] text-brand-800 md:text-5xl lg:text-[3.4rem]">
+            <h1 className="font-display text-4xl font-black uppercase leading-[1.05] text-brand-800 md:text-5xl lg:text-[3.4rem]">
               Samen werken aan
               <br />
               duurzame energie
