@@ -19,7 +19,7 @@
   --color-lilac-100: #f1edff;
   --color-leaf-100: #f0f8e9;
 
-  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-display: var(--font-league-spartan), "League Spartan", system-ui, sans-serif;
   --font-sans: var(--font-inter), system-ui, sans-serif;
 
   --shadow-soft: 0 2px 12px rgba(0,0,0,.04);
