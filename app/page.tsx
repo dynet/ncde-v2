@@ -356,7 +356,7 @@ export default function Home() {
 
       {/* ===== WONINGCHECK ===== */}
       <section id="woningcheck" className="cx py-12 md:py-16">
-        <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-card)] grid grid-cols-1 lg:grid-cols-2">
+        <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-card)] grid grid-cols-1 lg:grid-cols-2 transition-all duration-300 hover:scale-[1.02] hover:shadow-[var(--shadow-elevated)]">
           <div className="bg-brand-700 p-8 text-white md:p-10">
             <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-200">Gratis & vrijblijvend</p>
             <h2 className="mt-2 font-display text-3xl font-extrabold uppercase md:text-4xl">Start uw woningcheck</h2>
