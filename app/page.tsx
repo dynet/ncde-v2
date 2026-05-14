@@ -406,8 +406,8 @@ export default function Home() {
       <footer className="bg-brand-800 border-t border-brand-700 mt-8">
         <div className="cx py-16">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
-            <div className="lg:col-span-3">
-              <img src="/logo/Group 39895.svg" alt="NCDE — Nationaal Collectief Duurzame Energie" className="h-20 w-auto object-contain" />
+            <div className="lg:col-span-4">
+              <img src="/Group 39896.svg" alt="NCDE — Nationaal Collectief Duurzame Energie" className="h-20 w-auto object-contain" />
               <p className="mt-4 max-w-xs text-sm leading-relaxed text-brand-100">Samen maken we Nederland duurzaam.</p>
               <div className="mt-5 flex items-center gap-3">
                 <a href="#" aria-label="LinkedIn" className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 text-brand-200 hover:bg-white hover:text-brand-700 transition-all">
@@ -421,27 +421,11 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:col-span-6">
-              <div>
-                <h4 className="font-display text-sm font-bold text-white">Verduurzamen</h4>
-                <ul className="mt-3 space-y-2">
-                  {["Isolatie", "Zonnepanelen", "Warmtepomp", "Thuisbatterij", "Ventilatie"].map((t) => (
-                    <li key={t}><a href="#" className="text-sm text-brand-200 hover:text-white">{t}</a></li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-display text-sm font-bold text-white">Subsidies</h4>
-                <ul className="mt-3 space-y-2">
-                  {["ISDE-subsidie", "Gemeentelijke subsidies", "Energiebespaarlening", "Alle regelingen"].map((t) => (
-                    <li key={t}><a href="#" className="text-sm text-brand-200 hover:text-white">{t}</a></li>
-                  ))}
-                </ul>
-              </div>
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-5">
               <div>
                 <h4 className="font-display text-sm font-bold text-white">Pagina&apos;s</h4>
                 <ul className="mt-3 space-y-2">
-                  {["Home", "Over ons", "Partners", "Nieuws"].map((t) => (
+                  {["Home", "Over ons", "Subsidies & Financiering", "Partners", "Nieuws", "Contact"].map((t) => (
                     <li key={t}><a href="#" className="text-sm text-brand-200 hover:text-white">{t}</a></li>
                   ))}
                 </ul>
