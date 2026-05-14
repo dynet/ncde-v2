@@ -34,7 +34,7 @@ export default function Home() {
         <div className="cx flex h-24 items-center justify-between">
           <a href="#" aria-label="NCDE — Nationaal Collectief Duurzame Energie home" className="block h-16 w-[200px] overflow-hidden shrink-0">
             <img
-              src="/Group 39896.svg"
+              src="/this one.svg"
               alt="NCDE — Nationaal Collectief Duurzame Energie"
               className="h-[5.6rem] w-auto max-w-none object-cover object-top"
             />
