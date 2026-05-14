@@ -213,8 +213,8 @@ export default function Home() {
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
             {[
               { img: "/Homepagina/isolatie.png", title: "Isolatie", sub: "Energie besparen & comfort" },
-              { img: "/Homepagina/zonnepanelen.png", title: "Zonnepanelen", sub: "Wek uw eigen stroom op" },
               { img: "/Homepagina/warmtepomp.png", title: "Warmtepomp", sub: "Duurzaam verwarmen" },
+              { img: "/Homepagina/zonnepanelen.png", title: "Zonnepanelen", sub: "Wek uw eigen stroom op" },
               { img: "/Homepagina/thuisbatterij.png", title: "Thuisbatterij", sub: "Sla energie op & gebruik slim" },
               { img: "/Homepagina/ventilatie.png", title: "Ventilatie", sub: "Gezond binnenklimaat" },
               { img: "/Homepagina/laadpaal.png", title: "Laadpaal", sub: "Klaar voor elektrisch rijden" },
