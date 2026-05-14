@@ -356,8 +356,8 @@ export default function Home() {
 
       {/* ===== WONINGCHECK ===== */}
       <section id="woningcheck" className="cx py-12 md:py-16">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
-          <div className="rounded-2xl bg-brand-700 p-8 text-white shadow-[var(--shadow-card)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[var(--shadow-elevated)] cursor-default md:p-10">
+        <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-card)] grid grid-cols-1 lg:grid-cols-2">
+          <div className="bg-brand-700 p-8 text-white md:p-10">
             <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-200">Gratis & vrijblijvend</p>
             <h2 className="mt-2 font-display text-3xl font-extrabold uppercase md:text-4xl">Start uw woningcheck</h2>
             <p className="mt-4 text-base leading-relaxed text-brand-100">
@@ -372,7 +372,7 @@ export default function Home() {
               ))}
             </ul>
           </div>
-          <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-[var(--shadow-card)]">
+          <div className="bg-white p-6 md:p-8">
             <h3 className="font-display text-xl font-bold text-gray-900">Vul uw adres in</h3>
             <p className="mt-1 text-sm text-gray-600">We geven direct een eerste indicatie op basis van uw woning.</p>
             <form className="mt-5 space-y-3">
