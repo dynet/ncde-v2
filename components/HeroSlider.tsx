@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { ArrowRight } from "lucide-react";
 
+const SLIDE_INTERVAL_MS = 3000;
+
 const slides: { src: string; alt: string }[] = [
   {
     src: "/homepagina 2/Definitie Hero 2.png",
@@ -33,7 +35,7 @@ export default function HeroSlider() {
       if (timerRef.current) clearInterval(timerRef.current);
       return;
     }
-    timerRef.current = setInterval(next, 6000);
+    timerRef.current = setInterval(next, SLIDE_INTERVAL_MS);
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
@@ -85,9 +87,9 @@ export default function HeroSlider() {
           aria-hidden="true"
           className="absolute bottom-0 left-0 z-30 h-[3px] bg-brand-600"
           style={{
-            transition: "width 6000ms linear",
+            transition: `width ${SLIDE_INTERVAL_MS}ms linear`,
             width: "0%",
-            animation: "heroProgress 6000ms linear forwards",
+            animation: `heroProgress ${SLIDE_INTERVAL_MS}ms linear forwards`,
           }}
         />
       )}
