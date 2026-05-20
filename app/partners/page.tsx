@@ -158,13 +158,13 @@ export default function Partners() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* Links: visual */}
-            <div className="relative flex justify-center">
+            <div className="flex flex-col items-center gap-8">
               <div className="relative w-64 h-64 rounded-full bg-white shadow-[var(--shadow-card)] flex items-center justify-center">
                 <div className="absolute inset-0 rounded-full border-2 border-brand-200 animate-pulse"></div>
                 <div className="absolute inset-4 rounded-full border-2 border-brand-300/60"></div>
                 <Award size={120} className="text-brand-600" strokeWidth={1.2} />
               </div>
-              <div className="absolute -bottom-4 grid grid-cols-3 gap-2 w-full max-w-xs">
+              <div className="grid grid-cols-3 gap-3 w-full max-w-sm">
                 <div className="rounded-xl bg-white p-3 text-center shadow-[var(--shadow-soft)]">
                   <Shield size={20} className="mx-auto text-brand-600" />
                   <p className="mt-1 text-[10px] font-bold uppercase text-gray-700">Keurmerk</p>
