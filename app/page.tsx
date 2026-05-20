@@ -34,31 +34,31 @@ export default function Home() {
       {/* ===== HEADER ===== */}
       <header className="sticky top-0 z-50 bg-white/95 shadow-[var(--shadow-soft)] backdrop-blur-md">
         <div className="cx flex h-24 items-center justify-between">
-          <a href="#" aria-label="NCDE — Nationaal Collectief Duurzame Energie home" className="block h-16 w-[200px] overflow-hidden shrink-0">
+          <Link href="/" aria-label="NCDE — Nationaal Collectief Duurzame Energie home" className="block h-16 w-[200px] overflow-hidden shrink-0">
             <img
               src="/this one.svg"
               alt="NCDE — Nationaal Collectief Duurzame Energie"
               className="h-[5.6rem] w-auto max-w-none object-cover object-top"
             />
-          </a>
+          </Link>
           <nav className="hidden items-center gap-6 lg:flex">
-            <a href="#" className="relative text-sm font-semibold text-brand-600">
+            <Link href="/" className="relative text-sm font-semibold text-brand-600">
               Home
               <span className="absolute -bottom-[29px] left-0 right-0 h-[3px] rounded-full bg-brand-600"></span>
-            </a>
-            <a href="/over-ons" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Over ons</a>
-            <a href="/subsidies-financiering" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Subsidies & Financiering</a>
-            <a href="/partners" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Partners</a>
-            <a href="/nieuws" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Nieuws</a>
-            <a href="#" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Contact</a>
+            </Link>
+            <Link href="/over-ons" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Over ons</Link>
+            <Link href="/subsidies-financiering" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Subsidies & Financiering</Link>
+            <Link href="/partners" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Partners</Link>
+            <Link href="/nieuws" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Nieuws</Link>
+            <Link href="/" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Contact</Link>
           </nav>
-          <a
+          <Link
             href="#woningcheck"
             className="hidden lg:inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] transition-all"
           >
             <HomeIcon size={17} />
             Start woningcheck
-          </a>
+          </Link>
           <button className="lg:hidden rounded-md p-2 text-brand-700" aria-label="Menu">
             <Menu size={26} />
           </button>
