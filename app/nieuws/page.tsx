@@ -5,9 +5,6 @@ import {
   ArrowRight,
   Home as HomeIcon,
   Menu,
-  Newspaper,
-  Sparkles,
-  Lightbulb,
   Calendar,
   Bell,
   FileText,
@@ -40,9 +37,9 @@ const articles = [
 const categories = ["Alles", "Energielabel", "Saldering", "Warmtenet", "Subsidies", "Noodpakket"];
 
 const heroPills = [
-  { Icon: Newspaper, t: "Actueel Nieuws", d: "Uit de sector en van NCDE" },
-  { Icon: Sparkles, t: "Inspirerende Verhalen", d: "Projecten en ervaringen" },
-  { Icon: Lightbulb, t: "Praktische Tips", d: "Slimmer en duurzamer thuis" },
+  { img: "/nieuws/hero-actueel.png", t: "Actueel Nieuws", d: "Uit de sector en van NCDE" },
+  { img: "/nieuws/inspirerende-verhalen.png", t: "Inspirerende Verhalen", d: "Projecten en ervaringen" },
+  { img: "/nieuws/tips.jpg", t: "Praktische Tips", d: "Slimmer en duurzamer thuis" },
 ];
 
 export default function Nieuws() {
@@ -87,12 +84,12 @@ export default function Nieuws() {
               Blijf op de hoogte van het laatste nieuws, ontwikkelingen, projecten en tips over duurzaam wonen en de energietransitie in Nederland.
             </p>
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl">
-              {heroPills.map(({ Icon, t, d }) => (
-                <div key={t} className="rounded-xl bg-white p-4 border border-brand-100 flex items-start gap-3 hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all">
-                  <div className="grid h-10 w-10 place-items-center rounded-lg bg-brand-50 text-brand-600 shrink-0">
-                    <Icon size={20} />
+              {heroPills.map(({ img, t, d }) => (
+                <div key={t} className="rounded-xl bg-white border border-brand-100 overflow-hidden hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all">
+                  <div className="aspect-[16/9] overflow-hidden">
+                    <img src={img} alt={t} className="h-full w-full object-cover" />
                   </div>
-                  <div>
+                  <div className="p-3">
                     <p className="font-display text-sm font-bold text-gray-900">{t}</p>
                     <p className="text-xs text-gray-700">{d}</p>
                   </div>
