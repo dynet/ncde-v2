@@ -46,7 +46,7 @@ export default function Home() {
             </a>
             <a href="/over-ons" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Over ons</a>
             <a href="/subsidies-financiering" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Subsidies & Financiering</a>
-            <a href="#" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Partners</a>
+            <a href="/partners" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Partners</a>
             <a href="#" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Nieuws</a>
             <a href="#" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Contact</a>
           </nav>
