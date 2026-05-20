@@ -41,7 +41,7 @@ const subsidies: Subsidy[] = [
     title: "ISDE isolatie",
     text: "Voor dak-, vloer-, bodem-, gevel-, spouwmuur- en glasisolatie. Nieuw vanaf 2026: ook subsidie voor ventilatie (€ 400), mits gecombineerd met isolatie. Voldoe aan minimale m² en Rd-waarden.",
     voorwaarden: ["Bestaande woning", "Uitvoering door bedrijf", "Meldcode en factuur nodig"],
-    img: "/Homepagina/isolatie.png",
+    img: "/subsidies-financiering/isde-isolatie.png",
     alt: "Isolatiewerkzaamheden aan woning",
   },
   {
@@ -49,7 +49,7 @@ const subsidies: Subsidy[] = [
     title: "ISDE warmtepomp",
     text: "Subsidie voor een nieuwe (hybride) warmtepomp voor ruimteverwarming of tapwaterverwarming in een bestaande woning. Let op: split lucht-waterwarmtepompen met GWP > 750 en vulgewicht < 3 kg komen vanaf 2026 niet meer in aanmerking.",
     voorwaarden: ["Eerst installeren", "Binnen 24 maanden aanvragen", "Meldcode verplicht"],
-    img: "/Homepagina/warmtepomp.png",
+    img: "/subsidies-financiering/isde-warmtepomp.png",
     alt: "Installatie van duurzame techniek",
   },
   {
@@ -57,15 +57,15 @@ const subsidies: Subsidy[] = [
     title: "ISDE zonneboiler",
     text: "Voor duurzame warmwateropwekking met een zonneboiler (collectoren + boilervat + circulatiepomp). Woning moet bouwjaar vóór 1 januari 2019 hebben. Minimale subsidie: € 300.",
     voorwaarden: ["Nieuwe installatie", "Bestaande woning", "Bewijs van aanschaf bewaren"],
-    img: "/Homepagina/zonnepanelen.png",
-    alt: "Zonnepanelen en zonne-energie op dak",
+    img: "/subsidies-financiering/isde-zonneboiler.png",
+    alt: "Zonneboiler op dak",
   },
   {
     doelgroep: "VvE's",
     title: "SVVE",
     text: "Voor isolatie, warmtepompen, energieadvies, DMJOP en oplaadpunten bij appartementencomplexen. Looptijd verlengd tot 2030. Vanaf 2026: geen subsidieplafond meer (eerder max. € 2,5 mln per VvE). Tot 75% van advieskosten vergoed.",
     voorwaarden: ["Besluitvorming VvE", "Gebouwgebonden aanvraag", "Offertes en rapporten nodig"],
-    img: "/Homepagina/Meer woningwaarde.png",
+    img: "/subsidies-financiering/svve.png",
     alt: "Appartementengebouw voor VvE verduurzaming",
   },
   {
@@ -73,7 +73,7 @@ const subsidies: Subsidy[] = [
     title: "Gemeentelijke subsidie",
     text: "Gemeenten bieden soms extra subsidie voor isolatie, ventilatie, energieadvies of collectieve wijkacties.",
     voorwaarden: ["Verschilt per gemeente", "Vaak inkomen- of labelafhankelijk", "Budget kan opraken"],
-    img: "/Homepagina/subsidie.png",
+    img: "/subsidies-financiering/gemeentelijk.png",
     alt: "Gemeente en duurzame wijk",
   },
   {
@@ -81,8 +81,8 @@ const subsidies: Subsidy[] = [
     title: "Warmtenet & elektrisch koken",
     text: "ISDE geldt ook voor aansluiting op een warmtenet en een elektrische kookvoorziening bij overstap van gas. Aardgasmeter hoeft vanaf 2026 pas later te worden verwijderd: bevestiging netbeheerder volstaat bij aanvraag.",
     voorwaarden: ["Specifieke situatie", "Controleer voorwaarden", "Documenten verplicht"],
-    img: "/Homepagina/saldering verandert.png",
-    alt: "Duurzame stadsverwarming en warmtenet",
+    img: "/subsidies-financiering/warmtenet-koken.png",
+    alt: "Warmtenet en elektrisch koken",
   },
 ];
 
@@ -211,7 +211,21 @@ export default function SubsidiesFinanciering() {
 
       {/* ===== HERO ===== */}
       <section className="relative isolate min-h-[480px] flex items-center overflow-hidden bg-brand-50">
-        <div className="cx relative z-10 py-20 w-full">
+        <img
+          src="/subsidies-financiering/woningeigenaar.png"
+          alt=""
+          aria-hidden
+          className="absolute inset-0 z-0 h-full w-full object-cover object-center"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 z-10"
+          style={{
+            background:
+              "linear-gradient(100deg, rgba(241,250,245,1) 0%, rgba(241,250,245,.97) 30%, rgba(241,250,245,.82) 50%, rgba(241,250,245,.3) 68%, transparent 82%)",
+          }}
+        ></div>
+        <div className="cx relative z-20 py-20 w-full">
           <div className="max-w-[820px]">
             <p className="text-xs font-extrabold uppercase tracking-[.2em] text-brand-600 mb-5">
               Subsidies, leningen en duidelijke keuzes
