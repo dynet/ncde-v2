@@ -8,10 +8,6 @@ import {
   Menu,
   Users,
   Calculator,
-  Wrench,
-  Mountain,
-  Telescope,
-  Building2,
   Scale,
   Search,
   Shield,
@@ -121,16 +117,18 @@ export default function OverOns() {
             </div>
             <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-3">
               {[
-                { Icon: Users, t: "Onafhankelijk", d: "Advies dat u kunt vertrouwen" },
-                { Icon: Calculator, t: "Data & Inzicht", d: "Slimme analyses voor de beste keuze" },
-                { Icon: Wrench, t: "Betrouwbare uitvoerders", d: "Geselecteerd op kwaliteit" },
-              ].map(({ Icon, t, d }) => (
-                <div key={t} className="rounded-xl bg-white p-5 border border-brand-100 text-center hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all">
-                  <div className="mx-auto mb-2 grid h-10 w-10 place-items-center rounded-full bg-brand-50 text-brand-600">
-                    <Icon size={20} />
+                { img: "/over-ons/onafhankelijk.png", t: "Onafhankelijk", d: "Advies dat u kunt vertrouwen" },
+                { img: "/over-ons/data-inzicht.png", t: "Data & Inzicht", d: "Slimme analyses voor de beste keuze" },
+                { img: "/over-ons/betrouwbare-partners.png", t: "Betrouwbare uitvoerders", d: "Geselecteerd op kwaliteit" },
+              ].map((c) => (
+                <div key={c.t} className="rounded-xl bg-white border border-brand-100 overflow-hidden hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img src={c.img} alt={c.t} className="h-full w-full object-cover" />
                   </div>
-                  <p className="font-display text-sm font-bold text-gray-900">{t}</p>
-                  <p className="mt-1 text-xs text-gray-700 leading-snug">{d}</p>
+                  <div className="p-4 text-center">
+                    <p className="font-display text-sm font-bold text-gray-900">{c.t}</p>
+                    <p className="mt-1 text-xs text-gray-700 leading-snug">{c.d}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -156,15 +154,20 @@ export default function OverOns() {
                 </li>
               ))}
             </ol>
+            <div className="mt-10 rounded-2xl overflow-hidden border border-gray-200">
+              <img src="/over-ons/stap-voor-stap.png" alt="Stap voor stap naar succes" className="w-full h-auto" />
+            </div>
           </div>
 
           {/* Rechts: missie/visie + stichting */}
           <div className="lg:col-span-7">
             <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Onze missie &amp; visie</p>
             <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-              <article className="rounded-2xl p-6 bg-blue-50 flex gap-4 items-start hover:-translate-y-1 transition-all">
-                <Mountain size={36} className="text-brand-700 shrink-0 mt-1" />
-                <div>
+              <article className="rounded-2xl overflow-hidden bg-blue-50 hover:-translate-y-1 transition-all">
+                <div className="aspect-[16/9] overflow-hidden">
+                  <img src="/over-ons/onze-missie.png" alt="Onze missie" className="h-full w-full object-cover" />
+                </div>
+                <div className="p-6">
                   <p className="text-xs font-bold uppercase tracking-wider text-brand-600">Onze missie</p>
                   <h3 className="mt-1 font-display text-base font-bold text-gray-900">Slimme en duurzame keuzes voor iedereen</h3>
                   <p className="mt-2 text-sm leading-relaxed text-gray-700">
@@ -172,9 +175,11 @@ export default function OverOns() {
                   </p>
                 </div>
               </article>
-              <article className="rounded-2xl p-6 bg-yellow-50 flex gap-4 items-start hover:-translate-y-1 transition-all">
-                <Telescope size={36} className="text-amber-700 shrink-0 mt-1" />
-                <div>
+              <article className="rounded-2xl overflow-hidden bg-yellow-50 hover:-translate-y-1 transition-all">
+                <div className="aspect-[16/9] overflow-hidden">
+                  <img src="/over-ons/onze-visie.png" alt="Onze visie" className="h-full w-full object-cover" />
+                </div>
+                <div className="p-6">
                   <p className="text-xs font-bold uppercase tracking-wider text-brand-600">Onze visie</p>
                   <h3 className="mt-1 font-display text-base font-bold text-gray-900">Iedere woning duurzaam en betaalbaar</h3>
                   <p className="mt-2 text-sm leading-relaxed text-gray-700">
@@ -184,14 +189,18 @@ export default function OverOns() {
               </article>
             </div>
 
-            <article className="mt-4 rounded-2xl p-6 bg-brand-50 flex gap-4 items-start">
-              <Building2 size={36} className="text-brand-700 shrink-0 mt-1" />
-              <div>
-                <p className="text-xs font-bold uppercase tracking-wider text-brand-600">Wat voor soort stichting is NCDE?</p>
-                <h3 className="mt-1 font-display text-base font-bold text-gray-900">Stichting zonder winstoogmerk</h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-700">
-                  NCDE is een onafhankelijke stichting die zich inzet voor het algemeen belang. Wij investeren onze middelen in betrouwbare data, onafhankelijk advies en het versnellen van de energietransitie.
-                </p>
+            <article className="mt-4 rounded-2xl overflow-hidden bg-brand-50">
+              <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-0">
+                <div className="aspect-[16/9] md:aspect-auto overflow-hidden">
+                  <img src="/over-ons/stichting.png" alt="Stichting zonder winstoogmerk" className="h-full w-full object-cover" />
+                </div>
+                <div className="p-6">
+                  <p className="text-xs font-bold uppercase tracking-wider text-brand-600">Wat voor soort stichting is NCDE?</p>
+                  <h3 className="mt-1 font-display text-base font-bold text-gray-900">Stichting zonder winstoogmerk</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-gray-700">
+                    NCDE is een onafhankelijke stichting die zich inzet voor het algemeen belang. Wij investeren onze middelen in betrouwbare data, onafhankelijk advies en het versnellen van de energietransitie.
+                  </p>
+                </div>
               </div>
             </article>
 
