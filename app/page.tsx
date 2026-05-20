@@ -44,7 +44,7 @@ export default function Home() {
               Home
               <span className="absolute -bottom-[29px] left-0 right-0 h-[3px] rounded-full bg-brand-600"></span>
             </a>
-            <a href="#" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Over ons</a>
+            <a href="/over-ons" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Over ons</a>
             <a href="/subsidies-financiering" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Subsidies & Financiering</a>
             <a href="#" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Partners</a>
             <a href="#" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Nieuws</a>
