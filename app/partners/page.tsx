@@ -159,10 +159,9 @@ export default function Partners() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* Links: visual */}
             <div className="flex flex-col items-center gap-8">
-              <div className="relative w-64 h-64 rounded-full bg-white shadow-[var(--shadow-card)] flex items-center justify-center">
-                <div className="absolute inset-0 rounded-full border-2 border-brand-200 animate-pulse"></div>
-                <div className="absolute inset-4 rounded-full border-2 border-brand-300/60"></div>
-                <Award size={120} className="text-brand-600" strokeWidth={1.2} />
+              <div className="relative w-72 h-72 rounded-full overflow-hidden bg-white shadow-[var(--shadow-card)]">
+                <div className="absolute inset-0 rounded-full border-2 border-brand-200 animate-pulse z-10 pointer-events-none"></div>
+                <img src="/partners/ncde-keurmerk.png" alt="NCDE Keurmerk" className="h-full w-full object-cover" />
               </div>
               <div className="grid grid-cols-3 gap-3 w-full max-w-sm">
                 <div className="rounded-xl bg-white p-3 text-center shadow-[var(--shadow-soft)]">
