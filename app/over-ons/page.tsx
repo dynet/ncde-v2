@@ -1,27 +1,72 @@
-/* eslint-disable @next/next/no-img-element */
-import { ArrowRight, Home as HomeIcon, Menu } from "lucide-react";
+/* Over ons pagina - vanuit public/over-ons.html (Kilo Code)
+   Aangepast aan homepage-stack (League Spartan + brand-* + bestaande tokens) */
+
 import Link from "next/link";
-import { 
-  KnightShieldIcon, 
-  EyeIcon, 
-  GlobeIcon,
-  BalanceScaleIcon,
-  Leaf01Icon,
-  IdeaIcon,
-  AddTeamIcon
-} from "hugeicons-react";
+import {
+  ArrowRight,
+  Home as HomeIcon,
+  Menu,
+  Users,
+  Calculator,
+  Wrench,
+  Mountain,
+  Telescope,
+  Building2,
+  Scale,
+  Search,
+  Shield,
+  Lightbulb,
+  Leaf,
+  Compass,
+  Heart,
+} from "lucide-react";
 
 const LinkedinIcon = ({ size = 16 }: { size?: number }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
 );
-
 const YoutubeIcon = ({ size = 16 }: { size?: number }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="currentColor"><path d="M23 9.71a8.5 8.5 0 00-.91-4.13 2.92 2.92 0 00-1.72-1A78.36 78.36 0 0012 4.27a78.45 78.45 0 00-8.34.3 2.87 2.87 0 00-1.46.74c-.9.83-1 2.25-1.1 3.45a48.29 48.29 0 000 5.58 9.55 9.55 0 00.3 2 3.14 3.14 0 00.71 1.36 2.86 2.86 0 001.49.78 45.18 45.18 0 006.5.33c3.5.05 6.57 0 10.2-.28a2.88 2.88 0 001.53-.78 2.49 2.49 0 00.61-1 10.58 10.58 0 00.52-3.4c.04-.56.04-3.94.04-4.64zM9.74 14.85V8.66l5.92 3.11c-1.66.92-3.85 1.96-5.92 3.08z"/></svg>
 );
-
 const InstagramIcon = ({ size = 16 }: { size?: number }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
 );
+
+/* eslint-disable @next/next/no-img-element */
+
+const timeline = [
+  { year: "2024", title: "Het idee", text: "Het idee voor NCDE ontstaat vanuit de behoefte aan duidelijke, onafhankelijke en praktische informatie over het verduurzamen van woningen." },
+  { year: "2025", title: "Oprichting NCDE", text: "De stichting Nationaal Collectief Duurzame Energie wordt opgericht met als doel verduurzaming toegankelijk, transparant en datagedreven te maken." },
+  { year: "2026", title: "Website-lancering", text: "De website van NCDE wordt gelanceerd met informatie over woningverduurzaming, subsidies, advies op maat en betrouwbare uitvoerders." },
+];
+
+const waarden = [
+  { Icon: Scale, t: "Onafhankelijk", d: "Advies zonder commerciële belangen" },
+  { Icon: Search, t: "Transparant", d: "Duidelijke informatie en eerlijke uitleg" },
+  { Icon: Shield, t: "Betrouwbaar", d: "U kunt op ons rekenen" },
+  { Icon: Users, t: "Toegankelijk", d: "Voor iedereen begrijpelijk en beschikbaar" },
+  { Icon: Lightbulb, t: "Innovatief", d: "Slimme data en duurzame oplossingen" },
+  { Icon: Leaf, t: "Duurzaam", d: "Bijdragen aan een betere toekomst" },
+];
+
+const steps = [
+  { n: 1, t: "Inzicht in mogelijkheden", d: "Wij maken op basis van uw woningdata duidelijk welke verduurzamingsopties passen bij uw situatie." },
+  { n: 2, t: "Subsidies & financiering", d: "U krijgt een helder overzicht van regelingen, subsidies en betaalmogelijkheden." },
+  { n: 3, t: "Persoonlijk advies", d: "Wij vertalen data naar een concreet advies met prioriteiten en terugverdientijden." },
+  { n: 4, t: "Betrouwbare uitvoering", d: "Wij koppelen bewoners aan geselecteerde partners voor vakkundige uitvoering." },
+];
+
+const dataCards = [
+  { t: "Woningdata", d: "Informatie over woningtype, bouwjaar en energielabel helpt om de eerste inschatting concreter te maken." },
+  { t: "Kosten en besparing", d: "De rekentools geven inzicht in investering, subsidie, jaarlijkse besparing en mogelijke maandlasten." },
+  { t: "Betere begeleiding", d: "Bewoners krijgen praktische vervolgstappen richting persoonlijk advies, offerte en professionele uitvoering." },
+];
+
+const bestuur = [
+  { naam: "Jeroen van der Meer", rol: "Voorzitter", omschr: "Expert in energietransitie en organisatieontwikkeling." },
+  { naam: "Sophie de Groot", rol: "Secretaris", omschr: "Specialist in duurzaamheid en beleid." },
+  { naam: "Mark van der Heijden", rol: "Penningmeester", omschr: "Financieel strateeg en risicomanagement." },
+  { naam: "Lisa Bakker", rol: "Bestuurslid", omschr: "Data & Innovatie — gedreven voorvechter van digitale oplossingen." },
+];
 
 export default function OverOns() {
   return (
@@ -29,22 +74,23 @@ export default function OverOns() {
       {/* ===== HEADER ===== */}
       <header className="sticky top-0 z-50 bg-white/95 shadow-[var(--shadow-soft)] backdrop-blur-md">
         <div className="cx flex h-24 items-center justify-between">
-          <Link href="/" aria-label="NCDE — Nationaal Collectief Duurzame Energie home" className="block h-16 w-[200px] overflow-hidden shrink-0">
+          <Link href="/" aria-label="NCDE home" className="block h-16 w-[200px] overflow-hidden shrink-0">
             <img src="/this one.svg" alt="NCDE" className="h-[5.6rem] w-auto max-w-none object-cover object-top" />
           </Link>
           <nav className="hidden items-center gap-6 lg:flex">
             <Link href="/" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Home</Link>
-            <a href="/over-ons" className="relative text-sm font-semibold text-brand-600">
+            <Link href="/over-ons" className="relative text-sm font-semibold text-brand-600">
               Over ons
               <span className="absolute -bottom-[29px] left-0 right-0 h-[3px] rounded-full bg-brand-600"></span>
-            </a>
-            <a href="#" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Subsidies & Financiering</a>
-            <a href="#" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Partners</a>
-            <a href="#" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Nieuws</a>
-            <a href="#" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Contact</a>
+            </Link>
+            <Link href="/subsidies-financiering" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Subsidies & Financiering</Link>
+            <Link href="/" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Partners</Link>
+            <Link href="/" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Nieuws</Link>
+            <Link href="/" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Contact</Link>
           </nav>
-          <Link href="/" className="hidden lg:inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] transition-all">
-            <HomeIcon size={17} /> Start woningcheck
+          <Link href="/#woningcheck" className="hidden lg:inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] transition-all">
+            <HomeIcon size={17} />
+            Start woningcheck
           </Link>
           <button className="lg:hidden rounded-md p-2 text-brand-700" aria-label="Menu">
             <Menu size={26} />
@@ -53,101 +99,114 @@ export default function OverOns() {
       </header>
 
       {/* ===== HERO ===== */}
-      <section className="relative isolate min-h-[580px] flex items-center overflow-hidden">
-        <img src="/hero-home.jpg" alt="" aria-hidden className="absolute inset-0 z-0 h-full w-full object-cover object-center" />
-        <div aria-hidden className="absolute inset-0 z-10" style={{ background: "linear-gradient(100deg, rgba(241,250,245,1) 0%, rgba(241,250,245,.97) 30%, rgba(241,250,245,.82) 50%, rgba(241,250,245,.3) 68%, transparent 82%)" }}></div>
-        <div className="cx relative z-20 py-20 w-full">
-          <div className="max-w-[720px]">
-            <p className="text-xs font-extrabold uppercase tracking-[.2em] text-brand-600 mb-5">Over NCDE</p>
-            <h1 className="font-display text-3xl font-black uppercase leading-[1.1] text-brand-800 md:text-4xl lg:text-[2.75rem]">
-              Over ons
-            </h1>
-            <p className="mt-5 text-base leading-relaxed text-gray-800 md:text-lg max-w-md">
-              NCDE is het onafhankelijke kennis- en adviescentrum voor huiseigenaren en bewoners die hun woning willen verduurzamen. Wij maken verduurzamen eenvoudig, duidelijk en toegankelijk.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/" className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-4 text-sm font-bold text-white hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] transition-all">
-                Start woningcheck <ArrowRight size={18} />
-              </Link>
-              <a href="#hoe-werken" className="inline-flex items-center gap-2 rounded-lg border-2 border-brand-600 bg-white/80 px-6 py-4 text-sm font-bold text-brand-600 hover:bg-brand-50 transition-all">
-                Bekijk hoe wij werken
-              </a>
+      <section className="relative isolate min-h-[480px] flex items-center overflow-hidden bg-brand-50">
+        <div className="cx relative z-10 py-16 md:py-20 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-7">
+              <p className="text-xs font-extrabold uppercase tracking-[.2em] text-brand-600 mb-5">Over NCDE</p>
+              <h1 className="font-display text-3xl font-black uppercase leading-[1.1] text-brand-800 md:text-4xl lg:text-[2.75rem]">
+                Over ons
+              </h1>
+              <p className="mt-5 text-base leading-relaxed text-gray-800 md:text-lg max-w-2xl">
+                NCDE is hét onafhankelijke kennis- en adviescentrum voor huiseigenaren en bewoners die hun woning willen verduurzamen. Wij maken verduurzamen eenvoudig, duidelijk en toegankelijk.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link href="/#woningcheck" className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-4 text-sm font-bold text-white hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] transition-all">
+                  Start woningcheck <ArrowRight size={16} />
+                </Link>
+                <a href="#hoe-werken" className="inline-flex items-center gap-2 rounded-lg border-2 border-brand-600 bg-white/80 px-6 py-4 text-sm font-bold text-brand-600 hover:bg-brand-50 transition-all">
+                  Bekijk hoe wij werken
+                </a>
+              </div>
+            </div>
+            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-3">
+              {[
+                { Icon: Users, t: "Onafhankelijk", d: "Advies dat u kunt vertrouwen" },
+                { Icon: Calculator, t: "Data & Inzicht", d: "Slimme analyses voor de beste keuze" },
+                { Icon: Wrench, t: "Betrouwbare uitvoerders", d: "Geselecteerd op kwaliteit" },
+              ].map(({ Icon, t, d }) => (
+                <div key={t} className="rounded-xl bg-white p-5 border border-brand-100 text-center hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all">
+                  <div className="mx-auto mb-2 grid h-10 w-10 place-items-center rounded-full bg-brand-50 text-brand-600">
+                    <Icon size={20} />
+                  </div>
+                  <p className="font-display text-sm font-bold text-gray-900">{t}</p>
+                  <p className="mt-1 text-xs text-gray-700 leading-snug">{d}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* ===== ABOUT: TIJDLIJN + MISSIE/VISIE + WAARDEN ===== */}
-      <section className="bg-brand-50 py-20">
-        <div className="cx grid grid-cols-1 gap-12 lg:grid-cols-12">
+      {/* ===== TIJDLIJN + MISSIE/VISIE + WAARDEN ===== */}
+      <section className="py-16 md:py-20">
+        <div className="cx grid grid-cols-1 lg:grid-cols-12 gap-12">
+
           {/* Links: tijdlijn */}
           <div className="lg:col-span-5">
             <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Onze ontstaansgeschiedenis</p>
-            <h2 className="mt-2 font-display text-3xl font-extrabold text-brand-800">Van idee tot impact</h2>
-            <div className="mt-8 relative">
-              <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-brand-600"></div>
-              <div className="space-y-8">
-                <div className="relative pl-10">
-                  <span className="absolute -left-[37px] top-1 w-[18px] h-[18px] bg-white border-[5px] border-brand-600 rounded-full"></span>
-                  <span className="inline-block bg-brand-600 text-white rounded-md px-3 py-1 text-xs font-extrabold mb-2">2024</span>
-                  <b className="block text-base font-bold text-gray-900 mb-1">Het idee</b>
-                  <p className="text-sm text-gray-700">Het idee voor NCDE ontstaat vanuit de behoefte aan duidelijke, onafhankelijke en praktische informatie over het verduurzamen van woningen.</p>
-                </div>
-                <div className="relative pl-10">
-                  <span className="absolute -left-[37px] top-1 w-[18px] h-[18px] bg-white border-[5px] border-brand-600 rounded-full"></span>
-                  <span className="inline-block bg-brand-600 text-white rounded-md px-3 py-1 text-xs font-extrabold mb-2">2025</span>
-                  <b className="block text-base font-bold text-gray-900 mb-1">Oprichting NCDE</b>
-                  <p className="text-sm text-gray-700">De stichting Nationaal Collectief Duurzame Energie wordt opgericht met als doel verduurzaming toegankelijk, transparant en datagedreven te maken.</p>
-                </div>
-                <div className="relative pl-10">
-                  <span className="absolute -left-[37px] top-1 w-[18px] h-[18px] bg-white border-[5px] border-brand-600 rounded-full"></span>
-                  <span className="inline-block bg-brand-600 text-white rounded-md px-3 py-1 text-xs font-extrabold mb-2">2026</span>
-                  <b className="block text-base font-bold text-gray-900 mb-1">Website-lancering</b>
-                  <p className="text-sm text-gray-700">De website van NCDE wordt gelanceerd met informatie over woningverduurzaming, subsidies, advies op maat en betrouwbare uitvoerders.</p>
-                </div>
-              </div>
-            </div>
+            <h2 className="mt-2 font-display text-3xl font-extrabold uppercase text-brand-800 md:text-4xl">Van idee tot impact</h2>
+            <ol className="relative mt-10 border-l-[3px] border-brand-600 pl-8 space-y-8">
+              {timeline.map((t) => (
+                <li key={t.year} className="relative">
+                  <span className="absolute -left-[44px] top-1 grid h-[18px] w-[18px] place-items-center rounded-full bg-white border-[5px] border-brand-600"></span>
+                  <span className="inline-block rounded-lg bg-brand-600 px-3 py-1 text-xs font-extrabold text-white">{t.year}</span>
+                  <p className="mt-2 font-bold text-gray-900">{t.title}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-gray-700">{t.text}</p>
+                </li>
+              ))}
+            </ol>
           </div>
 
           {/* Rechts: missie/visie + stichting */}
-          <div className="lg:col-span-7 space-y-6">
-            <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Onze missie & visie</p>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-              <div className="rounded-2xl bg-sky-50 border border-sky-100 p-6 transition-all hover:-translate-y-1">
-                <BalanceScaleIcon size={40} className="text-brand-600 mb-3" />
-                <p className="text-xs font-bold uppercase text-brand-600 mb-1">Onze missie</p>
-                <h3 className="font-display text-lg font-extrabold text-brand-800 mb-2">Slimme en duurzame keuzes voor iedereen</h3>
-                <p className="text-sm text-gray-700">NCDE helpt huiseigenaren en bewoners bij het maken van slimme en duurzame keuzes door onafhankelijk, datagedreven en praktisch advies.</p>
-              </div>
-              <div className="rounded-2xl bg-amber-50 border border-amber-100 p-6 transition-all hover:-translate-y-1">
-                <GlobeIcon size={40} className="text-amber-700 mb-3" />
-                <p className="text-xs font-bold uppercase text-amber-700 mb-1">Onze visie</p>
-                <h3 className="font-display text-lg font-extrabold text-brand-800 mb-2">Iedere woning duurzaam en betaalbaar</h3>
-                <p className="text-sm text-gray-700">Wij streven naar een toekomst waarin iedere woning in Nederland op een toegankelijke, betaalbare en efficiënte manier wordt verduurzaamd.</p>
-              </div>
+          <div className="lg:col-span-7">
+            <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Onze missie &amp; visie</p>
+            <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+              <article className="rounded-2xl p-6 bg-blue-50 flex gap-4 items-start hover:-translate-y-1 transition-all">
+                <Mountain size={36} className="text-brand-700 shrink-0 mt-1" />
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wider text-brand-600">Onze missie</p>
+                  <h3 className="mt-1 font-display text-base font-bold text-gray-900">Slimme en duurzame keuzes voor iedereen</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-gray-700">
+                    NCDE helpt huiseigenaren en bewoners bij het maken van slimme en duurzame keuzes door onafhankelijk, datagedreven en praktisch advies.
+                  </p>
+                </div>
+              </article>
+              <article className="rounded-2xl p-6 bg-yellow-50 flex gap-4 items-start hover:-translate-y-1 transition-all">
+                <Telescope size={36} className="text-amber-700 shrink-0 mt-1" />
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wider text-brand-600">Onze visie</p>
+                  <h3 className="mt-1 font-display text-base font-bold text-gray-900">Iedere woning duurzaam en betaalbaar</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-gray-700">
+                    Wij streven naar een toekomst waarin iedere woning in Nederland op een toegankelijke, betaalbare en efficiënte manier wordt verduurzaamd.
+                  </p>
+                </div>
+              </article>
             </div>
-            <div className="rounded-2xl bg-white border border-gray-200 p-6 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1">
-              <KnightShieldIcon size={40} className="text-brand-600 mb-3" />
-              <p className="text-xs font-bold uppercase text-brand-600 mb-1">Wat voor soort stichting is NCDE?</p>
-              <h3 className="font-display text-lg font-extrabold text-brand-800 mb-2">Stichting zonder winstoogmerk</h3>
-              <p className="text-sm text-gray-700">NCDE is een onafhankelijke stichting die zich inzet voor het algemeen belang. Wij investeren onze middelen in betrouwbare data, onafhankelijk advies en het versnellen van de energietransitie.</p>
-            </div>
-            <div className="mt-8">
+
+            <article className="mt-4 rounded-2xl p-6 bg-brand-50 flex gap-4 items-start">
+              <Building2 size={36} className="text-brand-700 shrink-0 mt-1" />
+              <div>
+                <p className="text-xs font-bold uppercase tracking-wider text-brand-600">Wat voor soort stichting is NCDE?</p>
+                <h3 className="mt-1 font-display text-base font-bold text-gray-900">Stichting zonder winstoogmerk</h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-700">
+                  NCDE is een onafhankelijke stichting die zich inzet voor het algemeen belang. Wij investeren onze middelen in betrouwbare data, onafhankelijk advies en het versnellen van de energietransitie.
+                </p>
+              </div>
+            </article>
+
+            {/* Kernwaarden */}
+            <div className="mt-10">
               <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Onze kernwaarden</p>
-              <h2 className="mt-2 font-display text-3xl font-extrabold text-brand-800">Wat ons drijft</h2>
-              <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-3">
-{[
-                   { icon: BalanceScaleIcon, title: "Onafhankelijk", text: "Advies zonder commerciële belangen" },
-                   { icon: EyeIcon, title: "Transparant", text: "Duidelijke informatie en eerlijke uitleg" },
-                   { icon: KnightShieldIcon, title: "Betrouwbaar", text: "U kunt op ons rekenen" },
-                   { icon: AddTeamIcon, title: "Toegankelijk", text: "Voor iedereen begrijpelijk en beschikbaar" },
-                   { icon: IdeaIcon, title: "Innovatief", text: "Slimme data en duurzame oplossingen" },
-                   { icon: Leaf01Icon, title: "Duurzaam", text: "Bijdragen aan een betere toekomst" },
-                 ].map((v) => (
-                   <div key={v.title} className="rounded-xl p-4 text-center bg-purple-50 transition-all hover:-translate-y-1">
-                     <v.icon size={32} className="text-brand-600 mb-2" />
-                     <b className="block text-sm font-extrabold text-gray-900 mb-1">{v.title}</b>
-                    <p className="text-xs text-gray-700">{v.text}</p>
+              <h2 className="mt-2 font-display text-2xl font-extrabold uppercase text-brand-800 md:text-3xl">Wat ons drijft</h2>
+              <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {waarden.map(({ Icon, t, d }) => (
+                  <div key={t} className="rounded-xl bg-white p-4 border border-gray-200 hover:border-brand-200 hover:-translate-y-1 transition-all">
+                    <div className="grid h-9 w-9 place-items-center rounded-full bg-brand-50 text-brand-600">
+                      <Icon size={18} />
+                    </div>
+                    <p className="mt-3 font-display text-sm font-bold text-gray-900">{t}</p>
+                    <p className="mt-1 text-xs leading-snug text-gray-700">{d}</p>
                   </div>
                 ))}
               </div>
@@ -157,68 +216,91 @@ export default function OverOns() {
       </section>
 
       {/* ===== HOE WIJ WERKEN ===== */}
-      <section id="hoe-werken" className="py-20">
-        <div className="cx">
-          <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600 text-center mb-3">Hoe wij werken</p>
-          <h2 className="font-display text-3xl font-extrabold text-brand-800 text-center mb-4">Van inzicht naar uitvoering</h2>
-          <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">NCDE begeleidt bewoners stap voor stap: van eerste inzicht tot koppeling met een betrouwbare uitvoerder.</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { num: "1", title: "Inzicht in mogelijkheden", text: "Wij maken op basis van uw woningdata duidelijk welke verduurzamingsopties passen bij uw situatie." },
-              { num: "2", title: "Subsidies & financiering", text: "U krijgt een helder overzicht van regelingen, subsidies en betaalmogelijkheden." },
-              { num: "3", title: "Persoonlijk advies", text: "Wij vertalen data naar een concreet advies met prioriteiten en terugverdientijden." },
-              { num: "4", title: "Betrouwbare uitvoering", text: "Wij koppelen bewoners aan geselecteerde partners voor vakkundige uitvoering." },
-            ].map((s) => (
-              <div key={s.num} className="rounded-2xl bg-white border border-gray-200 p-6 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-600 text-white font-extrabold text-xl mb-5">{s.num}</div>
-                <h3 className="font-display text-lg font-extrabold text-gray-900 mb-2">{s.title}</h3>
-                <p className="text-sm text-gray-600">{s.text}</p>
-              </div>
+      <section id="hoe-werken" className="bg-brand-50 py-16 md:py-20">
+        <div className="cx text-center">
+          <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Hoe wij werken</p>
+          <h2 className="mt-2 font-display text-3xl font-extrabold uppercase text-brand-800 md:text-4xl">Van inzicht naar uitvoering</h2>
+          <p className="mt-3 text-base leading-relaxed text-gray-700 max-w-2xl mx-auto">
+            NCDE begeleidt bewoners stap voor stap: van eerste inzicht tot koppeling met een betrouwbare uitvoerder.
+          </p>
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 text-left">
+            {steps.map((s) => (
+              <article key={s.n} className="rounded-2xl bg-white p-6 border border-gray-200 hover:border-brand-200 hover:shadow-[var(--shadow-card)] hover:-translate-y-1 transition-all">
+                <div className="grid h-10 w-10 place-items-center rounded-full bg-brand-600 text-white font-bold">{s.n}</div>
+                <h3 className="mt-4 font-display text-base font-bold text-gray-900">{s.t}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-700">{s.d}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ===== ORGANOGRAM ===== */}
-      <section className="bg-brand-50 py-20">
+      {/* ===== DATA & INNOVATIE ===== */}
+      <section className="py-16 md:py-20">
         <div className="cx">
-          <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600 mb-3">Onze organisatie</p>
-          <h2 className="font-display text-3xl font-extrabold text-brand-800 mb-4">Organogram</h2>
-          <p className="text-gray-600 max-w-2xl mb-12">Een heldere organisatiestructuur met focus op bestuur, advies, data, operations en kwaliteitsborging.</p>
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-            <div>
-              <div className="text-center">
-                <div className="inline-block bg-brand-800 text-white rounded-md px-6 py-3 font-extrabold mb-3">Raad van Toezicht</div>
-                <div className="h-6 w-[2px] bg-gray-400 mx-auto mb-2"></div>
-                <div className="inline-block bg-brand-600 text-white rounded-md px-6 py-3 font-extrabold mb-3">Bestuur</div>
-                <div className="h-6 w-[2px] bg-gray-400 mx-auto mb-2"></div>
-                <div className="h-6 max-w-md bg-gray-400 mx-auto mb-3"></div>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-                  {["Directeur", "Team Data & Advies", "Team Operations", "Team Kwaliteit"].map((t) => (
-                    <div key={t} className="rounded-md border border-gray-200 bg-white p-3 text-xs">
-                      <b className="block text-gray-900 mb-1">{t}</b>
-                      <small className="text-gray-500">
-                        {t === "Directeur" ? "Strategie & Partnerships" : t === "Team Data & Advies" ? "Analyse & Ontwikkeling" : t === "Team Operations" ? "Platform & Klant" : "Uitvoerders & Controle"}
-                      </small>
+          <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Data &amp; innovatie</p>
+          <h2 className="mt-2 font-display text-3xl font-extrabold uppercase text-brand-800 md:text-4xl">Slimme analyses voor betere keuzes</h2>
+          <p className="mt-3 text-base leading-relaxed text-gray-700 max-w-2xl">
+            NCDE maakt gebruik van openbare data en slimme analyses om bewoners snel inzicht te geven in de mogelijkheden voor hun woning.
+          </p>
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-5">
+            {dataCards.map((d) => (
+              <article key={d.t} className="rounded-2xl bg-white p-6 border border-gray-200 hover:border-brand-200 hover:shadow-[var(--shadow-card)] hover:-translate-y-1 transition-all">
+                <h3 className="font-display text-base font-bold text-gray-900">{d.t}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-700">{d.d}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== ORGANOGRAM / BESTUUR ===== */}
+      <section className="bg-brand-50 py-16 md:py-20">
+        <div className="cx">
+          <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Onze organisatie</p>
+          <h2 className="mt-2 font-display text-3xl font-extrabold uppercase text-brand-800 md:text-4xl">Organogram</h2>
+          <p className="mt-3 text-base leading-relaxed text-gray-700 max-w-2xl">
+            Een heldere organisatiestructuur met focus op bestuur, advies, data, operations en kwaliteitsborging.
+          </p>
+
+          <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div className="lg:col-span-7">
+              {/* Eenvoudige chart */}
+              <div className="rounded-2xl bg-white p-8 border border-gray-200">
+                <div className="flex flex-col items-center gap-3">
+                  <span className="rounded-lg bg-brand-800 px-5 py-2 text-sm font-bold text-white">Raad van Toezicht</span>
+                  <span className="h-6 w-[2px] bg-brand-200"></span>
+                  <span className="rounded-lg bg-brand-600 px-5 py-2 text-sm font-bold text-white">Bestuur</span>
+                  <span className="h-6 w-[2px] bg-brand-200"></span>
+                  <div className="w-full">
+                    <div className="h-[2px] w-full bg-brand-200"></div>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6">
+                      {[
+                        { b: "Directeur", s: "Strategie & Partnerships" },
+                        { b: "Team Data & Advies", s: "Analyse & Ontwikkeling" },
+                        { b: "Team Operations", s: "Platform & Klant" },
+                        { b: "Team Kwaliteit", s: "Uitvoerders & Controle" },
+                      ].map((br) => (
+                        <div key={br.b} className="rounded-lg bg-brand-50 p-3 text-center border border-brand-100">
+                          <p className="font-bold text-xs text-gray-900">{br.b}</p>
+                          <p className="text-[10px] text-gray-600 mt-1">{br.s}</p>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  </div>
                 </div>
               </div>
             </div>
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600 mb-4">Bestuursleden</p>
-              <div className="space-y-5">
-                {[
-                  { name: "Jeroen van der Meer", role: "Voorzitter", bio: "Expert in energietransitie en organisatieontwikkeling." },
-                  { name: "Sophie de Groot", role: "Secretaris", bio: "Specialist in duurzaamheid en beleid." },
-                  { name: "Mark van der Heijden", role: "Penningmeester", bio: "Financieel strateeg en risicomanagement." },
-                  { name: "Lisa Bakker", role: "Bestuurslid", bio: "Data & Innovatie — gedreven voorvechter van digitale oplossingen." },
-                ].map((m) => (
-                  <div key={m.name} className="border-b border-gray-200 pb-5 last:border-0 last:pb-0">
-                    <b className="block text-base font-extrabold text-gray-900">{m.name}</b>
-                    <span className="text-xs font-bold text-brand-600 block mb-1">{m.role}</span>
-                    <p className="text-sm text-gray-600">{m.bio}</p>
-                  </div>
+
+            <div className="lg:col-span-5">
+              <p className="text-xs font-bold uppercase tracking-wider text-brand-600 mb-4">Bestuursleden</p>
+              <div className="space-y-3">
+                {bestuur.map((m) => (
+                  <article key={m.naam} className="rounded-xl bg-white p-5 border border-gray-200">
+                    <p className="font-display text-base font-bold text-gray-900">{m.naam}</p>
+                    <span className="inline-block rounded-md bg-brand-50 px-2 py-0.5 text-xs font-bold text-brand-700 mt-1">{m.rol}</span>
+                    <p className="mt-2 text-sm leading-relaxed text-gray-700">{m.omschr}</p>
+                  </article>
                 ))}
               </div>
             </div>
@@ -226,47 +308,68 @@ export default function OverOns() {
         </div>
       </section>
 
-      {/* ===== CTA ===== */}
-      <section className="bg-white py-12 md:py-16">
-        <div className="cx">
-          <div className="rounded-2xl bg-gradient-to-r from-brand-800 to-green-900 p-8 md:p-12 shadow-[var(--shadow-elevated)] flex flex-col md:flex-row items-center justify-between gap-6 text-white">
-            <div>
-              <h2 className="font-display text-3xl font-extrabold">Klaar om te verduurzamen?</h2>
-              <p className="mt-2 text-white/75">Ontdek wat uw woning kan besparen. Start vandaag nog.</p>
+      {/* ===== AANPAK STRIP ===== */}
+      <section className="cx py-12">
+        <div className="rounded-2xl bg-white border border-gray-200 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
+          {[
+            { Icon: Compass, b: "Onafhankelijk advies", s: "Altijd objectief en in uw belang" },
+            { Icon: Calculator, b: "Data-gedreven", s: "De beste keuzes op basis van feiten" },
+            { Icon: Heart, b: "Praktisch en toegankelijk", s: "Van inzicht naar uitvoering" },
+            { Icon: Users, b: "Samen sterker", s: "Met partners en gemeenten" },
+          ].map(({ Icon, b, s }) => (
+            <div key={b} className="flex items-start gap-3 p-5">
+              <Icon size={24} className="text-brand-600 shrink-0 mt-1" />
+              <div>
+                <p className="font-display text-sm font-bold text-gray-900">{b}</p>
+                <p className="text-xs text-gray-700">{s}</p>
+              </div>
             </div>
-            <Link href="/" className="shrink-0 inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-sm font-bold text-brand-600 hover:bg-brand-50 transition-all">
-              Start woningcheck <ArrowRight size={18} className="ml-2" />
+          ))}
+        </div>
+      </section>
+
+      {/* ===== CTA ===== */}
+      <section className="cx pb-16 md:pb-20">
+        <div className="rounded-2xl bg-brand-700 p-8 md:p-10 text-white shadow-[var(--shadow-card)]">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <h2 className="font-display text-2xl font-extrabold uppercase md:text-3xl">Klaar om te verduurzamen?</h2>
+              <p className="mt-2 text-base text-brand-100">Ontdek wat uw woning kan besparen. Start vandaag nog.</p>
+            </div>
+            <Link href="/#woningcheck" className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-4 text-sm font-bold text-brand-700 hover:bg-brand-50 transition-all whitespace-nowrap">
+              Start woningcheck <ArrowRight size={16} />
             </Link>
           </div>
         </div>
       </section>
 
       {/* ===== FOOTER ===== */}
-      <footer className="bg-brand-800">
+      <footer className="bg-brand-800 border-t border-brand-700 mt-8">
         <div className="cx py-16">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
             <div className="lg:col-span-4">
               <img src="/logo/Group 39895.svg" alt="NCDE" className="h-20 w-auto object-contain" />
               <p className="mt-4 max-w-xs text-sm leading-relaxed text-brand-100">Samen maken we Nederland duurzaam.</p>
               <div className="mt-5 flex items-center gap-3">
-                <a href="#" aria-label="LinkedIn" className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 text-brand-200 hover:bg-white hover:text-brand-700 transition-all">
-                  <LinkedinIcon />
-                </a>
-                <a href="#" aria-label="YouTube" className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 text-brand-200 hover:bg-white hover:text-brand-700 transition-all">
-                  <YoutubeIcon />
-                </a>
-                <a href="#" aria-label="Instagram" className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 text-brand-200 hover:bg-white hover:text-brand-700 transition-all">
-                  <InstagramIcon />
-                </a>
+                <a href="#" aria-label="LinkedIn" className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 text-brand-200 hover:bg-white hover:text-brand-700 transition-all"><LinkedinIcon /></a>
+                <a href="#" aria-label="YouTube" className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 text-brand-200 hover:bg-white hover:text-brand-700 transition-all"><YoutubeIcon /></a>
+                <a href="#" aria-label="Instagram" className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 text-brand-200 hover:bg-white hover:text-brand-700 transition-all"><InstagramIcon /></a>
               </div>
             </div>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-5">
               <div>
                 <h4 className="font-display text-sm font-bold text-white">Pagina&apos;s</h4>
                 <ul className="mt-3 space-y-2">
-{["Home", "Over ons", "Subsidies & Financiering", "Partners", "Nieuws", "Contact"].map((t) => (
-                     <li key={t}><Link href={t === "Home" ? "/" : t === "Over ons" ? "/over-ons" : "#"} className="text-sm text-brand-200 hover:text-white">{t}</Link></li>
-                   ))}
+                  {[
+                    { t: "Home", href: "/" },
+                    { t: "Over ons", href: "/over-ons" },
+                    { t: "Subsidies & Financiering", href: "/subsidies-financiering" },
+                    { t: "Partners", href: "/" },
+                    { t: "Nieuws", href: "/" },
+                    { t: "Contact", href: "/" },
+                  ].map((p) => (
+                    <li key={p.t}><Link href={p.href} className="text-sm text-brand-200 hover:text-white">{p.t}</Link></li>
+                  ))}
                 </ul>
               </div>
               <div>
