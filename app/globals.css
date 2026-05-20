@@ -52,6 +52,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Hero progress bar animation */
+@keyframes heroProgress {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
 @keyframes typewriter-blink {
   0%, 49% { opacity: 1; }
   50%, 100% { opacity: 0; }

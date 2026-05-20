@@ -1,7 +1,6 @@
 /* Homepage NCDE - 1-op-1 vanaf Codehomepagine Claude dd 7-5-2026.docx */
 
 import {
-  ArrowRight,
   Home as HomeIcon,
   BarChart2,
   Banknote,
@@ -9,8 +8,11 @@ import {
   CheckCircle,
   Check,
   Menu,
+  ArrowRight,
 } from "lucide-react";
+import Link from "next/link";
 import PopText from "./PopText";
+import HeroSlider from "../components/HeroSlider";
 
 const LinkedinIcon = ({ size = 16 }: { size?: number }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
@@ -32,82 +34,39 @@ export default function Home() {
       {/* ===== HEADER ===== */}
       <header className="sticky top-0 z-50 bg-white/95 shadow-[var(--shadow-soft)] backdrop-blur-md">
         <div className="cx flex h-24 items-center justify-between">
-          <a href="#" aria-label="NCDE — Nationaal Collectief Duurzame Energie home" className="block h-16 w-[200px] overflow-hidden shrink-0">
+          <Link href="/" aria-label="NCDE — Nationaal Collectief Duurzame Energie home" className="block h-16 w-[200px] overflow-hidden shrink-0">
             <img
               src="/this one.svg"
               alt="NCDE — Nationaal Collectief Duurzame Energie"
               className="h-[5.6rem] w-auto max-w-none object-cover object-top"
             />
-          </a>
+          </Link>
           <nav className="hidden items-center gap-6 lg:flex">
-            <a href="#" className="relative text-sm font-semibold text-brand-600">
+            <Link href="/" className="relative text-sm font-semibold text-brand-600">
               Home
               <span className="absolute -bottom-[29px] left-0 right-0 h-[3px] rounded-full bg-brand-600"></span>
-            </a>
-            <a href="/over-ons" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Over ons</a>
-            <a href="/subsidies-financiering" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Subsidies & Financiering</a>
-            <a href="/partners" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Partners</a>
-            <a href="/nieuws" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Nieuws</a>
-            <a href="#" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Contact</a>
+            </Link>
+            <Link href="/over-ons" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Over ons</Link>
+            <Link href="/subsidies-financiering" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Subsidies & Financiering</Link>
+            <Link href="/partners" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Partners</Link>
+            <Link href="/nieuws" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Nieuws</Link>
+            <Link href="/" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Contact</Link>
           </nav>
-          <a
+          <Link
             href="#woningcheck"
             className="hidden lg:inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] transition-all"
           >
             <HomeIcon size={17} />
             Start woningcheck
-          </a>
+          </Link>
           <button className="lg:hidden rounded-md p-2 text-brand-700" aria-label="Menu">
             <Menu size={26} />
           </button>
         </div>
       </header>
 
-      {/* ===== HERO ===== */}
-      <section className="relative isolate min-h-[580px] flex items-center overflow-hidden">
-        <img
-          src="/hero-home.jpg"
-          alt=""
-          aria-hidden
-          className="absolute inset-0 z-0 h-full w-full object-cover object-center"
-        />
-        <div
-          aria-hidden
-          className="absolute inset-0 z-10"
-          style={{
-            background:
-              "linear-gradient(100deg, rgba(241,250,245,1) 0%, rgba(241,250,245,.97) 30%, rgba(241,250,245,.82) 50%, rgba(241,250,245,.3) 68%, transparent 82%)",
-          }}
-        ></div>
-        <div className="cx relative z-20 py-20 w-full">
-          <div className="max-w-[720px]">
-            <p className="text-xs font-extrabold uppercase tracking-[.2em] text-brand-600 mb-5">
-              Nationaal Collectief Duurzame Energie
-            </p>
-            <h1 className="font-display text-3xl font-black uppercase leading-[1.1] text-brand-800 md:text-4xl lg:text-[2.75rem] whitespace-nowrap">
-              Samen werken aan<br />
-              duurzame energie
-            </h1>
-            <p className="mt-5 text-base leading-relaxed text-gray-800 md:text-lg max-w-md">
-              Wij helpen u stap voor stap naar een energiezuinige woning — met onafhankelijk advies, praktische oplossingen en betrouwbare uitvoerders.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="#woningcheck"
-                className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-4 text-sm font-bold text-white hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] transition-all"
-              >
-                Start woningcheck <ArrowRight size={18} />
-              </a>
-              <a
-                href="#oplossingen"
-                className="inline-flex items-center gap-2 rounded-lg border-2 border-brand-600 bg-white/80 px-6 py-4 text-sm font-bold text-brand-600 hover:bg-brand-50 transition-all"
-              >
-                Bekijk oplossingen
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ===== HERO SLIDER ===== */}
+      <HeroSlider />
 
       {/* ===== USP-SECTIE — 3 grote kaarten ===== */}
       <section className="bg-white py-8 border-b border-gray-100">
@@ -187,8 +146,8 @@ export default function Home() {
           {[
             { img: "/Homepagina/besparing op energiekosten.png", title: "Besparing op energiekosten", body: "Verlaag direct uw maandlasten door minder verbruik.", strong: "Minder verbruik is direct voordeel" },
             { img: "/Homepagina/Meer woningwaarde.png", title: "Meer woningwaarde", body: "Een beter energielabel verhoogt de waarde van uw woning.", strong: "Investeren in duurzaamheid loont" },
-            { img: "/Homepagina/meer comfort in huis.png", title: "Meer comfort in huis", body: "Stabiele temperaturen en betere luchtkwaliteit het jaar rond.", strong: "Warmer in winter, koeler in zomer" },
-            { img: "/Homepagina/saldering stopt.png", title: "Saldering verandert", body: "Vanaf 2027 wordt terugleveren minder voordelig. Handelen loont nu.", strong: "Eigen verbruik wordt essentieel" },
+            { img: "/homepagina 2/Meer comfort in huis.png", title: "Meer comfort in huis", body: "Stabiele temperaturen en betere luchtkwaliteit het jaar rond.", strong: "Warmer in winter, koeler in zomer" },
+            { img: "/homepagina 2/Einde saldering .png", title: "Saldering verandert", body: "Vanaf 2027 wordt terugleveren minder voordelig. Handelen loont nu.", strong: "Eigen verbruik wordt essentieel" },
             { img: "/Homepagina/netgongestie.png", title: "Netcongestie", body: "Het net raakt vol. Zelfvoorzienend worden geeft zekerheid.", strong: "Minder afhankelijk van het net" },
             { img: "/Homepagina/klimaat.png", title: "Klimaat & toekomst", body: "Draag bij aan een beter klimaat voor volgende generaties.", strong: "Voor uzelf én de toekomst" },
           ].map((c) => (
@@ -331,7 +290,7 @@ export default function Home() {
                   <h3 className="font-display text-lg font-bold text-gray-900">Noodpakket</h3>
                   <p className="mt-2 text-sm leading-relaxed text-gray-700">Bereid u voor op een stroomuitval en blijf zelfvoorzienend.</p>
                 </div>
-                <img src="/Homepagina/saldering stopt.png" alt="" className="h-28 w-32 shrink-0 rounded-lg object-cover" />
+                <img src="/homepagina 2/Noodpakket.png" alt="" className="h-28 w-32 shrink-0 rounded-lg object-cover" />
               </div>
               <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-bold text-brand-600">
                 Meer informatie <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
@@ -345,7 +304,7 @@ export default function Home() {
                   <h3 className="font-display text-lg font-bold text-gray-900">Salderingsregeling</h3>
                   <p className="mt-2 text-sm leading-relaxed text-gray-700">Vanaf 2027 wordt terugleveren minder voordelig. Lees wat dit betekent.</p>
                 </div>
-                <img src="/Homepagina/saldering verandert.png" alt="" className="h-28 w-32 shrink-0 rounded-lg object-cover" />
+                <img src="/homepagina 2/Einde saldering .png" alt="" className="h-28 w-32 shrink-0 rounded-lg object-cover" />
               </div>
               <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-bold text-brand-600">
                 Meer informatie <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
@@ -426,7 +385,7 @@ export default function Home() {
                 <h4 className="font-display text-sm font-bold text-white">Pagina&apos;s</h4>
                 <ul className="mt-3 space-y-2">
                   {["Home", "Over ons", "Subsidies & Financiering", "Partners", "Nieuws", "Contact"].map((t) => (
-                    <li key={t}><a href="#" className="text-sm text-brand-200 hover:text-white">{t}</a></li>
+                    <li key={t}><Link href={t === "Home" ? "/" : t === "Over ons" ? "/over-ons" : "#"} className="text-sm text-brand-200 hover:text-white">{t}</Link></li>
                   ))}
                 </ul>
               </div>
