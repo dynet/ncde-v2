@@ -5,9 +5,6 @@ import {
   ArrowRight,
   Home as HomeIcon,
   Menu,
-  Newspaper,
-  Sparkles,
-  Lightbulb,
   Calendar,
   Bell,
   FileText,
@@ -29,20 +26,20 @@ const InstagramIcon = ({ size = 16 }: { size?: number }) => (
 /* eslint-disable @next/next/no-img-element */
 
 const articles = [
-  { cat: "Energielabel", date: "19 mei 2026", title: "Woningen met label E, F en G vragen om actie", desc: "Een slecht energielabel betekent vaak hogere energiekosten, minder wooncomfort en mogelijk lagere woningwaarde.", img: "/Homepagina/Meer woningwaarde.png" },
-  { cat: "Saldering", date: "18 mei 2026", title: "Salderingsregeling verandert: wat betekent dit voor zonnepanelen?", desc: "Bewoners met zonnepanelen moeten beter kijken naar eigen verbruik, opslag en slimme sturing van energie.", img: "/Homepagina/saldering verandert.png" },
-  { cat: "Warmtenet", date: "17 mei 2026", title: "Warmtenet als alternatief voor aardgas in wijken", desc: "Voor sommige buurten kan aansluiting op een warmtenet onderdeel zijn van de route naar aardgasvrij wonen.", img: "/Homepagina/warmtepomp.png" },
-  { cat: "Subsidies", date: "16 mei 2026", title: "Subsidies en leningen maken verduurzaming betaalbaarder", desc: "Gemeenten, fondsen en landelijke regelingen kunnen helpen om isolatie, installaties en energiemaatregelen te financieren.", img: "/Homepagina/subsidie.png" },
-  { cat: "Noodpakket", date: "15 mei 2026", title: "Noodpakket thuis: voorbereid zijn op stroomuitval of storing", desc: "Een goed noodpakket helpt huishoudens om beter voorbereid te zijn op tijdelijke uitval van stroom, warmte of communicatie.", img: "/Homepagina/saldering stopt.png" },
-  { cat: "Saldering", date: "14 mei 2026", title: "Thuisbatterij wordt interessanter bij slim energiegebruik", desc: "Opslag van eigen stroom kan bewoners helpen om meer zonne-energie zelf te gebruiken.", img: "/Homepagina/thuisbatterij.png" },
+  { cat: "Energielabel", date: "19 mei 2026", title: "Woningen met label E, F en G vragen om actie", desc: "Een slecht energielabel betekent vaak hogere energiekosten, minder wooncomfort en mogelijk lagere woningwaarde.", img: "/nieuws/energielabel.png" },
+  { cat: "Saldering", date: "18 mei 2026", title: "Salderingsregeling verandert: wat betekent dit voor zonnepanelen?", desc: "Bewoners met zonnepanelen moeten beter kijken naar eigen verbruik, opslag en slimme sturing van energie.", img: "/nieuws/saldering-verandert.png" },
+  { cat: "Warmtenet", date: "17 mei 2026", title: "Warmtenet als alternatief voor aardgas in wijken", desc: "Voor sommige buurten kan aansluiting op een warmtenet onderdeel zijn van de route naar aardgasvrij wonen.", img: "/nieuws/warmtenet.png" },
+  { cat: "Subsidies", date: "16 mei 2026", title: "Subsidies en leningen maken verduurzaming betaalbaarder", desc: "Gemeenten, fondsen en landelijke regelingen kunnen helpen om isolatie, installaties en energiemaatregelen te financieren.", img: "/subsidies-financiering/gemeentelijk.png" },
+  { cat: "Noodpakket", date: "15 mei 2026", title: "Noodpakket thuis: voorbereid zijn op stroomuitval of storing", desc: "Een goed noodpakket helpt huishoudens om beter voorbereid te zijn op tijdelijke uitval van stroom, warmte of communicatie.", img: "/nieuws/noodpakket.png" },
+  { cat: "Saldering", date: "14 mei 2026", title: "Thuisbatterij wordt interessanter bij slim energiegebruik", desc: "Opslag van eigen stroom kan bewoners helpen om meer zonne-energie zelf te gebruiken.", img: "/nieuws/thuisbatterij.png" },
 ];
 
 const categories = ["Alles", "Energielabel", "Saldering", "Warmtenet", "Subsidies", "Noodpakket"];
 
 const heroPills = [
-  { Icon: Newspaper, t: "Actueel Nieuws", d: "Uit de sector en van NCDE" },
-  { Icon: Sparkles, t: "Inspirerende Verhalen", d: "Projecten en ervaringen" },
-  { Icon: Lightbulb, t: "Praktische Tips", d: "Slimmer en duurzamer thuis" },
+  { img: "/nieuws/hero-actueel.png", t: "Actueel Nieuws", d: "Uit de sector en van NCDE" },
+  { img: "/nieuws/inspirerende-verhalen.png", t: "Inspirerende Verhalen", d: "Projecten en ervaringen" },
+  { img: "/nieuws/tips.jpg", t: "Praktische Tips", d: "Slimmer en duurzamer thuis" },
 ];
 
 export default function Nieuws() {
@@ -87,12 +84,12 @@ export default function Nieuws() {
               Blijf op de hoogte van het laatste nieuws, ontwikkelingen, projecten en tips over duurzaam wonen en de energietransitie in Nederland.
             </p>
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl">
-              {heroPills.map(({ Icon, t, d }) => (
-                <div key={t} className="rounded-xl bg-white p-4 border border-brand-100 flex items-start gap-3 hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all">
-                  <div className="grid h-10 w-10 place-items-center rounded-lg bg-brand-50 text-brand-600 shrink-0">
-                    <Icon size={20} />
+              {heroPills.map(({ img, t, d }) => (
+                <div key={t} className="rounded-xl bg-white border border-brand-100 overflow-hidden hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all">
+                  <div className="aspect-[16/9] overflow-hidden">
+                    <img src={img} alt={t} className="h-full w-full object-cover" />
                   </div>
-                  <div>
+                  <div className="p-3">
                     <p className="font-display text-sm font-bold text-gray-900">{t}</p>
                     <p className="text-xs text-gray-700">{d}</p>
                   </div>
@@ -166,7 +163,7 @@ export default function Nieuws() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 items-stretch">
             {/* Links: foto */}
             <div className="rounded-2xl overflow-hidden bg-white border border-gray-200">
-              <img src="/Homepagina/meer comfort in huis.png" alt="Warmteverlies woning" className="w-full h-full object-cover" />
+              <img src="/nieuws/warmteverlies.png" alt="Warmteverlies woning" className="w-full h-full object-cover" />
             </div>
 
             {/* Rechts: tekst + 3 pictogrammen */}
