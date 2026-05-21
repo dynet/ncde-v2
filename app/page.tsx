@@ -7,12 +7,12 @@ import {
   ShieldCheck,
   CheckCircle,
   Check,
-  Menu,
   ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
 import PopText from "./PopText";
 import HeroSlider from "../components/HeroSlider";
+import MobileMenu from "../components/MobileMenu";
 
 const LinkedinIcon = ({ size = 16 }: { size?: number }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
@@ -50,7 +50,7 @@ export default function Home() {
             <Link href="/subsidies-financiering" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Subsidies & Financiering</Link>
             <Link href="/partners" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Partners</Link>
             <Link href="/nieuws" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Nieuws</Link>
-            <Link href="/" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Contact</Link>
+            <Link href="/contact" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Contact</Link>
           </nav>
           <Link
             href="#woningcheck"
@@ -59,9 +59,7 @@ export default function Home() {
             <HomeIcon size={17} />
             Start woningcheck
           </Link>
-          <button className="lg:hidden rounded-md p-2 text-brand-700" aria-label="Menu">
-            <Menu size={26} />
-          </button>
+          <MobileMenu active="/" />
         </div>
       </header>
 
@@ -290,7 +288,7 @@ export default function Home() {
                   <h3 className="font-display text-lg font-bold text-gray-900">Noodpakket</h3>
                   <p className="mt-2 text-sm leading-relaxed text-gray-700">Bereid u voor op een stroomuitval en blijf zelfvoorzienend.</p>
                 </div>
-                <img src="/homepagina 2/Noodpakket.png" alt="" className="h-28 w-32 shrink-0 rounded-lg object-cover" />
+                <img src="/homepagina 2/Noodpakket.png" alt="" className="h-20 w-24 sm:h-28 sm:w-32 shrink-0 rounded-lg object-cover" />
               </div>
               <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-bold text-brand-600">
                 Meer informatie <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
@@ -304,7 +302,7 @@ export default function Home() {
                   <h3 className="font-display text-lg font-bold text-gray-900">Salderingsregeling</h3>
                   <p className="mt-2 text-sm leading-relaxed text-gray-700">Vanaf 2027 wordt terugleveren minder voordelig. Lees wat dit betekent.</p>
                 </div>
-                <img src="/homepagina 2/Einde saldering .png" alt="" className="h-28 w-32 shrink-0 rounded-lg object-cover" />
+                <img src="/homepagina 2/Einde saldering .png" alt="" className="h-20 w-24 sm:h-28 sm:w-32 shrink-0 rounded-lg object-cover" />
               </div>
               <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-bold text-brand-600">
                 Meer informatie <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
@@ -393,7 +391,7 @@ export default function Home() {
                 <h4 className="font-display text-sm font-bold text-white">Contact</h4>
                 <ul className="mt-3 space-y-2">
                   <li><a href="mailto:info@ncde.nl" className="text-sm text-brand-200 hover:text-white">info@ncde.nl</a></li>
-                  <li><a href="#" className="text-sm text-brand-200 hover:text-white">Contactformulier</a></li>
+                  <li><Link href="/contact" className="text-sm text-brand-200 hover:text-white">Contactformulier</Link></li>
                   <li><a href="#" className="text-sm text-brand-200 hover:text-white">FAQ</a></li>
                 </ul>
               </div>
@@ -414,9 +412,9 @@ export default function Home() {
           <div className="cx flex flex-col gap-2 py-4 text-xs text-brand-300 md:flex-row md:items-center md:justify-between">
             <p>© 2026 Nationaal Collectief Duurzame Energie. Alle rechten voorbehouden.</p>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-white">Privacy</a>
-              <a href="#" className="hover:text-white">Disclaimer</a>
-              <a href="#" className="hover:text-white">Cookies</a>
+              <Link href="/privacy" className="hover:text-white">Privacy</Link>
+              <Link href="/disclaimer" className="hover:text-white">Disclaimer</Link>
+              <Link href="/algemene-voorwaarden" className="hover:text-white">Algemene voorwaarden</Link>
             </div>
           </div>
         </div>
