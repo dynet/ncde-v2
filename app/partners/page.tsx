@@ -1,10 +1,10 @@
 /* Partners pagina - vanuit Claude code Partners dd 19-5-2026.docx */
 
 import Link from "next/link";
+import MobileMenu from "../../components/MobileMenu";
 import {
   ArrowRight,
   Home as HomeIcon,
-  Menu,
   Handshake,
   Award,
   Leaf,
@@ -86,39 +86,45 @@ export default function Partners() {
               <span className="absolute -bottom-[29px] left-0 right-0 h-[3px] rounded-full bg-brand-600"></span>
             </Link>
             <Link href="/nieuws" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Nieuws</Link>
-            <Link href="/" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Contact</Link>
+            <Link href="/contact" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Contact</Link>
           </nav>
           <Link href="/#woningcheck" className="hidden lg:inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] transition-all">
             <HomeIcon size={17} />
             Start woningcheck
           </Link>
-          <button className="lg:hidden rounded-md p-2 text-brand-700" aria-label="Menu">
-            <Menu size={26} />
-          </button>
+          <MobileMenu active="/partners" />
         </div>
       </header>
 
       {/* ===== HERO ===== */}
       <section className="relative isolate min-h-[480px] flex items-center overflow-hidden bg-gradient-to-br from-brand-700 to-brand-800">
         <div className="cx relative z-10 py-20 w-full">
-          <div className="max-w-[820px] text-white">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-bold uppercase tracking-wider">
-              <Handshake size={14} /> Partnerprogramma NCDE
-            </span>
-            <h1 className="mt-5 font-display text-3xl font-black uppercase leading-[1.1] md:text-4xl lg:text-[2.75rem]">
-              Samen maken we<br />
-              Nederland duurzamer
-            </h1>
-            <p className="mt-5 text-base leading-relaxed text-brand-100 md:text-lg max-w-2xl">
-              NCDE werkt samen met betrouwbare partners uit verschillende sectoren. Samen bundelen we kennis, technologie en ervaring om huiseigenaren te ontzorgen en de energietransitie te versnellen.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#contact" className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-4 text-sm font-bold text-brand-700 hover:bg-brand-50 transition-all">
-                Word partner van NCDE <ArrowRight size={16} />
-              </a>
-              <a href="#keurmerk" className="inline-flex items-center gap-2 rounded-lg border-2 border-white/40 bg-white/10 backdrop-blur px-6 py-4 text-sm font-bold text-white hover:bg-white/20 transition-all">
-                Bekijk keurmerk <ArrowRight size={16} />
-              </a>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-7 text-white">
+              <span className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-bold uppercase tracking-wider">
+                <Handshake size={14} /> Partnerprogramma NCDE
+              </span>
+              <h1 className="mt-5 font-display text-3xl font-black uppercase leading-[1.1] md:text-4xl lg:text-[2.75rem]">
+                Samen maken we<br />
+                Nederland duurzamer
+              </h1>
+              <p className="mt-5 text-base leading-relaxed text-brand-100 md:text-lg max-w-2xl">
+                NCDE werkt samen met betrouwbare partners uit verschillende sectoren. Samen bundelen we kennis, technologie en ervaring om huiseigenaren te ontzorgen en de energietransitie te versnellen.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a href="#contact" className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-4 text-sm font-bold text-brand-700 hover:bg-brand-50 transition-all">
+                  Word partner van NCDE <ArrowRight size={16} />
+                </a>
+                <a href="#keurmerk" className="inline-flex items-center gap-2 rounded-lg border-2 border-white/40 bg-white/10 backdrop-blur px-6 py-4 text-sm font-bold text-white hover:bg-white/20 transition-all">
+                  Bekijk keurmerk <ArrowRight size={16} />
+                </a>
+              </div>
+            </div>
+            <div className="lg:col-span-5 flex justify-center lg:justify-end">
+              <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden bg-white shadow-[var(--shadow-card)]">
+                <div className="absolute inset-0 rounded-full border-2 border-white/40 animate-pulse z-10 pointer-events-none"></div>
+                <img src="/partners/ncde-keurmerk.png" alt="NCDE Keurmerk" className="h-full w-full object-cover" />
+              </div>
             </div>
           </div>
         </div>
@@ -238,9 +244,6 @@ export default function Partners() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {categories.map((c) => (
               <article key={c.t} className="group rounded-2xl overflow-hidden bg-white border border-gray-200 hover:border-brand-200 hover:shadow-[var(--shadow-card)] hover:-translate-y-1 transition-all">
-                <div className="aspect-[16/10] overflow-hidden">
-                  <img src={c.img} alt={c.t} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                </div>
                 <div className="p-6">
                   <p className="text-xs font-bold uppercase tracking-wider text-brand-600">{c.label}</p>
                   <h3 className="mt-1 font-display text-lg font-bold text-gray-900 flex items-center gap-2">
@@ -304,7 +307,7 @@ export default function Partners() {
                     { t: "Subsidies & Financiering", href: "/subsidies-financiering" },
                     { t: "Partners", href: "/partners" },
                     { t: "Nieuws", href: "/" },
-                    { t: "Contact", href: "/" },
+                    { t: "Contact", href: "/contact" },
                   ].map((p) => (
                     <li key={p.t}><Link href={p.href} className="text-sm text-brand-200 hover:text-white">{p.t}</Link></li>
                   ))}
@@ -335,9 +338,9 @@ export default function Partners() {
           <div className="cx flex flex-col gap-2 py-4 text-xs text-brand-300 md:flex-row md:items-center md:justify-between">
             <p>© 2026 Nationaal Collectief Duurzame Energie. Alle rechten voorbehouden.</p>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-white">Privacy</a>
-              <a href="#" className="hover:text-white">Disclaimer</a>
-              <a href="#" className="hover:text-white">Cookies</a>
+              <Link href="/privacy" className="hover:text-white">Privacy</Link>
+              <Link href="/disclaimer" className="hover:text-white">Disclaimer</Link>
+              <Link href="/algemene-voorwaarden" className="hover:text-white">Algemene voorwaarden</Link>
             </div>
           </div>
         </div>

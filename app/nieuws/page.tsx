@@ -1,10 +1,10 @@
 /* Nieuws pagina - vanuit Claudecode Nieuws final dd 19-5-2026.docx */
 
 import Link from "next/link";
+import MobileMenu from "../../components/MobileMenu";
 import {
   ArrowRight,
   Home as HomeIcon,
-  Menu,
   Calendar,
   Bell,
   FileText,
@@ -60,27 +60,25 @@ export default function Nieuws() {
               Nieuws
               <span className="absolute -bottom-[29px] left-0 right-0 h-[3px] rounded-full bg-brand-600"></span>
             </Link>
-            <Link href="/" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Contact</Link>
+            <Link href="/contact" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Contact</Link>
           </nav>
           <Link href="/#woningcheck" className="hidden lg:inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] transition-all">
             <HomeIcon size={17} />
             Start woningcheck
           </Link>
-          <button className="lg:hidden rounded-md p-2 text-brand-700" aria-label="Menu">
-            <Menu size={26} />
-          </button>
+          <MobileMenu active="/nieuws" />
         </div>
       </header>
 
       {/* ===== HERO ===== */}
-      <section className="relative isolate min-h-[420px] flex items-center overflow-hidden bg-brand-50">
+      <section className="relative isolate min-h-[420px] flex items-center overflow-hidden bg-gradient-to-br from-brand-700 to-brand-800">
         <div className="cx relative z-10 py-16 md:py-20 w-full">
-          <div className="max-w-[820px]">
-            <h1 className="font-display text-3xl font-black uppercase leading-[1.1] text-brand-800 md:text-4xl lg:text-[2.75rem]">
+          <div className="max-w-[820px] text-white">
+            <h1 className="font-display text-3xl font-black uppercase leading-[1.1] md:text-4xl lg:text-[2.75rem]">
               Nieuws
             </h1>
-            <p className="mt-3 text-base font-bold text-brand-600">Actueel. Inspirerend. Duurzaam.</p>
-            <p className="mt-3 text-base leading-relaxed text-gray-700 md:text-lg max-w-2xl">
+            <p className="mt-3 text-base font-bold text-brand-200">Actueel. Inspirerend. Duurzaam.</p>
+            <p className="mt-3 text-base leading-relaxed text-brand-100 md:text-lg max-w-2xl">
               Blijf op de hoogte van het laatste nieuws, ontwikkelingen, projecten en tips over duurzaam wonen en de energietransitie in Nederland.
             </p>
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl">
@@ -131,26 +129,21 @@ export default function Nieuws() {
             ))}
           </div>
 
-          {/* Cards grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {/* Cards list */}
+          <div className="flex flex-col gap-4">
             {articles.map((a) => (
-              <article key={a.title} className="group flex flex-col overflow-hidden rounded-2xl bg-white border border-gray-200 hover:border-brand-200 hover:shadow-[var(--shadow-card)] hover:-translate-y-1 transition-all">
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <span className="absolute top-3 left-3 z-10 rounded-full bg-white/95 backdrop-blur px-3 py-1 text-xs font-bold text-brand-700">
-                    {a.cat}
-                  </span>
-                  <img src={a.img} alt={a.cat} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                </div>
-                <div className="flex flex-col flex-1 p-6">
+              <article key={a.title} className="group rounded-2xl bg-white border border-gray-200 hover:border-brand-200 hover:shadow-[var(--shadow-card)] transition-all p-6">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="rounded-full bg-brand-50 px-3 py-1 text-xs font-bold text-brand-700">{a.cat}</span>
                   <p className="flex items-center gap-1.5 text-xs text-gray-500">
                     <Calendar size={12} /> {a.date}
                   </p>
-                  <h3 className="mt-2 font-display text-base font-bold text-gray-900 leading-snug">{a.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-gray-700 flex-1">{a.desc}</p>
-                  <a href="#" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700 group-hover:gap-2 transition-all">
-                    Lees artikel <ArrowRight size={14} />
-                  </a>
                 </div>
+                <h3 className="mt-3 font-display text-lg font-bold text-gray-900 leading-snug">{a.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-700">{a.desc}</p>
+                <a href="#" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700 group-hover:gap-2 transition-all">
+                  Lees artikel <ArrowRight size={14} />
+                </a>
               </article>
             ))}
           </div>
@@ -246,7 +239,7 @@ export default function Nieuws() {
                     { t: "Subsidies & Financiering", href: "/subsidies-financiering" },
                     { t: "Partners", href: "/partners" },
                     { t: "Nieuws", href: "/nieuws" },
-                    { t: "Contact", href: "/" },
+                    { t: "Contact", href: "/contact" },
                   ].map((p) => (
                     <li key={p.t}><Link href={p.href} className="text-sm text-brand-200 hover:text-white">{p.t}</Link></li>
                   ))}
@@ -277,9 +270,9 @@ export default function Nieuws() {
           <div className="cx flex flex-col gap-2 py-4 text-xs text-brand-300 md:flex-row md:items-center md:justify-between">
             <p>© 2026 Nationaal Collectief Duurzame Energie. Alle rechten voorbehouden.</p>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-white">Privacy</a>
-              <a href="#" className="hover:text-white">Disclaimer</a>
-              <a href="#" className="hover:text-white">Cookies</a>
+              <Link href="/privacy" className="hover:text-white">Privacy</Link>
+              <Link href="/disclaimer" className="hover:text-white">Disclaimer</Link>
+              <Link href="/algemene-voorwaarden" className="hover:text-white">Algemene voorwaarden</Link>
             </div>
           </div>
         </div>

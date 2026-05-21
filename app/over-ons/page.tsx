@@ -2,10 +2,10 @@
    Aangepast aan homepage-stack (League Spartan + brand-* + bestaande tokens) */
 
 import Link from "next/link";
+import MobileMenu from "../../components/MobileMenu";
 import {
   ArrowRight,
   Home as HomeIcon,
-  Menu,
   Users,
   Calculator,
   Scale,
@@ -82,20 +82,25 @@ export default function OverOns() {
             <Link href="/subsidies-financiering" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Subsidies & Financiering</Link>
             <Link href="/partners" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Partners</Link>
             <Link href="/nieuws" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Nieuws</Link>
-            <Link href="/" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Contact</Link>
+            <Link href="/contact" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Contact</Link>
           </nav>
           <Link href="/#woningcheck" className="hidden lg:inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] transition-all">
             <HomeIcon size={17} />
             Start woningcheck
           </Link>
-          <button className="lg:hidden rounded-md p-2 text-brand-700" aria-label="Menu">
-            <Menu size={26} />
-          </button>
+          <MobileMenu active="/over-ons" />
         </div>
       </header>
 
       {/* ===== HERO ===== */}
       <section className="relative isolate min-h-[480px] flex items-center overflow-hidden bg-brand-50">
+        <img
+          src="/over-ons/hero-over-ons.png"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-white/95 via-white/80 to-white/30" />
         <div className="cx relative z-10 py-16 md:py-20 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7">
@@ -154,9 +159,6 @@ export default function OverOns() {
                 </li>
               ))}
             </ol>
-            <div className="mt-10 rounded-2xl overflow-hidden border border-gray-200">
-              <img src="/over-ons/stap-voor-stap.png" alt="Stap voor stap naar succes" className="w-full h-auto" />
-            </div>
           </div>
 
           {/* Rechts: missie/visie + stichting */}
@@ -164,8 +166,8 @@ export default function OverOns() {
             <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Onze missie &amp; visie</p>
             <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
               <article className="rounded-2xl overflow-hidden bg-blue-50 hover:-translate-y-1 transition-all">
-                <div className="aspect-[16/9] overflow-hidden">
-                  <img src="/over-ons/onze-missie.png" alt="Onze missie" className="h-full w-full object-cover" />
+                <div className="aspect-square overflow-hidden bg-white flex items-center justify-center">
+                  <img src="/over-ons/onze-missie.png" alt="Onze missie" className="h-full w-full object-contain" />
                 </div>
                 <div className="p-6">
                   <p className="text-xs font-bold uppercase tracking-wider text-brand-600">Onze missie</p>
@@ -176,8 +178,8 @@ export default function OverOns() {
                 </div>
               </article>
               <article className="rounded-2xl overflow-hidden bg-yellow-50 hover:-translate-y-1 transition-all">
-                <div className="aspect-[16/9] overflow-hidden">
-                  <img src="/over-ons/onze-visie.png" alt="Onze visie" className="h-full w-full object-cover" />
+                <div className="aspect-square overflow-hidden bg-white flex items-center justify-center">
+                  <img src="/over-ons/onze-visie.png" alt="Onze visie" className="h-full w-full object-contain" />
                 </div>
                 <div className="p-6">
                   <p className="text-xs font-bold uppercase tracking-wider text-brand-600">Onze visie</p>
@@ -375,7 +377,7 @@ export default function OverOns() {
                     { t: "Subsidies & Financiering", href: "/subsidies-financiering" },
                     { t: "Partners", href: "/" },
                     { t: "Nieuws", href: "/" },
-                    { t: "Contact", href: "/" },
+                    { t: "Contact", href: "/contact" },
                   ].map((p) => (
                     <li key={p.t}><Link href={p.href} className="text-sm text-brand-200 hover:text-white">{p.t}</Link></li>
                   ))}
@@ -406,9 +408,9 @@ export default function OverOns() {
           <div className="cx flex flex-col gap-2 py-4 text-xs text-brand-300 md:flex-row md:items-center md:justify-between">
             <p>© 2026 Nationaal Collectief Duurzame Energie. Alle rechten voorbehouden.</p>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-white">Privacy</a>
-              <a href="#" className="hover:text-white">Disclaimer</a>
-              <a href="#" className="hover:text-white">Cookies</a>
+              <Link href="/privacy" className="hover:text-white">Privacy</Link>
+              <Link href="/disclaimer" className="hover:text-white">Disclaimer</Link>
+              <Link href="/algemene-voorwaarden" className="hover:text-white">Algemene voorwaarden</Link>
             </div>
           </div>
         </div>

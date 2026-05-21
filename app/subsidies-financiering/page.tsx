@@ -1,6 +1,8 @@
 /* Subsidies & Financiering pagina - 1-op-1 vanaf Claude Code Subsidies & Finaciering.docx */
 
 import Link from "next/link";
+import MobileMenu from "../../components/MobileMenu";
+import LeningenAccordion from "../../components/LeningenAccordion";
 import {
   ArrowRight,
   Home as HomeIcon,
@@ -11,7 +13,6 @@ import {
   Shield,
   HelpCircle,
   Sparkles,
-  Menu,
 } from "lucide-react";
 
 const LinkedinIcon = ({ size = 16 }: { size?: number }) => (
@@ -190,22 +191,20 @@ export default function SubsidiesFinanciering() {
           </Link>
           <nav className="hidden items-center gap-6 lg:flex">
             <Link href="/" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Home</Link>
-            <Link href="/" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Over ons</Link>
+            <Link href="/over-ons" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Over ons</Link>
             <Link href="/subsidies-financiering" className="relative text-sm font-semibold text-brand-600">
               Subsidies & Financiering
               <span className="absolute -bottom-[29px] left-0 right-0 h-[3px] rounded-full bg-brand-600"></span>
             </Link>
             <Link href="/partners" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Partners</Link>
             <Link href="/nieuws" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Nieuws</Link>
-            <Link href="/" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Contact</Link>
+            <Link href="/contact" className="text-sm font-semibold text-gray-800 hover:text-brand-600 transition-colors">Contact</Link>
           </nav>
           <Link href="/#woningcheck" className="hidden lg:inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] transition-all">
             <HomeIcon size={17} />
             Start woningcheck
           </Link>
-          <button className="lg:hidden rounded-md p-2 text-brand-700" aria-label="Menu">
-            <Menu size={26} />
-          </button>
+          <MobileMenu active="/subsidies-financiering" />
         </div>
       </header>
 
@@ -317,24 +316,7 @@ export default function SubsidiesFinanciering() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {leningen.map((l) => (
-              <article key={l.title} className="rounded-2xl bg-white p-6 border border-gray-200 hover:border-brand-200 hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1">
-                <p className="text-xs font-bold uppercase tracking-wider text-brand-600">{l.doelgroep}</p>
-                <h3 className="mt-1 font-display text-lg font-bold text-gray-900">{l.title}</h3>
-                <p className="mt-2 font-display text-xl font-extrabold text-brand-700">{l.amount}</p>
-                <p className="mt-3 text-sm leading-relaxed text-gray-700">{l.text}</p>
-                <ul className="mt-4 space-y-2">
-                  {l.voorwaarden.map((v) => (
-                    <li key={v} className="flex items-start gap-2 text-xs text-gray-800">
-                      <Check size={14} className="mt-0.5 text-brand-600 shrink-0" strokeWidth={3} />
-                      {v}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
+          <LeningenAccordion items={leningen} />
         </div>
       </section>
 
@@ -407,7 +389,7 @@ export default function SubsidiesFinanciering() {
                     { t: "Subsidies & Financiering", href: "/subsidies-financiering" },
                     { t: "Partners", href: "/" },
                     { t: "Nieuws", href: "/" },
-                    { t: "Contact", href: "/" },
+                    { t: "Contact", href: "/contact" },
                   ].map((p) => (
                     <li key={p.t}><Link href={p.href} className="text-sm text-brand-200 hover:text-white">{p.t}</Link></li>
                   ))}
@@ -438,9 +420,9 @@ export default function SubsidiesFinanciering() {
           <div className="cx flex flex-col gap-2 py-4 text-xs text-brand-300 md:flex-row md:items-center md:justify-between">
             <p>© 2026 Nationaal Collectief Duurzame Energie. Alle rechten voorbehouden.</p>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-white">Privacy</a>
-              <a href="#" className="hover:text-white">Disclaimer</a>
-              <a href="#" className="hover:text-white">Cookies</a>
+              <Link href="/privacy" className="hover:text-white">Privacy</Link>
+              <Link href="/disclaimer" className="hover:text-white">Disclaimer</Link>
+              <Link href="/algemene-voorwaarden" className="hover:text-white">Algemene voorwaarden</Link>
             </div>
           </div>
         </div>
