@@ -114,35 +114,42 @@ export default function IsolatiePage() {
               </div>
             </div>
 
-            <div className="hidden rounded-3xl border border-white/20 bg-white/10 p-6 backdrop-blur-sm lg:block">
-              <h2 className="font-display text-xl font-bold">Waarom isoleren?</h2>
-              <div className="mt-5 space-y-3">
-                {[
-                  { Icon: Thermometer, t: "Minder warmteverlies", d: "Stop warmteverlies via dak, muren, vloer, ramen en kieren" },
-                  { Icon: Coins, t: "Lagere energiekosten", d: "Minder stoken betekent direct minder kosten op uw energierekening" },
-                  { Icon: HomeIcon, t: "Meer comfort in zomer en winter", d: "Aangenamer binnenklimaat en minder last van tocht en kou" },
-                ].map(({ Icon, t, d }) => (
-                  <div key={t} className="flex items-start gap-3 rounded-2xl bg-white/10 p-3">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/15">
-                      <Icon size={18} />
-                    </div>
-                    <div>
-                      <p className="text-sm font-bold leading-tight">{t}</p>
-                      <p className="mt-1 text-xs text-white/70">{d}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-5 grid grid-cols-2 gap-3">
-                <div className="rounded-xl bg-white/10 p-3 text-center">
-                  <p className="font-display text-2xl font-black text-amber-400">30%</p>
-                  <p className="mt-1 text-xs text-white/70">minder gasverbruik na dakisolatie</p>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/20 shadow-2xl">
+              <img src="/subpaginas/isolatie.jpg" alt="Isolatie van een woning" className="absolute inset-0 h-full w-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== WAAROM ISOLEREN ===== */}
+      <section className="bg-brand-50 py-14 md:py-16">
+        <div className="cx">
+          <p className="text-xs font-bold uppercase tracking-wider text-brand-600">Waarom isoleren?</p>
+          <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
+            {[
+              { Icon: Thermometer, t: "Minder warmteverlies", d: "Stop warmteverlies via dak, muren, vloer, ramen en kieren" },
+              { Icon: Coins, t: "Lagere energiekosten", d: "Minder stoken betekent direct minder kosten op uw energierekening" },
+              { Icon: HomeIcon, t: "Meer comfort in zomer en winter", d: "Aangenamer binnenklimaat en minder last van tocht en kou" },
+            ].map(({ Icon, t, d }) => (
+              <div key={t} className="flex items-start gap-3 rounded-2xl border border-brand-100 bg-white p-5 shadow-[var(--shadow-card)]">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-700 border border-brand-100">
+                  <Icon size={20} />
                 </div>
-                <div className="rounded-xl bg-white/10 p-3 text-center">
-                  <p className="font-display text-2xl font-black text-amber-400">5–8jr</p>
-                  <p className="mt-1 text-xs text-white/70">terugverdientijd spouwmuur</p>
+                <div>
+                  <p className="font-display text-base font-bold text-brand-900">{t}</p>
+                  <p className="mt-1 text-sm text-gray-700">{d}</p>
                 </div>
               </div>
+            ))}
+          </div>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl border border-brand-100 bg-white p-5 text-center shadow-[var(--shadow-card)]">
+              <p className="font-display text-3xl font-black text-brand-800">30%</p>
+              <p className="mt-1 text-sm text-gray-700">minder gasverbruik na dakisolatie</p>
+            </div>
+            <div className="rounded-2xl border border-brand-100 bg-white p-5 text-center shadow-[var(--shadow-card)]">
+              <p className="font-display text-3xl font-black text-brand-800">5–8jr</p>
+              <p className="mt-1 text-sm text-gray-700">terugverdientijd spouwmuur</p>
             </div>
           </div>
         </div>
