@@ -1,12 +1,17 @@
-/* Contact pagina - placeholder "moet nog gebouwd worden" in stijl van site */
+/* Contact pagina - volledig opgebouwd volgens klantmockup dd 22-5-2026 */
 
 import Link from "next/link";
 import MobileMenu from "../../components/MobileMenu";
 import {
   ArrowRight,
   Home as HomeIcon,
-  Construction,
   Mail,
+  Phone,
+  Clock,
+  MapPin,
+  Map as MapIcon,
+  Handshake,
+  Wallet,
 } from "lucide-react";
 
 const LinkedinIcon = ({ size = 16 }: { size?: number }) => (
@@ -50,74 +55,178 @@ export default function Contact() {
       </header>
 
       {/* ===== HERO ===== */}
-      <section className="relative isolate min-h-[480px] flex items-center overflow-hidden bg-brand-50">
-        <div className="cx relative z-10 py-16 md:py-20 w-full">
-          <div className="max-w-[820px]">
-            <p className="text-sm font-bold uppercase tracking-wider text-brand-600">Contact</p>
-            <h1 className="mt-3 font-display text-3xl font-black uppercase leading-[1.1] text-brand-800 md:text-4xl lg:text-[2.75rem]">
-              Deze pagina<br />moet nog gebouwd worden
-            </h1>
-            <p className="mt-5 text-base leading-relaxed text-gray-700 md:text-lg max-w-2xl">
-              We werken aan een volwaardig contactformulier met directe routes naar onze adviseurs, partners en algemene informatie. Tot die tijd vind je hieronder de snelste manieren om ons te bereiken.
-            </p>
+      <section className="relative isolate overflow-hidden bg-gradient-to-br from-brand-900 via-brand-800 to-brand-700 text-white">
+        <div className="cx relative z-10 py-16 md:py-24">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_.9fr]">
+            <div>
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-wider">
+                <Mail size={14} /> Contact met NCDE
+              </span>
+              <h1 className="mt-5 font-display text-4xl font-black uppercase leading-[1.05] md:text-5xl lg:text-6xl">
+                Heeft u vragen over <span className="text-amber-400">verduurzaming</span> van uw woning?
+              </h1>
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/80 md:text-lg">
+                NCDE helpt bewoners met praktisch en onafhankelijk advies over zonnepanelen, thuisbatterijen, isolatie, energieverbruik en financieringsmogelijkheden.
+              </p>
+            </div>
+
+            <div className="hidden rounded-3xl border border-white/20 bg-white/10 p-6 backdrop-blur-sm lg:block">
+              <h2 className="font-display text-xl font-bold">Wij helpen u met</h2>
+              <p className="mt-2 text-sm text-white/75">
+                Een duidelijke eerste stap naar een lagere energierekening en een duurzamere woning.
+              </p>
+              <div className="mt-5 space-y-3">
+                {[
+                  { Icon: HomeIcon, t: "Woningadvies", d: "Passend bij uw woning en gezinssituatie" },
+                  { Icon: Handshake, t: "Betrouwbare partners en installateurs", d: "Gecertificeerde vakspecialisten in uw regio" },
+                  { Icon: Wallet, t: "Kosten & financiering", d: "Helder overzicht van opties en maandlasten" },
+                ].map(({ Icon, t, d }) => (
+                  <div key={t} className="flex items-start gap-3 rounded-2xl bg-white/10 p-3">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/15">
+                      <Icon size={18} />
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold leading-tight">{t}</p>
+                      <p className="mt-1 text-xs text-white/70">{d}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ===== PLACEHOLDER CARD ===== */}
-      <section className="bg-white py-16">
-        <div className="cx">
-          <div className="mx-auto max-w-3xl rounded-2xl border border-brand-100 bg-brand-50 p-8 md:p-12 text-center">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-600 text-white">
-              <Construction size={28} strokeWidth={2.2} />
-            </div>
-            <h2 className="mt-6 font-display text-2xl font-black uppercase text-brand-800 md:text-3xl">In opbouw</h2>
-            <p className="mt-3 text-base leading-relaxed text-gray-700 max-w-xl mx-auto">
-              De contactpagina is nog niet beschikbaar. We bouwen aan een formulier, openingstijden en een routekaart per type vraag. Bekijk in de tussentijd onze andere pagina&apos;s of stuur een e-mail.
-            </p>
-
-            <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-md mx-auto">
-              <a
-                href="mailto:info@ncde.nl"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] transition-all"
-              >
-                <Mail size={17} />
-                Mail ons
-              </a>
-              <Link
-                href="/"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-brand-600 px-5 py-3 text-sm font-bold text-brand-600 hover:bg-brand-600 hover:text-white transition-all"
-              >
-                <HomeIcon size={17} />
-                Naar home
-              </Link>
-            </div>
-          </div>
-
-          {/* ===== QUICK LINKS ===== */}
-          <div className="mx-auto mt-12 max-w-3xl">
-            <h3 className="font-display text-lg font-bold text-gray-900">Misschien zoek je dit</h3>
-            <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
-              {[
-                { t: "Over ons", d: "Wie we zijn en waar we voor staan", href: "/over-ons" },
-                { t: "Subsidies & Financiering", d: "Regelingen en mogelijkheden", href: "/subsidies-financiering" },
-                { t: "Partners", d: "Onze geselecteerde uitvoerders", href: "/partners" },
-                { t: "Nieuws", d: "Actuele ontwikkelingen", href: "/nieuws" },
-              ].map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  className="group flex items-center justify-between rounded-xl bg-white border border-gray-100 p-4 hover:-translate-y-1 hover:shadow-[var(--shadow-card)] hover:border-brand-200 transition-all"
-                >
+      {/* ===== MAIN ===== */}
+      <section className="bg-gray-50 py-12 md:py-16">
+        <div className="cx grid gap-6 lg:grid-cols-[1.15fr_.85fr] items-start">
+          {/* LEFT: form + CTA */}
+          <div className="space-y-6">
+            {/* CONTACT FORM CARD */}
+            <div id="formulier" className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[var(--shadow-card)]">
+              <div className="border-b border-gray-200 bg-gray-50 px-6 py-5 md:px-7 md:py-6">
+                <h2 className="font-display text-xl font-bold text-brand-900 md:text-2xl">Stuur ons een bericht</h2>
+                <p className="mt-1 text-sm font-semibold text-gray-500">
+                  Vul uw gegevens in. Wij nemen contact met u op voor een vrijblijvend adviesgesprek.
+                </p>
+              </div>
+              <div className="p-6 md:p-7">
+                <form className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   <div>
-                    <p className="font-display text-sm font-bold text-gray-900">{l.t}</p>
-                    <p className="mt-1 text-xs text-gray-700">{l.d}</p>
+                    <label className="mb-1.5 block text-xs font-bold text-gray-700">Voornaam</label>
+                    <input type="text" required placeholder="Uw voornaam" className="w-full rounded-xl border border-gray-200 px-3.5 py-3 text-sm focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/15" />
                   </div>
-                  <ArrowRight size={18} className="text-brand-600 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              ))}
+                  <div>
+                    <label className="mb-1.5 block text-xs font-bold text-gray-700">Achternaam</label>
+                    <input type="text" required placeholder="Uw achternaam" className="w-full rounded-xl border border-gray-200 px-3.5 py-3 text-sm focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/15" />
+                  </div>
+                  <div>
+                    <label className="mb-1.5 block text-xs font-bold text-gray-700">E-mailadres</label>
+                    <input type="email" required placeholder="naam@email.nl" className="w-full rounded-xl border border-gray-200 px-3.5 py-3 text-sm focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/15" />
+                  </div>
+                  <div>
+                    <label className="mb-1.5 block text-xs font-bold text-gray-700">Telefoonnummer</label>
+                    <input type="tel" placeholder="06 12345678" className="w-full rounded-xl border border-gray-200 px-3.5 py-3 text-sm focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/15" />
+                  </div>
+                  <div>
+                    <label className="mb-1.5 block text-xs font-bold text-gray-700">Postcode</label>
+                    <input type="text" placeholder="1234 AB" className="w-full rounded-xl border border-gray-200 px-3.5 py-3 text-sm focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/15" />
+                  </div>
+                  <div>
+                    <label className="mb-1.5 block text-xs font-bold text-gray-700">Onderwerp</label>
+                    <select required defaultValue="" className="w-full rounded-xl border border-gray-200 bg-white px-3.5 py-3 text-sm focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/15">
+                      <option value="" disabled>Kies een onderwerp</option>
+                      <option>Zonnepanelen</option>
+                      <option>Thuisbatterij</option>
+                      <option>Isolatie</option>
+                      <option>Energierekening verlagen</option>
+                      <option>Financiering of subsidie</option>
+                      <option>Algemeen advies</option>
+                    </select>
+                  </div>
+                  <div className="md:col-span-2">
+                    <label className="mb-1.5 block text-xs font-bold text-gray-700">Waarmee kunnen wij u helpen?</label>
+                    <textarea rows={5} placeholder="Beschrijf kort uw vraag of situatie..." className="w-full rounded-xl border border-gray-200 px-3.5 py-3 text-sm focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/15" />
+                  </div>
+                  <div className="md:col-span-2">
+                    <button type="submit" className="w-full rounded-xl bg-gradient-to-br from-brand-600 to-brand-900 px-5 py-4 text-base font-bold text-white shadow-[0_10px_26px_rgba(0,122,61,.25)] hover:from-brand-700 hover:to-brand-900 transition-all">
+                      Bericht verzenden
+                    </button>
+                    <p className="mt-3 text-xs text-gray-500">
+                      Door dit formulier te verzenden vraagt u om contact. Dit is vrijblijvend.
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div id="advies" className="rounded-2xl border border-brand-100 bg-gradient-to-br from-brand-50 to-white p-6 md:p-7 shadow-[var(--shadow-card)]">
+              <h2 className="font-display text-xl font-black uppercase text-brand-800 md:text-2xl">
+                Gratis eerste advies voor bewoners
+              </h2>
+              <p className="mt-2 text-sm text-gray-700 md:text-base">
+                Wilt u weten welke maatregel het meeste effect heeft op uw energierekening? Vraag een gratis eerste adviesgesprek aan.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <a href="#formulier" className="inline-flex items-center gap-2 rounded-full bg-brand-800 px-5 py-3 text-sm font-bold text-white hover:bg-brand-900 transition-colors">
+                  Advies aanvragen
+                  <ArrowRight size={16} />
+                </a>
+                <a href="mailto:info@ncde.nl" className="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white px-5 py-3 text-sm font-bold text-brand-800 hover:bg-brand-50 transition-colors">
+                  <Mail size={16} />
+                  Mail NCDE
+                </a>
+              </div>
             </div>
           </div>
+
+          {/* RIGHT: contact info + locatie */}
+          <aside className="space-y-6">
+            <div id="contactgegevens" className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[var(--shadow-card)]">
+              <div className="border-b border-gray-200 bg-gray-50 px-6 py-5">
+                <h2 className="font-display text-xl font-bold text-brand-900">Contactgegevens</h2>
+                <p className="mt-1 text-sm font-semibold text-gray-500">Neem direct contact op met NCDE.</p>
+              </div>
+              <div className="space-y-3 p-6">
+                {[
+                  { Icon: Mail, t: "E-mail", value: <a href="mailto:info@ncde.nl" className="text-gray-600 hover:text-brand-600">info@ncde.nl</a> },
+                  { Icon: Phone, t: "Telefoon", value: <a href="tel:0852224003" className="text-gray-600 hover:text-brand-600">085 222 4003</a> },
+                  { Icon: Clock, t: "Bereikbaar", value: <span className="text-gray-600">Maandag t/m vrijdag<br />09:00 — 17:00 uur</span> },
+                  { Icon: MapPin, t: "Adres", value: <span className="text-gray-600">Keurmeesterstraat 53<br />1187 ZX Amstelveen</span> },
+                  { Icon: MapIcon, t: "Werkgebied", value: <span className="text-gray-600">Bewoners en huiseigenaren in Nederland</span> },
+                ].map(({ Icon, t, value }) => (
+                  <div key={t} className="flex items-start gap-3 rounded-2xl border border-gray-200 bg-gray-50 p-4">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-brand-100 bg-brand-50 text-brand-700">
+                      <Icon size={18} />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-sm font-bold text-brand-900">{t}</p>
+                      <div className="mt-0.5 text-sm">{value}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[var(--shadow-card)]">
+              <div className="border-b border-gray-200 bg-gray-50 px-6 py-5">
+                <h2 className="font-display text-xl font-bold text-brand-900">Locatie</h2>
+                <p className="mt-1 text-sm font-semibold text-gray-500">NCDE werkt landelijk en digitaal.</p>
+              </div>
+              <div className="p-6">
+                <div className="grid h-64 place-items-center rounded-2xl border border-gray-200 bg-gradient-to-br from-brand-100 to-gray-50 p-6 text-center">
+                  <div>
+                    <p className="font-display text-lg font-black text-brand-900">NCDE</p>
+                    <p className="mt-2 text-xs text-gray-600">
+                      Keurmeesterstraat 53 · 1187 ZX Amstelveen<br />
+                      Online advies · woningverduurzaming · bewonersbegeleiding
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
       </section>
 
