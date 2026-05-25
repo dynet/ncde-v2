@@ -114,8 +114,8 @@ export default function IsolatiePage() {
               </div>
             </div>
 
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/20 shadow-2xl">
-              <img src="/subpaginas/isolatie.jpg" alt="Isolatie van een woning" className="absolute inset-0 h-full w-full object-cover" />
+            <div className="overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
+              <img src="/subpaginas/isolatie.jpg" alt="Isolatie van een woning" className="block h-auto w-full" />
             </div>
           </div>
         </div>
