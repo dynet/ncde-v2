@@ -118,35 +118,42 @@ export default function WarmtepompPage() {
               </div>
             </div>
 
-            <div className="hidden rounded-3xl border border-white/20 bg-white/10 p-6 backdrop-blur-sm lg:block">
-              <h2 className="font-display text-xl font-bold">Waarom een warmtepomp?</h2>
-              <div className="mt-5 space-y-3">
-                {[
-                  { Icon: Flame, t: "Lagere gaskosten", d: "Bespaar significant op uw maandelijkse gasrekening" },
-                  { Icon: Zap, t: "Hybride of volledig elektrisch", d: "Stap voor stap of direct volledig aardgasvrij verwarmen" },
-                  { Icon: Snowflake, t: "Meer comfort, klaar voor de toekomst", d: "Stabiele warmte en voorbereiding op aardgasvrije wijk" },
-                ].map(({ Icon, t, d }) => (
-                  <div key={t} className="flex items-start gap-3 rounded-2xl bg-white/10 p-3">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/15">
-                      <Icon size={18} />
-                    </div>
-                    <div>
-                      <p className="text-sm font-bold leading-tight">{t}</p>
-                      <p className="mt-1 text-xs text-white/70">{d}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-5 grid grid-cols-2 gap-3">
-                <div className="rounded-xl bg-white/10 p-3 text-center">
-                  <p className="font-display text-2xl font-black text-amber-400">4×</p>
-                  <p className="mt-1 text-xs text-white/70">meer warmte dan verbruikte stroom (COP)</p>
+            <div className="overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
+              <img src="/subpaginas/warmtepomp.jpg" alt="Warmtepomp voor uw woning" className="block h-auto w-full" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== WAAROM WARMTEPOMP ===== */}
+      <section className="bg-brand-50 py-14 md:py-16">
+        <div className="cx">
+          <p className="text-xs font-bold uppercase tracking-wider text-brand-600">Waarom een warmtepomp?</p>
+          <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
+            {[
+              { Icon: Flame, t: "Lagere gaskosten", d: "Bespaar significant op uw maandelijkse gasrekening" },
+              { Icon: Zap, t: "Hybride of volledig elektrisch", d: "Stap voor stap of direct volledig aardgasvrij verwarmen" },
+              { Icon: Snowflake, t: "Meer comfort, klaar voor de toekomst", d: "Stabiele warmte en voorbereiding op aardgasvrije wijk" },
+            ].map(({ Icon, t, d }) => (
+              <div key={t} className="flex items-start gap-3 rounded-2xl border border-brand-100 bg-white p-5 shadow-[var(--shadow-card)]">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-700 border border-brand-100">
+                  <Icon size={20} />
                 </div>
-                <div className="rounded-xl bg-white/10 p-3 text-center">
-                  <p className="font-display text-2xl font-black text-amber-400">60%</p>
-                  <p className="mt-1 text-xs text-white/70">minder gasverbruik met hybride</p>
+                <div>
+                  <p className="font-display text-base font-bold text-brand-900">{t}</p>
+                  <p className="mt-1 text-sm text-gray-700">{d}</p>
                 </div>
               </div>
+            ))}
+          </div>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl border border-brand-100 bg-white p-5 text-center shadow-[var(--shadow-card)]">
+              <p className="font-display text-3xl font-black text-brand-800">4×</p>
+              <p className="mt-1 text-sm text-gray-700">meer warmte dan verbruikte stroom (COP)</p>
+            </div>
+            <div className="rounded-2xl border border-brand-100 bg-white p-5 text-center shadow-[var(--shadow-card)]">
+              <p className="font-display text-3xl font-black text-brand-800">60%</p>
+              <p className="mt-1 text-sm text-gray-700">minder gasverbruik met hybride</p>
             </div>
           </div>
         </div>
@@ -291,8 +298,9 @@ export default function WarmtepompPage() {
       </section>
 
       {/* ===== ADVIES CTA ===== */}
-      <section id="advies" className="relative isolate overflow-hidden text-white" style={{ background: "#015C39" }}>
-        <div className="cx py-16 md:py-20">
+      <section id="advies" className="bg-white py-12 md:py-16">
+        <div className="cx">
+          <div className="rounded-3xl px-6 py-12 text-white md:px-12 md:py-16 shadow-2xl" style={{ background: "#015C39" }}>
           <div className="grid items-start gap-10 lg:grid-cols-2">
             <div>
               <p className="text-xs font-bold uppercase tracking-wider text-amber-400">Vrijblijvend advies</p>
@@ -319,6 +327,7 @@ export default function WarmtepompPage() {
                 </div>
               ))}
             </div>
+          </div>
           </div>
         </div>
       </section>
