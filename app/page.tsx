@@ -85,9 +85,9 @@ export default function Home() {
                 <p className="text-xs leading-relaxed text-gray-700">
                   Krijg direct inzicht in kosten, besparing en terugverdientijd — persoonlijk en op basis van uw woning.
                 </p>
-                <a href="#woningcheck" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700">
+                <Link href="/duidelijk-inzicht" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700">
                   Meer weten <ArrowRight size={15} />
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -106,9 +106,9 @@ export default function Home() {
                 <p className="text-xs leading-relaxed text-gray-700">
                   Alle landelijke en gemeentelijke regelingen op één plek — wij vertalen ze naar uw situatie.
                 </p>
-                <a href="#" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-amber-700 hover:text-amber-800">
+                <Link href="/subsidies-financiering" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-amber-700 hover:text-amber-800">
                   Bekijk regelingen <ArrowRight size={15} />
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -127,9 +127,9 @@ export default function Home() {
                 <p className="text-xs leading-relaxed text-gray-700">
                   Wij werken uitsluitend met gecertificeerde uitvoerders — geselecteerd op kwaliteit, service en eerlijke prijs.
                 </p>
-                <a href="#" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-sky-700 hover:text-sky-800">
+                <Link href="/partners" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-sky-700 hover:text-sky-800">
                   Onze uitvoerders <ArrowRight size={15} />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -170,14 +170,14 @@ export default function Home() {
           <h2 className="mt-2 font-display text-3xl font-extrabold text-brand-800 md:text-4xl">Ontdek wat bij uw woning past</h2>
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
             {[
-              { img: "/Homepagina/isolatie.png", title: "Isolatie", sub: "Energie besparen & comfort" },
-              { img: "/Homepagina/warmtepomp.png", title: "Warmtepomp", sub: "Duurzaam verwarmen" },
-              { img: "/Homepagina/zonnepanelen.png", title: "Zonnepanelen", sub: "Wek uw eigen stroom op" },
-              { img: "/Homepagina/thuisbatterij.png", title: "Thuisbatterij", sub: "Sla energie op & gebruik slim" },
-              { img: "/Homepagina/ventilatie.png", title: "Ventilatie", sub: "Gezond binnenklimaat" },
-              { img: "/Homepagina/laadpaal.png", title: "Laadpaal", sub: "Klaar voor elektrisch rijden" },
+              { img: "/Homepagina/isolatie.png", title: "Isolatie", sub: "Energie besparen & comfort", href: "/isolatie" },
+              { img: "/Homepagina/warmtepomp.png", title: "Warmtepomp", sub: "Duurzaam verwarmen", href: "/warmtepomp" },
+              { img: "/Homepagina/zonnepanelen.png", title: "Zonnepanelen", sub: "Wek uw eigen stroom op", href: "/zonnepanelen" },
+              { img: "/Homepagina/thuisbatterij.png", title: "Thuisbatterij", sub: "Sla energie op & gebruik slim", href: "/thuisbatterij" },
+              { img: "/Homepagina/ventilatie.png", title: "Ventilatie", sub: "Gezond binnenklimaat", href: "/ventilatie" },
+              { img: "/Homepagina/laadpaal.png", title: "Laadpaal", sub: "Klaar voor elektrisch rijden", href: "/laadpaal" },
             ].map((s) => (
-              <a key={s.title} href="#" className="group flex flex-col overflow-hidden rounded-[var(--radius-xl2)] bg-white border border-transparent hover:border-brand-200 hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all duration-300">
+              <Link key={s.title} href={s.href} className="group flex flex-col overflow-hidden rounded-[var(--radius-xl2)] bg-white border border-transparent hover:border-brand-200 hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all duration-300">
                 <div className="aspect-video overflow-hidden">
                   <img src={s.img} alt={s.title} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
@@ -185,7 +185,7 @@ export default function Home() {
                   <h3 className="font-display text-sm font-bold text-gray-900">{s.title}</h3>
                   <p className="mt-0.5 text-xs text-gray-500">{s.sub}</p>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -198,7 +198,7 @@ export default function Home() {
             <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Energielabel</p>
             <h2 className="mt-2 font-display text-3xl font-extrabold text-brand-800 md:text-4xl">Wat is uw energielabel waard?</h2>
             <p className="mt-4 text-base leading-relaxed text-gray-700">
-              Van label G naar A kan duizenden euro&apos;s per jaar schelen — én verhoogt de waarde van uw woning.
+              Van label G naar A kan duizenden euro&apos;s per jaar schelen en verhoogt de waarde van uw woning.
             </p>
             <ul className="mt-6 space-y-3">
               {["Lagere energierekening", "Hogere woningwaarde bij verkoop", "Meer comfort en minder tocht", "Betere positie voor verhuur"].map((t) => (
@@ -282,7 +282,7 @@ export default function Home() {
               </ul>
             </div>
 
-            <a href="#" className="group flex flex-col rounded-xl bg-white p-5 hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all lg:col-span-3">
+            <Link href="/noodpakket" className="group flex flex-col rounded-xl bg-white p-5 hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all lg:col-span-3">
               <div className="flex items-start justify-between gap-3">
                 <div className="flex-1">
                   <h3 className="font-display text-lg font-bold text-gray-900">Noodpakket</h3>
@@ -293,9 +293,9 @@ export default function Home() {
               <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-bold text-brand-600">
                 Meer informatie <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
               </span>
-            </a>
+            </Link>
 
-            <a href="#" className="group flex flex-col rounded-xl bg-white p-5 hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all lg:col-span-3">
+            <Link href="/salderingsregeling" className="group flex flex-col rounded-xl bg-white p-5 hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all lg:col-span-3">
               <div className="flex items-start justify-between gap-3">
                 <div className="flex-1">
                   <span className="inline-block rounded-full bg-red-50 px-2 py-0.5 text-[10px] font-bold text-red-700 mb-2">Vervalt 2027</span>
@@ -307,7 +307,7 @@ export default function Home() {
               <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-bold text-brand-600">
                 Meer informatie <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

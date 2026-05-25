@@ -106,7 +106,7 @@ export default function HeroSlider() {
               duurzame energie
             </h1>
             <p className="mt-5 text-base leading-relaxed text-gray-800 md:text-lg max-w-md">
-              Wij helpen u stap voor stap naar een energiezuinige woning — met
+              Wij helpen u stap voor stap naar een energiezuinige woning, met
               onafhankelijk advies, praktische oplossingen en betrouwbare
               uitvoerders.
             </p>
