@@ -298,8 +298,9 @@ export default function WarmtepompPage() {
       </section>
 
       {/* ===== ADVIES CTA ===== */}
-      <section id="advies" className="relative isolate overflow-hidden text-white" style={{ background: "#015C39" }}>
-        <div className="cx py-16 md:py-20">
+      <section id="advies" className="bg-white py-12 md:py-16">
+        <div className="cx">
+          <div className="rounded-3xl px-6 py-12 text-white md:px-12 md:py-16 shadow-2xl" style={{ background: "#015C39" }}>
           <div className="grid items-start gap-10 lg:grid-cols-2">
             <div>
               <p className="text-xs font-bold uppercase tracking-wider text-amber-400">Vrijblijvend advies</p>
@@ -326,6 +327,7 @@ export default function WarmtepompPage() {
                 </div>
               ))}
             </div>
+          </div>
           </div>
         </div>
       </section>
