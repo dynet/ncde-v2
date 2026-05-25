@@ -59,13 +59,17 @@ const steps = [
   { n: 5, Icon: BarChart3, t: "Evaluatie", d: "De samenwerking wordt periodiek beoordeeld en verbeterd." },
 ];
 
-const categories = [
-  { Icon: Sun, label: "Partner: Dynet", t: "Zonne-energie", d: "Leveranciers en installateurs van zonnepanelen, omvormers, monitoring en onderhoud.", img: "/Homepagina/zonnepanelen.png" },
-  { Icon: Thermometer, label: "Technische partners", t: "Verwarming & koeling", d: "Warmtepompen, hybride oplossingen en andere klimaattechnieken voor wooncomfort.", img: "/Homepagina/warmtepomp.png" },
-  { Icon: HousePlug, label: "Geselecteerde uitvoerders", t: "Isolatie & ventilatie", d: "Specialisten in isolatie, ventilatiesystemen en verbetering van het binnenklimaat.", img: "/Homepagina/isolatie.png" },
-  { Icon: Plug, label: "Partner: Dynet", t: "Laadoplossingen", d: "Laadpalen en slimme oplossingen voor elektrisch rijden, thuis en op locatie.", img: "/Homepagina/laadpaal.png" },
-  { Icon: Battery, label: "Partner: Dynet", t: "Energieopslag", d: "Opslagoplossingen voor meer energie-onafhankelijkheid en slim verbruik.", img: "/Homepagina/thuisbatterij.png" },
-  { Icon: Building2, label: "Gemeenten & fondsen", t: "Advies & financiering", d: "Adviesbureaus, inspectie, monitoring en financiële partners voor bewoners.", img: "/Homepagina/subsidie.png" },
+const ncdePartners = [
+  {
+    name: "Dynet BV",
+    desc: "Gespecialiseerd in elektrotechnische installaties.",
+    logo: "/partners/dynet-logo.png",
+  },
+  {
+    name: "Alterion BV",
+    desc: "Gespecialiseerd in de installatie van thuisbatterijen.",
+    logo: null,
+  },
 ];
 
 export default function Partners() {
@@ -231,29 +235,21 @@ export default function Partners() {
         </div>
       </section>
 
-      {/* ===== PARTNER CATEGORIES ===== */}
+      {/* ===== NCDE PARTNERS ===== */}
       <section className="bg-brand-50 py-16 md:py-20">
         <div className="cx">
-          <div className="text-center mb-12">
-            <p className="text-xs font-bold uppercase tracking-[.2em] text-brand-600">Onze partnercategorieën</p>
-            <h2 className="mt-2 font-display text-3xl font-extrabold uppercase text-brand-800 md:text-4xl">Van advies tot uitvoering</h2>
-            <p className="mt-3 text-base leading-relaxed text-gray-700 max-w-2xl mx-auto">
-              NCDE werkt met partners die bijdragen aan een duidelijke, betaalbare en betrouwbare verduurzamingsroute voor bewoners.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {categories.map((c) => (
-              <article key={c.t} className="group rounded-2xl overflow-hidden bg-white border border-gray-200 hover:border-brand-200 hover:shadow-[var(--shadow-card)] hover:-translate-y-1 transition-all">
-                <div className="p-6">
-                  <p className="text-xs font-bold uppercase tracking-wider text-brand-600">{c.label}</p>
-                  <h3 className="mt-1 font-display text-lg font-bold text-gray-900 flex items-center gap-2">
-                    <c.Icon size={18} className="text-brand-600" /> {c.t}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-gray-700">{c.d}</p>
-                  <a href="#" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700 group-hover:gap-2 transition-all">
-                    Bekijk partners <ArrowRight size={14} />
-                  </a>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {ncdePartners.map((p) => (
+              <article key={p.name} className="group rounded-2xl bg-white border border-gray-200 p-6 hover:border-brand-200 hover:shadow-[var(--shadow-card)] hover:-translate-y-1 transition-all">
+                <div className="flex h-24 items-center justify-center rounded-xl bg-gray-50 border border-gray-100">
+                  {p.logo ? (
+                    <img src={p.logo} alt={`${p.name} logo`} className="max-h-16 max-w-[80%] object-contain" />
+                  ) : (
+                    <span className="text-xs font-bold uppercase tracking-wider text-gray-400">Logo volgt</span>
+                  )}
                 </div>
+                <h3 className="mt-5 font-display text-xl font-black uppercase text-brand-800">{p.name}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-700">{p.desc}</p>
               </article>
             ))}
           </div>
