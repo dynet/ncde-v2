@@ -40,6 +40,7 @@ type Subsidy = {
   voorwaarden: string[];
   img: string;
   alt: string;
+  href: string;
 };
 
 const subsidies: Subsidy[] = [
@@ -50,6 +51,7 @@ const subsidies: Subsidy[] = [
     voorwaarden: ["Bestaande woning", "Uitvoering door bedrijf", "Meldcode en factuur nodig"],
     img: "/subsidies-financiering/isde-isolatie.png",
     alt: "Isolatiewerkzaamheden aan woning",
+    href: "/isde-isolatie",
   },
   {
     doelgroep: "Woningeigenaren",
@@ -58,6 +60,7 @@ const subsidies: Subsidy[] = [
     voorwaarden: ["Eerst installeren", "Binnen 24 maanden aanvragen", "Meldcode verplicht"],
     img: "/subsidies-financiering/isde-warmtepomp.png",
     alt: "Installatie van duurzame techniek",
+    href: "/isde-warmtepomp",
   },
   {
     doelgroep: "Woningeigenaren",
@@ -66,6 +69,7 @@ const subsidies: Subsidy[] = [
     voorwaarden: ["Nieuwe installatie", "Bestaande woning", "Bewijs van aanschaf bewaren"],
     img: "/subsidies-financiering/isde-zonneboiler.png",
     alt: "Zonneboiler op dak",
+    href: "/isde-zonneboiler",
   },
   {
     doelgroep: "VvE's",
@@ -74,6 +78,7 @@ const subsidies: Subsidy[] = [
     voorwaarden: ["Besluitvorming VvE", "Gebouwgebonden aanvraag", "Offertes en rapporten nodig"],
     img: "/subsidies-financiering/svve.png",
     alt: "Appartementengebouw voor VvE verduurzaming",
+    href: "/svve",
   },
   {
     doelgroep: "Bewoners lokaal",
@@ -82,6 +87,7 @@ const subsidies: Subsidy[] = [
     voorwaarden: ["Verschilt per gemeente", "Vaak inkomen- of labelafhankelijk", "Budget kan opraken"],
     img: "/subsidies-financiering/gemeentelijk.png",
     alt: "Gemeente en duurzame wijk",
+    href: "/gemeentelijke-subsidies",
   },
   {
     doelgroep: "Aansluiting warmtenet",
@@ -90,6 +96,7 @@ const subsidies: Subsidy[] = [
     voorwaarden: ["Specifieke situatie", "Controleer voorwaarden", "Documenten verplicht"],
     img: "/subsidies-financiering/warmtenet-koken.png",
     alt: "Warmtenet en elektrisch koken",
+    href: "/warmtenet-elektrisch-koken",
   },
 ];
 
@@ -284,9 +291,9 @@ export default function SubsidiesFinanciering() {
                       </li>
                     ))}
                   </ul>
-                  <a href="#" className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700">
+                  <Link href={s.href} className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700">
                     Lees voorwaarden <ArrowRight size={15} />
-                  </a>
+                  </Link>
                 </div>
               </article>
             ))}
