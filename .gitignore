@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# intern (niet pushen)
+WERK-OVERZICHT.md
+STATUS-VOOR-KLANT.md
