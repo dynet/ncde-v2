@@ -108,7 +108,7 @@ export default function IsdeIsolatiePage() {
                 <ShieldCheck size={14} /> Subsidie · ISDE Isolatie
               </span>
               <h1 className="mt-5 font-display text-4xl font-black uppercase leading-[1.05] md:text-5xl lg:text-6xl">
-                ISDE (Investeringssubsidie duurzame energie en energiebesparing)<br /><span className="text-amber-400">Isolatie</span> voor woningeigenaren
+                ISDE<br /><span className="text-amber-400">Isolatie</span> voor woningeigenaren
               </h1>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
                 Subsidie voor dak-, vloer-, bodem-, gevel-, spouwmuur- en glasisolatie. Vanaf 2026 ook voor energiezuinige ventilatie in combinatie met een isolatiemaatregel.
@@ -140,7 +140,7 @@ export default function IsdeIsolatiePage() {
           </h2>
           <div className="mt-4 max-w-3xl space-y-4 text-base text-gray-700">
             <p>
-              De ISDE is de landelijke subsidie voor woningeigenaren die hun woning verduurzamen. Met isolatie verlaagt u het energieverbruik, verbetert u het wooncomfort en kunt u een deel van de investering terugkrijgen.
+              De ISDE (Investeringssubsidie duurzame energie en energiebesparing) is de landelijke subsidie voor woningeigenaren die hun woning verduurzamen. Met isolatie verlaagt u het energieverbruik, verbetert u het wooncomfort en kunt u een deel van de investering terugkrijgen.
             </p>
             <p>
               De subsidie geldt alleen wanneer de maatregel voldoet aan de minimale oppervlakte-eisen en isolatiewaarden. De aanvraag loopt via RVO.nl.
