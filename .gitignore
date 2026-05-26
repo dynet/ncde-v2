@@ -40,6 +40,12 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# intern (niet pushen)
+# intern (niet pushen) - klant-overzicht docs + bronmateriaal
 WERK-OVERZICHT.md
 STATUS-VOOR-KLANT.md
+/nieuw pages/
+*.docx
+*.doc
+*.xlsx
+*.xls
+*.pdf
