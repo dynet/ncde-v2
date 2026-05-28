@@ -83,7 +83,7 @@ export default function Nieuws() {
             <h1 className="font-display text-3xl font-black uppercase leading-[1.1] md:text-4xl lg:text-[2.75rem]">
               Nieuws
             </h1>
-            <p className="mt-3 text-base font-bold text-brand-200">Actueel. Inspirerend. Duurzaam.</p>
+            <p className="mt-3 text-base font-bold text-brand-200">Actueel, Inspirerend, Duurzaam.</p>
             <p className="mt-3 text-base leading-relaxed text-brand-100 md:text-lg max-w-2xl">
               Blijf op de hoogte van het laatste nieuws, ontwikkelingen, projecten en tips over duurzaam wonen en de energietransitie in Nederland.
             </p>

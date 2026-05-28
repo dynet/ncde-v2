@@ -96,7 +96,7 @@ export default function IsdeZonneboilerPage() {
                 <Sun size={14} /> Subsidie · ISDE Zonneboiler
               </span>
               <h1 className="mt-5 font-display text-4xl font-black uppercase leading-[1.05] md:text-5xl lg:text-6xl">
-                ISDE (Investeringssubsidie duurzame energie en energiebesparing)<br /><span className="text-amber-400">Zonneboiler</span> voor woningeigenaren
+                ISDE <span className="text-amber-400">Zonneboiler</span><br />voor woningeigenaren
               </h1>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
                 Subsidie voor duurzame warmwateropwekking met een zonneboiler: collectoren, boilervat en circulatiepomp. Geschikt voor bestaande woningen.
@@ -112,8 +112,8 @@ export default function IsdeZonneboilerPage() {
               </a>
             </div>
 
-            <div className="overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
-              <img src="/subpaginas/isde-zonneboiler.png" alt="ISDE Zonneboiler" className="block h-auto w-full" />
+            <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
+              <img src="/subpaginas/isde-zonneboiler.png" alt="ISDE Zonneboiler" className="block h-full w-full object-cover" />
             </div>
           </div>
         </div>
@@ -128,10 +128,10 @@ export default function IsdeZonneboilerPage() {
           </h2>
           <div className="mt-4 max-w-3xl space-y-4 text-base text-gray-700">
             <p>
-              Met een zonneboiler gebruikt u zonnewarmte voor warm tapwater. Hierdoor gebruikt u minder gas of elektriciteit voor warm water en verlaagt u uw energierekening.
+              De ISDE (Investeringssubsidie duurzame energie en energiebesparing) is een landelijke subsidie voor woningeigenaren die hun woning verduurzamen. Met een zonneboiler gebruikt u warmte van de zon voor warm tapwater. Hierdoor verbruikt u minder gas of elektriciteit voor het verwarmen van water en verlaagt u uw energierekening.
             </p>
             <p>
-              Het subsidiebedrag hangt af van het collectoroppervlak en de inhoud van het voorraadvat.
+              Het subsidiebedrag is afhankelijk van het collectoroppervlak en de inhoud van het voorraadvat.
             </p>
           </div>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">

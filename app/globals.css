@@ -95,3 +95,27 @@ html {
   animation: pop-text 4s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
   transform-origin: left center;
 }
+
+/* Anchor-doelen niet achter de sticky header (h-24 = 6rem) laten verdwijnen */
+:target,
+#woningcheck, #oplossingen, #voorwaarden, #inzichten, #advies, #systemen,
+#keurmerk, #contact, #hoe-werken, #formulier, #contactgegevens {
+  scroll-margin-top: 7rem;
+}
+
+/* Partner logo slideshow (links -> rechts) */
+@keyframes partner-marquee {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+.partner-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: partner-marquee 24s linear infinite;
+}
+.partner-marquee:hover .partner-marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .partner-marquee-track { animation: none; }
+}

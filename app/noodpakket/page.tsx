@@ -157,8 +157,8 @@ export default function NoodpakketPage() {
               </a>
             </div>
 
-            <div className="flex aspect-square items-center justify-center rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm">
-              <Backpack size={220} strokeWidth={1.2} className="text-amber-400/90" />
+            <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
+              <img src="/homepagina 2/Noodpakket.png" alt="Noodpakket voor thuis" className="block h-full w-full object-cover" />
             </div>
           </div>
         </div>

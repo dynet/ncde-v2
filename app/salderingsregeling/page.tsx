@@ -41,7 +41,7 @@ const voorwaarden = [
 ];
 
 const periodes = [
-  { p: "Nu — 2026", w: "Tot 1 januari 2027 mag u teruggeleverde stroom verrekenen met uw verbruik.", v: "Uw energierekening wordt lager doordat afname en teruglevering worden weggestreept." },
+  { p: "2026", w: "Tot 1 januari 2027 mag u teruggeleverde stroom verrekenen met uw verbruik.", v: "Uw energierekening wordt lager doordat afname en teruglevering worden weggestreept." },
   { p: "Verandering", w: "Vanaf 1 januari 2027 stopt salderen volledig.", v: "U betaalt voor stroom die u afneemt en krijgt een aparte terugleververgoeding." },
   { p: "Toekomst", w: "Na 2027 wordt eigen verbruik belangrijker.", v: "Het loont meer om apparaten te gebruiken wanneer uw zonnepanelen stroom opwekken." },
 ];
@@ -53,8 +53,8 @@ const voordelen = [
 ];
 
 const acties = [
-  { Icon: Clock, t: "Verbruik verplaatsen", d: "Zet apparaten zoveel mogelijk aan overdag wanneer zonnepanelen produceren — wasmachine, vaatwasser, boiler en opladers." },
-  { Icon: ClipboardList, t: "Contract vergelijken", d: "Vergelijk terugleververgoeding, terugleverkosten, vaste kosten en tarieven per energieleverancier — verschillen kunnen groot zijn." },
+  { Icon: Clock, t: "Verbruik verplaatsen", d: "Gebruik apparaten zoveel mogelijk overdag wanneer uw zonnepanelen produceren, zoals de wasmachine, vaatwasser, boiler en opladers." },
+  { Icon: ClipboardList, t: "Contract vergelijken", d: "Vergelijk terugleververgoedingen, terugleverkosten, vaste kosten en tarieven per energieleverancier. De verschillen kunnen groot zijn." },
   { Icon: Battery, t: "Thuisbatterij onderzoeken", d: "Een thuisbatterij kan helpen om zonnestroom later te gebruiken, maar is niet in elke situatie financieel voordelig. Laat u goed adviseren." },
 ];
 
@@ -95,7 +95,7 @@ export default function SalderingsregelingPage() {
                 Salderingsregeling<br /><span className="text-amber-400">zonnepanelen</span>
               </h1>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
-                De salderingsregeling bepaalt hoe opgewekte zonnestroom wordt verrekend met uw stroomverbruik. Tot en met 31 december 2026 mag u nog salderen — daarna stopt de regeling.
+                De salderingsregeling bepaalt hoe opgewekte zonnestroom wordt verrekend met uw stroomverbruik. Tot en met 31 december 2026 mag u nog salderen, daarna stopt de regeling.
               </p>
               <ul className="mt-6 space-y-2 text-sm text-white/85">
                 <li>✓ Tot 2027 teruglevering verrekenen met verbruik</li>
@@ -108,8 +108,8 @@ export default function SalderingsregelingPage() {
               </a>
             </div>
 
-            <div className="flex aspect-square items-center justify-center rounded-3xl border border-white/20 bg-white/5 backdrop-blur-sm">
-              <Sun size={220} strokeWidth={1.2} className="text-amber-400/90" />
+            <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
+              <img src="/homepagina 2/Einde saldering .png" alt="Salderingsregeling zonnepanelen" className="block h-full w-full object-cover" />
             </div>
           </div>
         </div>
@@ -123,7 +123,7 @@ export default function SalderingsregelingPage() {
             Eigen verbruik wordt belangrijker dan ooit
           </h2>
           <p className="mt-4 max-w-3xl text-base text-gray-700">
-            Vanaf 2027 krijgt u een vergoeding voor stroom die u teruglevert, maar u mag deze stroom niet meer wegstrepen tegen de stroom die u later afneemt. Daardoor wordt eigen verbruik van zonnestroom belangrijker dan ooit — plan uw verbruik slim op momenten dat de zon schijnt.
+            Vanaf 2027 krijgt u een vergoeding voor stroom die u teruglevert, maar u mag deze stroom niet meer wegstrepen tegen de stroom die u later afneemt. Daardoor wordt eigen verbruik van zonnestroom belangrijker dan ooit, waardoor het slim is om uw verbruik te plannen op momenten dat de zon schijnt.
           </p>
         </div>
       </section>

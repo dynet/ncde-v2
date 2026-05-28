@@ -105,7 +105,7 @@ export default function GemeentelijkeSubsidiesPage() {
                 Gemeentelijke subsidie voor<br /><span className="text-amber-400">bewoners</span>
               </h1>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
-                Veel gemeenten bieden extra subsidie of ondersteuning voor isolatie, ventilatie, energieadvies of collectieve wijkacties — bovenop de landelijke regelingen.
+                Naast landelijke subsidies bieden veel gemeenten extra ondersteuning voor isolatie, ventilatie, energieadvies en lokale verduurzamingsacties.
               </p>
               <ul className="mt-6 space-y-2 text-sm text-white/85">
                 <li>✓ Verschilt per gemeente</li>
@@ -118,8 +118,8 @@ export default function GemeentelijkeSubsidiesPage() {
               </a>
             </div>
 
-            <div className="overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
-              <img src="/subpaginas/gemeentelijke-subsidies.png" alt="Gemeentelijke subsidie" className="block h-auto w-full" />
+            <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
+              <img src="/subpaginas/gemeentelijke-subsidies.png" alt="Gemeentelijke subsidie" className="block h-full w-full object-cover" />
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@ export default function GemeentelijkeSubsidiesPage() {
           <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {[
               "Combineerbaar met landelijke ISDE-subsidie",
-              "Vraag tijdig aan — budget kan opraken",
+              "Vraag tijdig aan: budget kan opraken",
             ].map((t) => (
               <div key={t} className="flex items-center gap-3 rounded-2xl border border-brand-100 bg-white p-4 shadow-[var(--shadow-card)]">
                 <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-brand-600 text-xs font-bold text-white">
@@ -284,7 +284,7 @@ export default function GemeentelijkeSubsidiesPage() {
                   Wilt u weten welke subsidie uw gemeente biedt?
                 </h2>
                 <p className="mt-4 max-w-xl text-base leading-relaxed text-white/80">
-                  NCDE helpt u met inzicht in lokale regelingen, voorwaarden, subsidie, kosten en maandelijkse besparing — volledig vrijblijvend.
+                  NCDE helpt u vrijblijvend met inzicht in lokale regelingen, subsidies, kosten en mogelijke maandelijkse besparingen.
                 </p>
                 <Link href="/contact" className="mt-6 inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-3.5 text-sm font-bold text-white hover:bg-brand-700 transition-colors">
                   Vraag vrijblijvend advies aan

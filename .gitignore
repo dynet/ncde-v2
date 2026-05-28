@@ -43,7 +43,9 @@ next-env.d.ts
 # intern (niet pushen) - klant-overzicht docs + bronmateriaal
 WERK-OVERZICHT.md
 STATUS-VOOR-KLANT.md
+HANDOFF.md
 /nieuw pages/
+/new update 28 mei/
 *.docx
 *.doc
 *.xlsx

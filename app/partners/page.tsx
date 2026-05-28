@@ -151,9 +151,6 @@ export default function Partners() {
                 </div>
                 <h3 className="font-display text-base font-bold text-gray-900">{t}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-gray-700">{d}</p>
-                <div className="mt-4 flex items-center gap-1 text-sm font-bold text-brand-600 group-hover:gap-2 transition-all">
-                  Lees meer <ArrowRight size={14} />
-                </div>
               </article>
             ))}
           </div>
@@ -244,20 +241,22 @@ export default function Partners() {
       {/* ===== NCDE PARTNERS ===== */}
       <section className="bg-brand-50 py-16 md:py-20">
         <div className="cx">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {ncdePartners.map((p) => (
-              <article key={p.name} className="group rounded-2xl bg-white border border-gray-200 p-6 hover:border-brand-200 hover:shadow-[var(--shadow-card)] hover:-translate-y-1 transition-all">
-                <div className="flex h-24 items-center justify-center rounded-xl bg-gray-50 border border-gray-100">
-                  {p.logo ? (
-                    <img src={p.logo} alt={`${p.name} logo`} className="max-h-16 max-w-[80%] object-contain" />
-                  ) : (
-                    <span className="text-xs font-bold uppercase tracking-wider text-gray-400">Logo volgt</span>
-                  )}
-                </div>
-                <h3 className="mt-5 font-display text-xl font-black uppercase text-brand-800">{p.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-700">{p.desc}</p>
-              </article>
-            ))}
+          <div className="partner-marquee overflow-hidden">
+            <div className="partner-marquee-track gap-5">
+              {[...ncdePartners, ...ncdePartners].map((p, i) => (
+                <article key={`${p.name}-${i}`} aria-hidden={i >= ncdePartners.length} className="w-64 shrink-0 rounded-2xl bg-white border border-gray-200 p-5">
+                  <div className="flex h-20 items-center justify-center rounded-xl bg-gray-50 border border-gray-100">
+                    {p.logo ? (
+                      <img src={p.logo} alt={`${p.name} logo`} className="max-h-12 max-w-[70%] object-contain" />
+                    ) : (
+                      <span className="text-xs font-bold uppercase tracking-wider text-gray-400">Logo volgt</span>
+                    )}
+                  </div>
+                  <h3 className="mt-4 font-display text-lg font-black uppercase text-brand-800">{p.name}</h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-gray-700">{p.desc}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>

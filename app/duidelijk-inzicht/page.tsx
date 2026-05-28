@@ -86,7 +86,7 @@ export default function DuidelijkInzichtPage() {
                 Duidelijk inzicht,<br /><span className="text-amber-400">betere keuzes.</span>
               </h1>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
-                Krijg direct inzicht in kosten, besparing en terugverdientijd — persoonlijk en op basis van uw woning.
+                Krijg inzicht in kosten en terugverdientijd, afgestemd op uw persoonlijke situatie en woning.
               </p>
               <ul className="mt-6 space-y-2 text-sm text-white/85">
                 <li>✓ Persoonlijk advies op maat</li>
@@ -95,17 +95,14 @@ export default function DuidelijkInzichtPage() {
               </ul>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link href="/#woningcheck" className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] transition-all">
-                  Start uw inzicht
+                  Start woningcheck
                   <ArrowRight size={16} />
                 </Link>
-                <a href="#inzichten" className="inline-flex items-center gap-2 rounded-lg border border-white/30 bg-white/10 px-5 py-3 text-sm font-bold text-white hover:bg-white/20 transition-colors">
-                  Bekijk rekentools
-                </a>
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
-              <img src="/subpaginas/duidelijk-inzicht.png" alt="Duidelijk inzicht in besparing en terugverdientijd" className="block h-auto w-full" />
+            <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
+              <img src="/subpaginas/duidelijk-inzicht.png" alt="Duidelijk inzicht in besparing en terugverdientijd" className="block h-full w-full object-cover" />
             </div>
           </div>
         </div>
@@ -219,7 +216,7 @@ export default function DuidelijkInzichtPage() {
                   Ontdek wat verduurzaming ú oplevert. Snel, eenvoudig en vrijblijvend.
                 </p>
                 <Link href="/#woningcheck" className="mt-6 inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-3.5 text-sm font-bold text-white hover:bg-brand-700 transition-colors">
-                  Start uw inzicht
+                  Start woningcheck
                   <ArrowRight size={16} />
                 </Link>
                 <p className="mt-4 flex items-center gap-2 text-xs text-white/70">
