@@ -124,8 +124,8 @@ export default function IsdeIsolatiePage() {
               </a>
             </div>
 
-            <div className="overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
-              <img src="/subpaginas/isde-isolatie.png" alt="ISDE Isolatie" className="block h-auto w-full" />
+            <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
+              <img src="/subpaginas/isde-isolatie.png" alt="ISDE Isolatie" className="block h-full w-full object-cover" />
             </div>
           </div>
         </div>

@@ -114,8 +114,8 @@ export default function WarmtenetElektrischKokenPage() {
               </a>
             </div>
 
-            <div className="overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
-              <img src="/subpaginas/warmtenet-elektrisch-koken.png" alt="Warmtenet en elektrisch koken" className="block h-auto w-full" />
+            <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
+              <img src="/subpaginas/warmtenet-elektrisch-koken.png" alt="Warmtenet en elektrisch koken" className="block h-full w-full object-cover" />
             </div>
           </div>
         </div>
@@ -188,9 +188,9 @@ export default function WarmtenetElektrischKokenPage() {
               <tbody className="divide-y divide-gray-200">
                 {tabel.map((r) => (
                   <tr key={r.o} className="hover:bg-brand-50/50 transition-colors">
-                    <td className="px-5 py-4 font-bold text-brand-800 whitespace-nowrap">{r.o}</td>
-                    <td className="px-5 py-4 text-gray-700">{r.w}</td>
-                    <td className="px-5 py-4 text-gray-700">{r.b}</td>
+                    <td className="px-5 py-4 align-top font-bold text-brand-800 whitespace-nowrap">{r.o}</td>
+                    <td className="px-5 py-4 align-top text-gray-700">{r.w}</td>
+                    <td className="px-5 py-4 align-top text-gray-700">{r.b}</td>
                   </tr>
                 ))}
               </tbody>

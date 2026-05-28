@@ -64,10 +64,10 @@ const dataCards = [
 ];
 
 const bestuur = [
-  { naam: "Jeroen van der Meer", rol: "Voorzitter", omschr: "Expert in energietransitie en organisatieontwikkeling." },
-  { naam: "Sophie de Groot", rol: "Secretaris", omschr: "Specialist in duurzaamheid en beleid." },
-  { naam: "Mark van der Heijden", rol: "Penningmeester", omschr: "Financieel strateeg en risicomanagement." },
-  { naam: "Lisa Bakker", rol: "Bestuurslid", omschr: "Data & Innovatie — gedreven voorvechter van digitale oplossingen." },
+  { naam: "Jamal Badho", rol: "Voorzitter" },
+  { naam: "Dennis Wieringa", rol: "Secretaris" },
+  { naam: "Zyon Best", rol: "Penningmeester" },
+  { naam: "Nirmal Madarie", rol: "Bestuurslid" },
 ];
 
 export default function OverOns() {
@@ -126,7 +126,7 @@ export default function OverOns() {
                 </a>
               </div>
             </div>
-            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-3">
+            <div className="lg:col-span-5 lg:mt-32 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-3">
               {[
                 { img: "/over-ons/onafhankelijk.png", t: "Onafhankelijk", d: "Advies dat u kunt vertrouwen" },
                 { img: "/over-ons/data-inzicht.png", t: "Data & Inzicht", d: "Slimme analyses voor de beste keuze" },
@@ -316,7 +316,6 @@ export default function OverOns() {
                   <article key={m.naam} className="rounded-xl bg-white p-5 border border-gray-200">
                     <p className="font-display text-base font-bold text-gray-900">{m.naam}</p>
                     <span className="inline-block rounded-md bg-brand-50 px-2 py-0.5 text-xs font-bold text-brand-700 mt-1">{m.rol}</span>
-                    <p className="mt-2 text-sm leading-relaxed text-gray-700">{m.omschr}</p>
                   </article>
                 ))}
               </div>

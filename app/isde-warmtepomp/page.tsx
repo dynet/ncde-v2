@@ -101,7 +101,7 @@ export default function IsdeWarmtepompPage() {
                 <Flame size={14} /> Subsidie · ISDE Warmtepomp
               </span>
               <h1 className="mt-5 font-display text-4xl font-black uppercase leading-[1.05] md:text-5xl lg:text-6xl">
-                ISDE (Investeringssubsidie duurzame energie en energiebesparing)<br /><span className="text-amber-400">Warmtepomp</span> voor woningeigenaren
+                ISDE <span className="text-amber-400">Warmtepomp</span><br />voor woningeigenaren
               </h1>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
                 Subsidie voor een nieuwe hybride of volledig elektrische warmtepomp voor ruimteverwarming of tapwaterverwarming in een bestaande woning.
@@ -117,8 +117,8 @@ export default function IsdeWarmtepompPage() {
               </a>
             </div>
 
-            <div className="overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
-              <img src="/subpaginas/isde-warmtepomp.png" alt="ISDE Warmtepomp" className="block h-auto w-full" />
+            <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
+              <img src="/subpaginas/isde-warmtepomp.png" alt="ISDE Warmtepomp" className="block h-full w-full object-cover" />
             </div>
           </div>
         </div>
@@ -133,7 +133,7 @@ export default function IsdeWarmtepompPage() {
           </h2>
           <div className="mt-4 max-w-3xl space-y-4 text-base text-gray-700">
             <p>
-              De ISDE is een landelijke subsidie voor woningeigenaren die hun woning verduurzamen met een warmtepomp. De warmtepomp moet nieuw zijn en worden gebruikt voor ruimteverwarming, tapwaterverwarming of beide.
+              De ISDE (Investeringssubsidie duurzame energie en energiebesparing) is een landelijke subsidie voor woningeigenaren die hun woning verduurzamen met een warmtepomp. De warmtepomp moet nieuw zijn en worden gebruikt voor ruimteverwarming, tapwaterverwarming of beide.
             </p>
             <p>
               Het subsidiebedrag hangt af van het type warmtepomp en het thermisch vermogen. Minimaal ontvangt u € 500 subsidie.

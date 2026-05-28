@@ -60,7 +60,7 @@ const tabel = [
   { o: "Warmtepompen", w: "Duurzame warmteopties: warmtepompen of aansluiting op een warmtenet.", b: "Geschikt wanneer het gebouw technisch klaar is voor duurzame warmte. Vóór uitvoering aanvragen." },
   { o: "Zeer Energiezuinig Pakket", w: "Een totaalpakket waarmee het gebouw zeer energiezuinig wordt gemaakt.", b: "Gecombineerd met bouwbegeleiding en integrale aanpak. Vóór uitvoering aanvragen." },
   { o: "Oplaadpuntenadvies", w: "Advies over laadpunten voor elektrische auto's bij het complex.", b: "Helpt de VvE om veilig en toekomstgericht laadvoorzieningen te plannen. Aanvraag achteraf." },
-  { o: "Basislaadinfrastructuur", w: "Voorbereiding van technische infrastructuur voor laadpunten.", b: "Vóór uitvoering aanvragen — geldt ook voor laadinfrastructuur." },
+  { o: "Basislaadinfrastructuur", w: "Voorbereiding van technische infrastructuur voor laadpunten.", b: "Vóór uitvoering aanvragen (geldt ook voor laadinfrastructuur)." },
 ];
 
 const wijzigingen = [
@@ -120,7 +120,7 @@ export default function SvvePage() {
               <ul className="mt-6 space-y-2 text-sm text-white/85">
                 <li>✓ Voor VvE&apos;s, woonverenigingen en wooncoöperaties</li>
                 <li>✓ Advies, maatregelen én laadinfrastructuur</li>
-                <li>✓ Open tot en met 2030 — geen maximum per VvE</li>
+                <li>✓ Open tot en met 2030, geen maximum per VvE</li>
               </ul>
               <a href="#voorwaarden" className="mt-7 inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] transition-all">
                 Lees voorwaarden
@@ -128,8 +128,8 @@ export default function SvvePage() {
               </a>
             </div>
 
-            <div className="overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
-              <img src="/subpaginas/svve.png" alt="SVVE voor VvE's" className="block h-auto w-full" />
+            <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
+              <img src="/subpaginas/svve.png" alt="SVVE voor VvE's" className="block h-full w-full object-cover" />
             </div>
           </div>
         </div>
@@ -147,7 +147,7 @@ export default function SvvePage() {
               SVVE staat voor Subsidieregeling Verduurzaming voor Verenigingen van Eigenaars. De regeling helpt VvE&apos;s om hun appartementencomplex stap voor stap te verduurzamen.
             </p>
             <p>
-              De regeling bestaat uit drie onderdelen: verduurzamingsadvies en -onderzoek, verduurzamingsmaatregelen en oplaadpunten(advies).
+              De regeling bestaat uit drie onderdelen: verduurzamingsadvies en -onderzoek, verduurzamingsmaatregelen en oplaadpunten(advies). DMJOP staat voor Duurzaam Meerjarenonderhoudsplan voor de VvE en helpt de VvE verduurzaming te koppelen aan gepland onderhoud.
             </p>
           </div>
           <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-amber-50 border border-amber-200 px-4 py-2 text-sm font-bold text-amber-900">
@@ -290,7 +290,7 @@ export default function SvvePage() {
           <div className="mt-6 flex items-start gap-3 rounded-xl border border-red-200 bg-red-50 px-5 py-4">
             <TriangleAlert size={18} className="mt-0.5 shrink-0 text-red-600" />
             <p className="text-sm text-red-900">
-              <strong>Let op — aanvraagmoment verschilt per onderdeel:</strong> controleer altijd vóór de aanvraag welke voorwaarden gelden voor het gekozen onderdeel. Advies, maatregelen en laadinfrastructuur hebben elk hun eigen aanvraagmoment en benodigde bewijsstukken. Verkeerd aanvragen kan leiden tot afwijzing.
+              <strong>Let op: aanvraagmoment verschilt per onderdeel.</strong> Controleer altijd vóór de aanvraag welke voorwaarden gelden voor het gekozen onderdeel. Advies, maatregelen en laadinfrastructuur hebben elk hun eigen aanvraagmoment en benodigde bewijsstukken. Verkeerd aanvragen kan leiden tot afwijzing.
             </p>
           </div>
         </div>

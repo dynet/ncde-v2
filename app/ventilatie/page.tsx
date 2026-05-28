@@ -103,7 +103,7 @@ export default function VentilatiePage() {
                 Ventilatie van<br /><span className="text-amber-400">je woning</span>
               </h1>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
-                Frisse lucht, minder vocht en een gezond binnenklimaat. NCDE helpt u met de juiste ventilatieoplossing voor uw woning, passend bij isolatie, comfort en energiebesparing.
+                Frisse lucht, minder vocht en een gezond binnenklimaat. NCDE helpt u met het kiezen van de juiste ventilatieoplossing voor uw woning, afgestemd op uw isolatieniveau, wooncomfort en energiebesparing. Met warmteterugwinning (WTW) haalt u maximaal rendement uit uw ventilatie zodat u gezonde lucht inademt zonder warmte te verliezen.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <a href="#systemen" className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] transition-all">
@@ -116,8 +116,8 @@ export default function VentilatiePage() {
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
-              <img src="/subpaginas/ventilatie.jpg" alt="Ventilatie van een woning" className="block h-auto w-full" />
+            <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
+              <img src="/subpaginas/ventilatie.jpg" alt="Ventilatie van een woning" className="block h-full w-full object-cover" />
             </div>
           </div>
         </div>

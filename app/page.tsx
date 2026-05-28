@@ -89,7 +89,7 @@ export default function Home() {
                   <h3 className="font-display text-base font-extrabold text-brand-800">Duidelijk inzicht</h3>
                 </div>
                 <p className="text-xs leading-relaxed text-gray-700">
-                  Krijg direct inzicht in kosten, besparing en terugverdientijd — persoonlijk en op basis van uw woning.
+                  Krijg inzicht in kosten en terugverdientijd, afgestemd op uw persoonlijke situatie en woning.
                 </p>
                 <Link href="/duidelijk-inzicht" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700">
                   Meer weten <ArrowRight size={15} />
@@ -110,7 +110,7 @@ export default function Home() {
                   <h3 className="font-display text-base font-extrabold text-gray-900">Subsidies</h3>
                 </div>
                 <p className="text-xs leading-relaxed text-gray-700">
-                  Alle landelijke en gemeentelijke regelingen op één plek — wij vertalen ze naar uw situatie.
+                  Alle landelijke en gemeentelijke regelingen op één plek, afgestemd op uw situatie.
                 </p>
                 <Link href="/subsidies-financiering" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-amber-700 hover:text-amber-800">
                   Bekijk regelingen <ArrowRight size={15} />
@@ -131,7 +131,7 @@ export default function Home() {
                   <h3 className="font-display text-base font-extrabold text-gray-900">Betrouwbare partners</h3>
                 </div>
                 <p className="text-xs leading-relaxed text-gray-700">
-                  Wij werken uitsluitend met gecertificeerde uitvoerders — geselecteerd op kwaliteit, service en eerlijke prijs.
+                  Wij werken uitsluitend met gecertificeerde uitvoerders, zorgvuldig geselecteerd op kwaliteit, service en prijs.
                 </p>
                 <Link href="/partners" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-sky-700 hover:text-sky-800">
                   Onze uitvoerders <ArrowRight size={15} />
@@ -160,7 +160,7 @@ export default function Home() {
                 <img src={c.img} alt="" className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" />
               </div>
               <div className="flex flex-col flex-1 p-4">
-                <h3 className="font-display text-sm font-bold text-gray-900">{c.title}</h3>
+                <h3 className="font-display text-lg font-extrabold text-brand-800">{c.title}</h3>
                 <p className="mt-1.5 text-xs leading-relaxed text-gray-600">{c.body}</p>
                 <p className="mt-auto pt-3 text-xs font-bold text-brand-700">{c.strong}</p>
               </div>
@@ -188,7 +188,7 @@ export default function Home() {
                   <img src={s.img} alt={s.title} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-3 text-center">
-                  <h3 className="font-display text-sm font-bold text-gray-900">{s.title}</h3>
+                  <h3 className="font-display text-lg font-extrabold text-brand-800">{s.title}</h3>
                   <p className="mt-0.5 text-xs text-gray-500">{s.sub}</p>
                 </div>
               </Link>

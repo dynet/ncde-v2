@@ -109,7 +109,7 @@ export default function Contact() {
           {/* LEFT: form + CTA */}
           <div className="space-y-6">
             {/* CONTACT FORM CARD */}
-            <div id="formulier" className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[var(--shadow-card)]">
+            <div id="formulier" className="scroll-mt-28 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[var(--shadow-card)]">
               <div className="border-b border-gray-200 bg-gray-50 px-6 py-5 md:px-7 md:py-6">
                 <h2 className="font-display text-xl font-bold text-brand-900 md:text-2xl">Stuur ons een bericht</h2>
                 <p className="mt-1 text-sm font-semibold text-gray-500">
@@ -198,7 +198,7 @@ export default function Contact() {
                 {[
                   { Icon: Mail, t: "E-mail", value: <a href="mailto:info@ncde.nl" className="text-gray-600 hover:text-brand-600">info@ncde.nl</a> },
                   { Icon: Phone, t: "Telefoon", value: <a href="tel:0852224003" className="text-gray-600 hover:text-brand-600">085 222 4003</a> },
-                  { Icon: Clock, t: "Bereikbaar", value: <span className="text-gray-600">Maandag t/m vrijdag<br />09:00 — 17:00 uur</span> },
+                  { Icon: Clock, t: "Bereikbaar", value: <span className="text-gray-600">Maandag t/m vrijdag<br />09:00 - 17:00 uur</span> },
                   { Icon: MapPin, t: "Adres", value: <span className="text-gray-600">Keurmeesterstraat 53<br />1187 ZX Amstelveen</span> },
                   { Icon: MapIcon, t: "Werkgebied", value: <span className="text-gray-600">Bewoners en huiseigenaren in Nederland</span> },
                 ].map(({ Icon, t, value }) => (
