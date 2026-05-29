@@ -126,7 +126,7 @@ export default function OverOns() {
                 </a>
               </div>
             </div>
-            <div className="lg:col-span-5 lg:mt-32 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-3">
+            <div className="lg:col-span-5 lg:mt-56 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-3">
               {[
                 { img: "/over-ons/onafhankelijk.png", t: "Onafhankelijk", d: "Advies dat u kunt vertrouwen" },
                 { img: "/over-ons/data-inzicht.png", t: "Data & Inzicht", d: "Slimme analyses voor de beste keuze" },
