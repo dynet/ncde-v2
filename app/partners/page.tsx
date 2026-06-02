@@ -74,7 +74,7 @@ const ncdePartners = [
   {
     name: "Alterion BV",
     desc: "Gespecialiseerd in de installatie van thuisbatterijen.",
-    logo: null,
+    logo: "/partners/alterion-logo.svg",
   },
 ];
 
@@ -244,16 +244,16 @@ export default function Partners() {
           <div className="partner-marquee overflow-hidden">
             <div className="partner-marquee-track gap-5">
               {[...ncdePartners, ...ncdePartners].map((p, i) => (
-                <article key={`${p.name}-${i}`} aria-hidden={i >= ncdePartners.length} className="w-64 shrink-0 rounded-2xl bg-white border border-gray-200 p-5">
+                <article key={`${p.name}-${i}`} aria-hidden={i >= ncdePartners.length} className="w-[420px] shrink-0 rounded-2xl bg-white border border-gray-200 p-5">
                   <div className="flex h-20 items-center justify-center rounded-xl bg-gray-50 border border-gray-100">
                     {p.logo ? (
-                      <img src={p.logo} alt={`${p.name} logo`} className="max-h-12 max-w-[70%] object-contain" />
+                      <img src={p.logo} alt={`${p.name} logo`} className="max-h-12 max-w-[60%] object-contain" />
                     ) : (
                       <span className="text-xs font-bold uppercase tracking-wider text-gray-400">Logo volgt</span>
                     )}
                   </div>
                   <h3 className="mt-4 font-display text-lg font-black uppercase text-brand-800">{p.name}</h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-gray-700">{p.desc}</p>
+                  <p className="mt-1.5 whitespace-nowrap text-sm leading-relaxed text-gray-700">{p.desc}</p>
                 </article>
               ))}
             </div>

@@ -221,15 +221,20 @@ export default function Contact() {
                 <p className="mt-1 text-sm font-semibold text-gray-500">NCDE werkt landelijk en digitaal.</p>
               </div>
               <div className="p-6">
-                <div className="grid h-64 place-items-center rounded-2xl border border-gray-200 bg-gradient-to-br from-brand-100 to-gray-50 p-6 text-center">
-                  <div>
-                    <p className="font-display text-lg font-black text-brand-900">NCDE</p>
-                    <p className="mt-2 text-xs text-gray-600">
-                      Keurmeesterstraat 53 · 1187 ZX Amstelveen<br />
-                      Online advies · woningverduurzaming · bewonersbegeleiding
-                    </p>
-                  </div>
+                <div className="overflow-hidden rounded-2xl border border-gray-200">
+                  <iframe
+                    title="Locatie NCDE — Keurmeesterstraat 53, Amstelveen"
+                    src="https://www.google.com/maps?q=Keurmeesterstraat+53,+1187+ZX+Amstelveen&output=embed"
+                    width="100%"
+                    height="256"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    style={{ border: 0, display: "block" }}
+                  />
                 </div>
+                <p className="mt-3 text-xs text-gray-600">
+                  Keurmeesterstraat 53 · 1187 ZX Amstelveen
+                </p>
               </div>
             </div>
           </aside>

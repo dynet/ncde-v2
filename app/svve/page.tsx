@@ -128,8 +128,8 @@ export default function SvvePage() {
               </a>
             </div>
 
-            <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
-              <img src="/subpaginas/svve.png" alt="SVVE voor VvE's" className="block h-full w-full object-cover" />
+            <div className="mx-auto overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
+              <img src="/subpaginas/svve.png" alt="SVVE voor VvE's" className="block max-h-[460px] w-auto" />
             </div>
           </div>
         </div>
