@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { League_Spartan, Inter } from "next/font/google";
 import "./globals.css";
+import ScrollToTop from "../components/ScrollToTop";
 
 const leagueSpartan = League_Spartan({
   variable: "--font-league-spartan",
@@ -32,7 +33,10 @@ export default function RootLayout({
       lang="nl"
       className={`${leagueSpartan.variable} ${inter.variable}`}
     >
-      <body className="bg-white text-gray-900 antialiased">{children}</body>
+      <body className="bg-white text-gray-900 antialiased">
+        <ScrollToTop />
+        {children}
+      </body>
     </html>
   );
 }
