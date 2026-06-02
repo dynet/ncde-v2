@@ -244,7 +244,7 @@ export default function Partners() {
           <div className="partner-marquee overflow-hidden">
             <div className="partner-marquee-track gap-5">
               {[...ncdePartners, ...ncdePartners].map((p, i) => (
-                <article key={`${p.name}-${i}`} aria-hidden={i >= ncdePartners.length} className="w-[380px] shrink-0 rounded-2xl bg-white border border-gray-200 p-5">
+                <article key={`${p.name}-${i}`} aria-hidden={i >= ncdePartners.length} className="w-[420px] shrink-0 rounded-2xl bg-white border border-gray-200 p-5">
                   <div className="flex h-20 items-center justify-center rounded-xl bg-gray-50 border border-gray-100">
                     {p.logo ? (
                       <img src={p.logo} alt={`${p.name} logo`} className="max-h-12 max-w-[60%] object-contain" />
