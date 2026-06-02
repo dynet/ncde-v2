@@ -125,7 +125,7 @@ export default function WarmtepompPage() {
             </div>
 
             <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
-              <img src="/subpaginas/warmtepomp.jpg" alt="Warmtepomp voor uw woning" className="block h-full w-full object-cover" />
+              <img src="/subpaginas/warmtepomp.jpg" alt="Warmtepomp voor uw woning" className="block h-full w-full object-contain" />
             </div>
           </div>
         </div>
