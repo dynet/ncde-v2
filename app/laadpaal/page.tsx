@@ -102,7 +102,7 @@ export default function LaadpaalPage() {
                 Laadpalen voor<br /><span className="text-amber-400">je woning</span>
               </h1>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
-                Laad uw elektrische auto veilig, slim en voordelig thuis op. NCDE helpt u met de juiste laadoplossing — afgestemd op uw woning, auto, meterkast en energieverbruik.
+                Laad uw elektrische auto veilig, slim en voordelig thuis op. NCDE helpt u met de juiste laadoplossing, afgestemd op uw woning, auto, meterkast en energieverbruik.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <a href="#oplossingen" className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] transition-all">
@@ -280,7 +280,7 @@ export default function LaadpaalPage() {
                 Wilt u veilig en slim thuis laden?
               </h2>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-white/80">
-                NCDE helpt u stap voor stap naar een passende laadoplossing — met onafhankelijk advies, inzicht in kosten en betrouwbare installatie.
+                NCDE helpt u stap voor stap naar een passende laadoplossing, met onafhankelijk advies, inzicht in kosten en betrouwbare installatie.
               </p>
               <Link href="/contact" className="mt-6 inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-3.5 text-sm font-bold text-white hover:bg-brand-700 transition-colors">
                 Vraag vrijblijvend advies aan
