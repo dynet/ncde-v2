@@ -49,7 +49,9 @@ h1, h2, h3, h4 {
   }
 }
 html {
-  scroll-behavior: smooth;
+  /* offset voor sticky header (h-24 = 6rem) bij anchor-jumps,
+     zodat de hero/sectie niet achter de header valt */
+  scroll-padding-top: 6rem;
 }
 
 /* Hero progress bar animation */

@@ -91,8 +91,8 @@ export default function Home() {
                 <p className="text-xs leading-relaxed text-gray-700">
                   Krijg inzicht in kosten en terugverdientijd, afgestemd op uw persoonlijke situatie en woning.
                 </p>
-                <Link href="/duidelijk-inzicht" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700">
-                  Meer weten <ArrowRight size={15} />
+                <Link href="#woningcheck" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700">
+                  Start woningcheck <ArrowRight size={15} />
                 </Link>
               </div>
             </div>
@@ -160,7 +160,7 @@ export default function Home() {
                 <img src={c.img} alt="" className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" />
               </div>
               <div className="flex flex-col flex-1 p-4">
-                <h3 className="font-display text-lg font-extrabold text-brand-800">{c.title}</h3>
+                <h3 className="font-display text-xl font-extrabold text-brand-800">{c.title}</h3>
                 <p className="mt-1.5 text-xs leading-relaxed text-gray-600">{c.body}</p>
                 <p className="mt-auto pt-3 text-xs font-bold text-brand-700">{c.strong}</p>
               </div>
@@ -188,7 +188,7 @@ export default function Home() {
                   <img src={s.img} alt={s.title} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-3 text-center">
-                  <h3 className="font-display text-lg font-extrabold text-brand-800">{s.title}</h3>
+                  <h3 className="font-display text-xl font-extrabold text-brand-800">{s.title}</h3>
                   <p className="mt-0.5 text-xs text-gray-500">{s.sub}</p>
                 </div>
               </Link>
