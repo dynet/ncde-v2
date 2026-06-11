@@ -118,7 +118,7 @@ export default function WarmtepompPage() {
                   Bekijk mogelijkheden
                   <ArrowRight size={16} />
                 </a>
-                <a href="#advies" className="inline-flex items-center gap-2 rounded-lg border border-white/30 bg-white/10 px-5 py-3 text-sm font-bold text-white hover:bg-white/20 transition-colors">
+                <a href="/contact" className="inline-flex items-center gap-2 rounded-lg border border-white/30 bg-white/10 px-5 py-3 text-sm font-bold text-white hover:bg-white/20 transition-colors">
                   Vraag advies aan
                 </a>
               </div>

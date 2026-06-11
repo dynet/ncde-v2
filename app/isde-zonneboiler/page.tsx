@@ -255,7 +255,7 @@ export default function IsdeZonneboilerPage() {
           <div className="mt-6 flex items-start gap-3 rounded-xl border border-amber-200 bg-amber-50 px-5 py-4">
             <Lightbulb size={18} className="mt-0.5 shrink-0 text-amber-600" />
             <p className="text-sm text-amber-900">
-              <strong>Tip — controleer vóór aankoop:</strong> controleer vóór aankoop of de zonneboiler op de meldcodelijst staat. Dan ziet u direct welk subsidiebedrag waarschijnlijk bij het apparaat hoort, zodat u de juiste keuze kunt maken.
+              <strong>Tip:</strong> controleer vóór aankoop of de zonneboiler op de meldcodelijst staat. Dan ziet u direct welk subsidiebedrag waarschijnlijk bij het apparaat hoort, zodat u de juiste keuze kunt maken.
             </p>
           </div>
         </div>
@@ -297,7 +297,7 @@ export default function IsdeZonneboilerPage() {
                   Wilt u weten of een zonneboiler past bij uw woning?
                 </h2>
                 <p className="mt-4 max-w-xl text-base leading-relaxed text-white/80">
-                  NCDE geeft inzicht in kosten, subsidie, maandelijkse besparing en terugverdientijd — persoonlijk en volledig vrijblijvend.
+                  NCDE geeft inzicht in kosten, subsidie, maandelijkse besparing en terugverdientijd, persoonlijk en volledig vrijblijvend.
                 </p>
                 <Link href="/contact" className="mt-6 inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-3.5 text-sm font-bold text-white hover:bg-brand-700 transition-colors">
                   Vraag vrijblijvend advies aan

@@ -256,7 +256,7 @@ export default function Nieuws() {
                 <ul className="mt-3 space-y-2">
                   <li><a href="mailto:info@ncde.nl" className="text-sm text-brand-200 hover:text-white">info@ncde.nl</a></li>
                   <li><a href="#" className="text-sm text-brand-200 hover:text-white">Contactformulier</a></li>
-                  <li><a href="#" className="text-sm text-brand-200 hover:text-white">FAQ</a></li>
+                  <li><Link href="/cvd-melding" className="text-sm text-brand-200 hover:text-white">CVD-melding</Link></li>
                 </ul>
               </div>
             </div>

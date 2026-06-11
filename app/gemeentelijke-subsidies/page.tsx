@@ -242,7 +242,7 @@ export default function GemeentelijkeSubsidiesPage() {
           <div className="mt-6 flex items-start gap-3 rounded-xl border border-amber-200 bg-amber-50 px-5 py-4">
             <Lightbulb size={18} className="mt-0.5 shrink-0 text-amber-600" />
             <p className="text-sm text-amber-900">
-              <strong>Tip — vraag niet te laat aan:</strong> sommige gemeenten eisen dat u de aanvraag indient vóórdat u de maatregel uitvoert. Wacht dus niet tot na de werkzaamheden. Neem bij twijfel eerst contact op met uw gemeente of met NCDE.
+              <strong>Tip: vraag niet te laat aan.</strong> Sommige gemeenten eisen dat u de aanvraag indient vóórdat u de maatregel uitvoert. Wacht dus niet tot na de werkzaamheden. Neem bij twijfel eerst contact op met uw gemeente of met NCDE.
             </p>
           </div>
         </div>

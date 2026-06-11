@@ -110,14 +110,14 @@ export default function ZonnepanelenPage() {
                   Bekijk mogelijkheden
                   <ArrowRight size={16} />
                 </a>
-                <a href="#advies" className="inline-flex items-center gap-2 rounded-lg border border-white/30 bg-white/10 px-5 py-3 text-sm font-bold text-white hover:bg-white/20 transition-colors">
+                <a href="/contact" className="inline-flex items-center gap-2 rounded-lg border border-white/30 bg-white/10 px-5 py-3 text-sm font-bold text-white hover:bg-white/20 transition-colors">
                   Vraag advies aan
                 </a>
               </div>
             </div>
 
-            <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
-              <img src="/subpaginas/zonnepanelen.jpg" alt="Zonnepanelen op een woning" className="block h-full w-full object-contain" />
+            <div className="overflow-hidden rounded-3xl border border-white/20 shadow-2xl">
+              <img src="/subpaginas/zonnepanelen-hero-2.jpg" alt="Zonnepanelen op een woning" className="block w-full h-auto" />
             </div>
           </div>
         </div>

@@ -400,8 +400,8 @@ export default function SubsidiesFinanciering() {
                     { t: "Home", href: "/" },
                     { t: "Over ons", href: "/" },
                     { t: "Subsidies & Financiering", href: "/subsidies-financiering" },
-                    { t: "Partners", href: "/" },
-                    { t: "Nieuws", href: "/" },
+                    { t: "Partners", href: "/partners" },
+                    { t: "Nieuws", href: "/nieuws" },
                     { t: "Contact", href: "/contact" },
                   ].map((p) => (
                     <li key={p.t}><Link href={p.href} className="text-sm text-brand-200 hover:text-white">{p.t}</Link></li>
@@ -413,7 +413,7 @@ export default function SubsidiesFinanciering() {
                 <ul className="mt-3 space-y-2">
                   <li><a href="mailto:info@ncde.nl" className="text-sm text-brand-200 hover:text-white">info@ncde.nl</a></li>
                   <li><a href="#" className="text-sm text-brand-200 hover:text-white">Contactformulier</a></li>
-                  <li><a href="#" className="text-sm text-brand-200 hover:text-white">FAQ</a></li>
+                  <li><Link href="/cvd-melding" className="text-sm text-brand-200 hover:text-white">CVD-melding</Link></li>
                 </ul>
               </div>
             </div>
