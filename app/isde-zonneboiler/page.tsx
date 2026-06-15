@@ -255,7 +255,7 @@ export default function IsdeZonneboilerPage() {
           <div className="mt-6 flex items-start gap-3 rounded-xl border border-amber-200 bg-amber-50 px-5 py-4">
             <Lightbulb size={18} className="mt-0.5 shrink-0 text-amber-600" />
             <p className="text-sm text-amber-900">
-              <strong>Tip — controleer vóór aankoop:</strong> controleer vóór aankoop of de zonneboiler op de meldcodelijst staat. Dan ziet u direct welk subsidiebedrag waarschijnlijk bij het apparaat hoort, zodat u de juiste keuze kunt maken.
+              <strong>Tip:</strong> controleer vóór aankoop of de zonneboiler op de meldcodelijst staat. Dan ziet u direct welk subsidiebedrag waarschijnlijk bij het apparaat hoort, zodat u de juiste keuze kunt maken.
             </p>
           </div>
         </div>
@@ -297,7 +297,7 @@ export default function IsdeZonneboilerPage() {
                   Wilt u weten of een zonneboiler past bij uw woning?
                 </h2>
                 <p className="mt-4 max-w-xl text-base leading-relaxed text-white/80">
-                  NCDE geeft inzicht in kosten, subsidie, maandelijkse besparing en terugverdientijd — persoonlijk en volledig vrijblijvend.
+                  NCDE geeft inzicht in kosten, subsidie, maandelijkse besparing en terugverdientijd, persoonlijk en volledig vrijblijvend.
                 </p>
                 <Link href="/contact" className="mt-6 inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-3.5 text-sm font-bold text-white hover:bg-brand-700 transition-colors">
                   Vraag vrijblijvend advies aan
@@ -366,7 +366,9 @@ export default function IsdeZonneboilerPage() {
               <div>
                 <h4 className="font-display text-sm font-bold text-white">Contact</h4>
                 <ul className="mt-3 space-y-2">
-                  <li><a href="mailto:info@ncde.nl" className="text-sm text-brand-200 hover:text-white">info@ncde.nl</a></li>
+                  <li><span className="text-sm text-brand-200">Keurmeesterstraat 53<br />1187 ZX Amstelveen</span></li>
+                  <li><a href="tel:0852224002" className="text-sm text-brand-200 hover:text-white">085-2224002</a></li>
+                  <li><a href="mailto:info@dynet.nl" className="text-sm text-brand-200 hover:text-white">info@dynet.nl</a></li>
                   <li><Link href="/contact" className="text-sm text-brand-200 hover:text-white">Contactformulier</Link></li>
                   <li><Link href="/cvd-melding" className="text-sm text-brand-200 hover:text-white">CVD-melding</Link></li>
                 </ul>

@@ -102,7 +102,7 @@ const checklist = [
 ];
 
 const energiezekerheid = [
-  { Icon: Snowflake, t: "Isolatie", d: "Goede isolatie helpt warmte langer vast te houden bij tijdelijke uitval van verwarming — ook zonder stroom of gas blijft uw woning langer op temperatuur." },
+  { Icon: Snowflake, t: "Isolatie", d: "Goede isolatie helpt warmte langer vast te houden bij tijdelijke uitval van verwarming. Ook zonder stroom of gas blijft uw woning langer op temperatuur." },
   { Icon: Battery, t: "Thuisbatterij", d: "Een thuisbatterij kan bijdragen aan meer grip op eigen energiegebruik, afhankelijk van systeem en aansluiting op uw installatie." },
   { Icon: Activity, t: "Slim energieverbruik", d: "Inzicht in verbruik helpt u bewuster omgaan met elektriciteit, vooral bij hogere energieprijzen of beperkte netbeschikbaarheid." },
 ];
@@ -179,7 +179,7 @@ export default function NoodpakketPage() {
           <div className="rounded-2xl border border-brand-100 bg-white p-6 shadow-[var(--shadow-card)]">
             <p className="text-xs font-bold uppercase tracking-wider text-brand-600">Wat is een noodpakket?</p>
             <p className="mt-3 text-sm text-gray-700">
-              Een noodpakket is een verzameling basisproducten die u thuis klaar heeft liggen voor onverwachte situaties. Het doel is rust en zekerheid geven — niet paniek.
+              Een noodpakket is een verzameling basisproducten die u thuis klaar heeft liggen voor onverwachte situaties. Het doel is rust en zekerheid geven, geen paniek.
             </p>
             <div className="mt-5 space-y-4">
               <div className="flex items-start gap-3">
@@ -356,7 +356,9 @@ export default function NoodpakketPage() {
               <div>
                 <h4 className="font-display text-sm font-bold text-white">Contact</h4>
                 <ul className="mt-3 space-y-2">
-                  <li><a href="mailto:info@ncde.nl" className="text-sm text-brand-200 hover:text-white">info@ncde.nl</a></li>
+                  <li><span className="text-sm text-brand-200">Keurmeesterstraat 53<br />1187 ZX Amstelveen</span></li>
+                  <li><a href="tel:0852224002" className="text-sm text-brand-200 hover:text-white">085-2224002</a></li>
+                  <li><a href="mailto:info@dynet.nl" className="text-sm text-brand-200 hover:text-white">info@dynet.nl</a></li>
                   <li><Link href="/contact" className="text-sm text-brand-200 hover:text-white">Contactformulier</Link></li>
                   <li><Link href="/cvd-melding" className="text-sm text-brand-200 hover:text-white">CVD-melding</Link></li>
                 </ul>
