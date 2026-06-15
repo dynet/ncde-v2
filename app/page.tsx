@@ -388,17 +388,26 @@ export default function Home() {
               <div>
                 <h4 className="font-display text-sm font-bold text-white">Pagina&apos;s</h4>
                 <ul className="mt-3 space-y-2">
-                  {["Home", "Over ons", "Subsidies & Financiering", "Partners", "Nieuws", "Contact"].map((t) => (
-                    <li key={t}><Link href={t === "Home" ? "/" : t === "Over ons" ? "/over-ons" : "#"} className="text-sm text-brand-200 hover:text-white">{t}</Link></li>
+                  {[
+                    { t: "Home", href: "/" },
+                    { t: "Over ons", href: "/over-ons" },
+                    { t: "Subsidies & Financiering", href: "/subsidies-financiering" },
+                    { t: "Partners", href: "/partners" },
+                    { t: "Nieuws", href: "/nieuws" },
+                    { t: "Contact", href: "/contact" },
+                  ].map((p) => (
+                    <li key={p.t}><Link href={p.href} className="text-sm text-brand-200 hover:text-white">{p.t}</Link></li>
                   ))}
                 </ul>
               </div>
               <div>
                 <h4 className="font-display text-sm font-bold text-white">Contact</h4>
                 <ul className="mt-3 space-y-2">
-                  <li><a href="mailto:info@ncde.nl" className="text-sm text-brand-200 hover:text-white">info@ncde.nl</a></li>
+                  <li><span className="text-sm text-brand-200">Keurmeesterstraat 53<br />1187 ZX Amstelveen</span></li>
+                  <li><a href="tel:0852224002" className="text-sm text-brand-200 hover:text-white">085-2224002</a></li>
+                  <li><a href="mailto:info@dynet.nl" className="text-sm text-brand-200 hover:text-white">info@dynet.nl</a></li>
                   <li><Link href="/contact" className="text-sm text-brand-200 hover:text-white">Contactformulier</Link></li>
-                  <li><a href="#" className="text-sm text-brand-200 hover:text-white">FAQ</a></li>
+                  <li><Link href="/cvd-melding" className="text-sm text-brand-200 hover:text-white">CVD-melding</Link></li>
                 </ul>
               </div>
             </div>

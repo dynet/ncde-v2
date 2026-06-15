@@ -67,7 +67,7 @@ const stappen = [
 
 const adviesBullets = [
   { t: "Analyse van zonnepanelen en verbruik", d: "Op basis van uw werkelijke situatie en energieprofiel" },
-  { t: "Advies over juiste batterijcapaciteit", d: "Niet te klein, niet te groot — precies passend" },
+  { t: "Advies over juiste batterijcapaciteit", d: "Niet te klein, niet te groot, maar precies passend" },
   { t: "Scenario met en zonder thuisbatterij", d: "Zodat u zelf een weloverwogen keuze kunt maken" },
 ];
 
@@ -115,14 +115,14 @@ export default function ThuisbatterijPage() {
                   Bekijk mogelijkheden
                   <ArrowRight size={16} />
                 </a>
-                <a href="#advies" className="inline-flex items-center gap-2 rounded-lg border border-white/30 bg-white/10 px-5 py-3 text-sm font-bold text-white hover:bg-white/20 transition-colors">
+                <a href="/contact" className="inline-flex items-center gap-2 rounded-lg border border-white/30 bg-white/10 px-5 py-3 text-sm font-bold text-white hover:bg-white/20 transition-colors">
                   Vraag advies aan
                 </a>
               </div>
             </div>
 
-            <div className="mx-auto overflow-hidden rounded-3xl border border-white/20 bg-white shadow-2xl">
-              <img src="/subpaginas/thuisbatterij-new.jpeg" alt="Thuisbatterij" className="block max-h-[460px] w-auto" />
+            <div className="mx-auto overflow-hidden rounded-3xl border border-white/20 shadow-2xl">
+              <img src="/subpaginas/thuisbatterij-final.jpeg" alt="Thuisbatterij" className="block max-h-[460px] w-auto" />
             </div>
           </div>
         </div>
@@ -374,7 +374,9 @@ export default function ThuisbatterijPage() {
               <div>
                 <h4 className="font-display text-sm font-bold text-white">Contact</h4>
                 <ul className="mt-3 space-y-2">
-                  <li><a href="mailto:info@ncde.nl" className="text-sm text-brand-200 hover:text-white">info@ncde.nl</a></li>
+                  <li><span className="text-sm text-brand-200">Keurmeesterstraat 53<br />1187 ZX Amstelveen</span></li>
+                  <li><a href="tel:0852224002" className="text-sm text-brand-200 hover:text-white">085-2224002</a></li>
+                  <li><a href="mailto:info@dynet.nl" className="text-sm text-brand-200 hover:text-white">info@dynet.nl</a></li>
                   <li><Link href="/contact" className="text-sm text-brand-200 hover:text-white">Contactformulier</Link></li>
                   <li><Link href="/cvd-melding" className="text-sm text-brand-200 hover:text-white">CVD-melding</Link></li>
                 </ul>
