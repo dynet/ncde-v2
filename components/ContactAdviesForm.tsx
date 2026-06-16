@@ -3,7 +3,18 @@
 /* Contactformulier - klantcode dd 11-6-2026: geen hero, validatie op *-velden, bedankt-kaart na verzenden */
 
 import { useState } from "react";
-import { Mail, Phone, Clock, MapPin, Map as MapIcon, Check } from "lucide-react";
+import Link from "next/link";
+import { Mail, Phone, Clock, MapPin, Map as MapIcon, Check, Home as HomeIcon, RotateCcw } from "lucide-react";
+
+const EMPTY: Values = {
+  naam: "",
+  telefoon: "",
+  email: "",
+  postcode: "",
+  woningtype: "",
+  onderwerp: "",
+  bericht: "",
+};
 
 type Values = {
   naam: string;
@@ -43,17 +54,16 @@ function FieldError({ msg }: { msg?: string }) {
 }
 
 export default function ContactAdviesForm() {
-  const [values, setValues] = useState<Values>({
-    naam: "",
-    telefoon: "",
-    email: "",
-    postcode: "",
-    woningtype: "",
-    onderwerp: "",
-    bericht: "",
-  });
+  const [values, setValues] = useState<Values>(EMPTY);
   const [errors, setErrors] = useState<Errors>({});
   const [verzonden, setVerzonden] = useState(false);
+
+  const opnieuw = () => {
+    setValues(EMPTY);
+    setErrors({});
+    setVerzonden(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const set = (key: keyof Values) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setValues((v) => ({ ...v, [key]: e.target.value }));
@@ -79,7 +89,24 @@ export default function ContactAdviesForm() {
         <p className="mt-4 text-lg text-gray-700">Wij hebben uw contactgegevens succesvol ontvangen.</p>
         <p className="mt-2 text-lg text-gray-700">Een adviseur van NCDE neemt binnen enkele dagen contact met u op.</p>
         <div className="mt-8 rounded-2xl bg-brand-50 p-5 text-base font-bold text-brand-800">
-          Houd uw telefoon en e-mail in de gaten — wij komen binnen een paar dagen bij u terug.
+          Houd uw telefoon en e-mail in de gaten. Wij komen binnen een paar dagen bij u terug.
+        </div>
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 px-6 py-3.5 text-sm font-bold text-white shadow-[0_10px_26px_rgba(0,122,61,.25)] hover:bg-brand-700 transition-all"
+          >
+            <HomeIcon size={17} />
+            Terug naar home
+          </Link>
+          <button
+            type="button"
+            onClick={opnieuw}
+            className="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-6 py-3.5 text-sm font-bold text-brand-800 hover:bg-gray-50 transition-all"
+          >
+            <RotateCcw size={17} />
+            Nog een aanvraag doen
+          </button>
         </div>
       </div>
     );
