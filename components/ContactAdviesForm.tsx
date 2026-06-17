@@ -29,13 +29,29 @@ type Values = {
 type Errors = Partial<Record<keyof Values, string>>;
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// NL postcode: 4 cijfers (eerste niet 0) + spatie + 2 letters
+const POSTCODE_RE = /^[1-9][0-9]{3}\s[A-Z]{2}$/;
+
+// Telefoon-invoer: alleen cijfers, spaties, + en -. Filtert verboden tekens al tijdens typen.
+const filterTelefoon = (s: string) => s.replace(/[^0-9+\-\s]/g, "");
+const telefoonDigits = (s: string) => s.replace(/\D/g, "");
+
+// Postcode-invoer: forceer formaat 1234 AB tijdens typen.
+function formatPostcode(s: string) {
+  const cleaned = s.toUpperCase().replace(/[^0-9A-Z]/g, "").slice(0, 6);
+  const cijfers = cleaned.slice(0, 4).replace(/\D/g, "");
+  const letters = cleaned.slice(4).replace(/[^A-Z]/g, "");
+  return letters ? `${cijfers} ${letters}` : cijfers;
+}
 
 function validate(v: Values): Errors {
   const e: Errors = {};
   if (!v.naam.trim()) e.naam = "Vul uw naam in.";
   if (!v.telefoon.trim()) e.telefoon = "Vul uw telefoonnummer in.";
+  else if (telefoonDigits(v.telefoon).length < 10) e.telefoon = "Vul een geldig telefoonnummer in (minimaal 10 cijfers).";
   if (!EMAIL_RE.test(v.email.trim())) e.email = "Vul een geldig e-mailadres in.";
   if (!v.postcode.trim()) e.postcode = "Vul uw postcode in.";
+  else if (!POSTCODE_RE.test(v.postcode.trim())) e.postcode = "Vul een geldige postcode in (bijv. 1234 AB).";
   if (!v.onderwerp) e.onderwerp = "Kies een onderwerp.";
   if (!v.bericht.trim()) e.bericht = "Vul uw vraag in.";
   return e;
@@ -65,8 +81,16 @@ export default function ContactAdviesForm() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  // Beperkt per veld wat de gebruiker kan typen (telefoon: cijfers; postcode: 1234 AB).
+  const transforms: Partial<Record<keyof Values, (s: string) => string>> = {
+    telefoon: filterTelefoon,
+    postcode: formatPostcode,
+  };
+
   const set = (key: keyof Values) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    setValues((v) => ({ ...v, [key]: e.target.value }));
+    const t = transforms[key];
+    const next = t ? t(e.target.value) : e.target.value;
+    setValues((v) => ({ ...v, [key]: next }));
     setErrors((er) => ({ ...er, [key]: undefined }));
   };
 
@@ -131,7 +155,7 @@ export default function ContactAdviesForm() {
             </div>
             <div>
               <label htmlFor="telefoon" className="mb-1.5 block text-xs font-bold text-gray-700">Telefoonnummer *</label>
-              <input id="telefoon" type="tel" value={values.telefoon} onChange={set("telefoon")} placeholder="06 12345678" className={inputClass(!!errors.telefoon)} />
+              <input id="telefoon" type="tel" inputMode="tel" value={values.telefoon} onChange={set("telefoon")} placeholder="06 12345678" className={inputClass(!!errors.telefoon)} />
               <FieldError msg={errors.telefoon} />
             </div>
             <div className="md:col-span-2">
@@ -141,7 +165,7 @@ export default function ContactAdviesForm() {
             </div>
             <div>
               <label htmlFor="postcode" className="mb-1.5 block text-xs font-bold text-gray-700">Postcode *</label>
-              <input id="postcode" type="text" value={values.postcode} onChange={set("postcode")} placeholder="1234 AB" className={inputClass(!!errors.postcode)} />
+              <input id="postcode" type="text" inputMode="numeric" maxLength={7} value={values.postcode} onChange={set("postcode")} placeholder="1234 AB" className={inputClass(!!errors.postcode)} />
               <FieldError msg={errors.postcode} />
             </div>
             <div>
