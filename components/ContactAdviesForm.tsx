@@ -111,10 +111,7 @@ export default function ContactAdviesForm() {
         </div>
         <h2 className="mt-8 font-display text-3xl font-black uppercase text-brand-800 md:text-4xl">Bedankt voor uw aanvraag!</h2>
         <p className="mt-4 text-lg text-gray-700">Wij hebben uw contactgegevens succesvol ontvangen.</p>
-        <p className="mt-2 text-lg text-gray-700">Een adviseur van NCDE neemt binnen enkele dagen contact met u op.</p>
-        <div className="mt-8 rounded-2xl bg-brand-50 p-5 text-base font-bold text-brand-800">
-          Houd uw telefoon en e-mail in de gaten. Wij komen binnen een paar dagen bij u terug.
-        </div>
+        <p className="mt-2 text-lg text-gray-700">Een adviseur van NCDE neemt zo spoedig mogelijk contact met u op.</p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
           <Link
             href="/"
