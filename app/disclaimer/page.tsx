@@ -171,7 +171,7 @@ const sections: Section[] = [
         <div className="mt-4 rounded-xl border border-brand-100 bg-brand-50/60 p-5 text-sm">
           <p className="font-bold text-brand-900">NCDE — Nationaal Collectief Duurzame Energie</p>
           <p className="mt-2 text-gray-700">
-            E-mail: <a href="mailto:info@ncde.nl" className="text-brand-700 hover:underline">info@ncde.nl</a><br />
+            E-mail: <a href="mailto:Info@ncde.nl" className="text-brand-700 hover:underline">Info@ncde.nl</a><br />
             Website: www.ncde.nl
           </p>
         </div>
@@ -219,8 +219,8 @@ export default function Disclaimer() {
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-white/80">
             <span className="rounded-full bg-white/10 px-3 py-1.5 font-semibold">Laatst bijgewerkt · 22 mei 2026</span>
-            <a href="mailto:info@ncde.nl" className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 font-semibold hover:bg-white/20 transition-colors">
-              <Mail size={14} /> info@ncde.nl
+            <a href="mailto:Info@ncde.nl" className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 font-semibold hover:bg-white/20 transition-colors">
+              <Mail size={14} /> Info@ncde.nl
             </a>
           </div>
         </div>
@@ -276,8 +276,8 @@ export default function Disclaimer() {
               <p className="mt-2 text-sm text-gray-700">
                 Ons team staat voor u klaar. Neem gerust contact op.
               </p>
-              <a href="mailto:info@ncde.nl" className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-800 px-5 py-3 text-sm font-bold text-white hover:bg-brand-900 transition-colors">
-                <Mail size={16} /> info@ncde.nl
+              <a href="mailto:Info@ncde.nl" className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-800 px-5 py-3 text-sm font-bold text-white hover:bg-brand-900 transition-colors">
+                <Mail size={16} /> Info@ncde.nl
               </a>
             </div>
           </article>
@@ -317,8 +317,8 @@ export default function Disclaimer() {
                 <h4 className="font-display text-sm font-bold text-white">Contact</h4>
                 <ul className="mt-3 space-y-2">
                   <li><span className="text-sm text-brand-200">Keurmeesterstraat 53<br />1187 ZX Amstelveen</span></li>
-                  <li><a href="tel:0852224002" className="text-sm text-brand-200 hover:text-white">085-2224002</a></li>
-                  <li><a href="mailto:info@dynet.nl" className="text-sm text-brand-200 hover:text-white">info@dynet.nl</a></li>
+                  <li><a href="tel:0852224003" className="text-sm text-brand-200 hover:text-white">085 222 4003</a></li>
+                  <li><a href="mailto:Info@ncde.nl" className="text-sm text-brand-200 hover:text-white">Info@ncde.nl</a></li>
                   <li><Link href="/contact" className="text-sm text-brand-200 hover:text-white">Contactformulier</Link></li>
                   <li><Link href="/cvd-melding" className="text-sm text-brand-200 hover:text-white">CVD-melding</Link></li>
                 </ul>

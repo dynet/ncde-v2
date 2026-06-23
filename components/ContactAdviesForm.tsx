@@ -219,7 +219,7 @@ export default function ContactAdviesForm() {
           </div>
           <div className="space-y-3 p-6">
             {[
-              { Icon: Mail, t: "E-mail", value: <a href="mailto:info@ncde.nl" className="text-gray-600 hover:text-brand-600">info@ncde.nl</a> },
+              { Icon: Mail, t: "E-mail", value: <a href="mailto:Info@ncde.nl" className="text-gray-600 hover:text-brand-600">Info@ncde.nl</a> },
               { Icon: Phone, t: "Telefoon", value: <a href="tel:0852224003" className="text-gray-600 hover:text-brand-600">085 222 4003</a> },
               { Icon: Clock, t: "Bereikbaar", value: <span className="text-gray-600">Maandag t/m vrijdag<br />09:00 - 17:00 uur</span> },
               { Icon: MapPin, t: "Adres", value: <span className="text-gray-600">Keurmeesterstraat 53<br />1187 ZX Amstelveen</span> },

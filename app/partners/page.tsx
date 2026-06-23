@@ -278,7 +278,7 @@ export default function Partners() {
                 </p>
               </div>
             </div>
-            <a href="mailto:info@ncde.nl?subject=Partnerprogramma" className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-4 text-sm font-bold text-brand-700 hover:bg-brand-50 transition-all whitespace-nowrap">
+            <a href="mailto:Info@ncde.nl?subject=Partnerprogramma" className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-4 text-sm font-bold text-brand-700 hover:bg-brand-50 transition-all whitespace-nowrap">
               Neem contact op <ArrowRight size={16} />
             </a>
           </div>
@@ -318,8 +318,8 @@ export default function Partners() {
                 <h4 className="font-display text-sm font-bold text-white">Contact</h4>
                 <ul className="mt-3 space-y-2">
                   <li><span className="text-sm text-brand-200">Keurmeesterstraat 53<br />1187 ZX Amstelveen</span></li>
-                  <li><a href="tel:0852224002" className="text-sm text-brand-200 hover:text-white">085-2224002</a></li>
-                  <li><a href="mailto:info@dynet.nl" className="text-sm text-brand-200 hover:text-white">info@dynet.nl</a></li>
+                  <li><a href="tel:0852224003" className="text-sm text-brand-200 hover:text-white">085 222 4003</a></li>
+                  <li><a href="mailto:Info@ncde.nl" className="text-sm text-brand-200 hover:text-white">Info@ncde.nl</a></li>
                   <li><a href="#" className="text-sm text-brand-200 hover:text-white">Contactformulier</a></li>
                   <li><Link href="/cvd-melding" className="text-sm text-brand-200 hover:text-white">CVD-melding</Link></li>
                 </ul>
